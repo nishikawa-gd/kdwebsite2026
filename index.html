@@ -1,11 +1,375 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <p>testtestaaa</p>
+    <script src="script.js" defer></script>
+
+    <!-- TOPへ戻るボタン -->
+<a href="#top" class="page-top">
+    <img src="img/top_icon.png" alt="TOPへ戻る">
+</a>
+
+    <!-- ロゴ -->
+    <img class="logo" src="img/rogo.png" alt="">
+
+    <main id="top">
+    <!-- MENUボタン -->
+    <button class="menu-btn" id="menuBtn">
+        <img src="img/menu_button.png" alt="MENU">
+    </button>
+
+    <!-- メニュー画面 -->
+    <div class="menu" id="menu">
+
+        <!-- 閉じるボタン -->
+     <button class="menu-close" id="menuClose">
+    <img src="img/menu_close.png" alt="閉じる">
+     </button>
+        <!-- メニュー -->
+        <nav class="menu-nav">
+
+    <a href="#top">TOP</a>
+
+    <a href="#event">
+        イベント情報
+    </a>
+
+    <a href="#feature">
+        神戸電子の魅力
+    </a>
+
+    <a href="#about">
+        学科紹介
+    </a>
+
+    <a href="#teacher">
+        主な担当教師
+    </a>
+
+    <a href="#nyusi">
+        入試ガイド
+    </a>
+
+    <a href="#genzaichiten">
+        現在地展
+    </a>
+
+    <a href="#account">
+        SNS
+    </a>
+
+     <a href="#footer">
+        フッター
+    </a>
+
+</nav>
+
+    </div>
+    <div class="mainvisual">
+
+        <img class="mv8" src="img/mv8.png" alt="">
+        <img class="mv2" src="img/mv2.png" alt="">
+        <img class="mv6" src="img/mv6.png" alt="">
+        <img class="mv3" src="img/mv3.png" alt="">
+        <img class="mv1" src="img/mv1.png" alt="">
+        <img class="mv7" src="img/mv7.png" alt="">
+        <img class="mv4" src="img/mv4.png" alt="">
+        <img class="mv5" src="img/mv5.png" alt="">
+
+        <img class="title" src="img/maintitl.png" alt="グラフィックデザイン学科">
+
+    </div>
+
+    <div class="telop">
+        <div class="telop_inner">
+            <img src="img/mv_telop.png" alt="">
+            <img src="img/mv_telop.png" alt="">
+        </div>
+    </div>
+
+    </main>
+
+<!-- イベント情報 -->
+<section class="event" id="event">
+
+    <img class="event-title" src="img/event/event_titl.png" alt="イベント情報">
+
+    <div class="event-wrapper">
+        <div class="event-content">
+
+            <div class="event-item">
+                <img src="img/event/event_1.png" alt="">
+            </div>
+
+            <div class="event-item">
+                <img src="img/event/event_2.png" alt="">
+            </div>
+
+            <div class="event-item">
+                <img src="img/event/event_1.png" alt="">
+            </div>
+
+            <div class="event-item">
+                <img src="img/event/event_2.png" alt="">
+            </div>
+
+        </div>
+    </div>  
+
+</section>
+
+<!-- 魅力紹介 -->
+<section class="feature" id="feature">
+    <!-- タイトル -->
+    <img class="feature-title" src="img/feature/feature_titl.png" alt="学科の魅力紹介">
+
+    <div class="feature-content">
+
+        <div class="feature-item">
+                <img src="img/feature/feature_1.png" alt="">
+        </div>
+
+        <div class="feature-item">
+                <img src="img/feature/feature_2.png" alt="">
+        </div>
+
+        <div class="feature-item">
+                <img src="img/feature/feature_3.png" alt="">
+        </div>
+
+        <div class="feature-item">
+                <img src="img/feature/feature_4.png" alt="">
+        </div>
+
+    </div>
+
+    <div class="btn">
+        <a href="https://www.kobedenshi.ac.jp/course/graphic/" target="_blank">
+            <img src="img/feature/btn.png" alt="詳細を見る">
+        </a>
+    </div>
+
+</section>
+    
+<!-- 学科紹介 -->
+<section class="about" id="about">
+    <!-- タイトル -->
+    <img class="about-title" src="img/about/about_titl.png" alt="学科紹介">
+
+    <!-- WEB -->
+    <div class="about-content">
+    <!-- イラスト -->
+    <img class="about-deco" src="img/about/about_deco1.png" alt="">
+    <!-- サブタイトル -->
+    <div class="about-text">
+    <img class="about-subtitle" src="img/about/about_subtitl1.png" alt="">
+
+    <p>
+        Webデザインを中心に、グラフィックデザインや動画制作など、幅広い<br>
+        分野を学べる専攻です。<br>
+        「Webもグラフィックも動画もやってみたい！」という人におすすめ。<br>
+        さまざまな制作に挑戦しながら、自分の好きなことや得意なことを<br>
+        見つけていきます。
+    </p>
+</div>
+
+</div>
+
+    <!-- グラフィック -->
+<div class="about-content about-content-reverse">
+
+    <!-- サブタイトル＋文章 -->
+    <div class="about-text">
+        <img class="about-subtitle" src="img/about/about_subtitl2.png" alt="">
+
+        <p>
+            グラフィックデザインを中心に、ポスターや広告、パッケージ、ロゴ、<br>
+            イラストなど、さまざまなデザイン表現について幅広く学ぶ専攻です。<br>
+            IllustratorやPhotoshopなどのソフトを使った制作を通して、情報やアイ<br>
+            デアを視覚的に伝えるためのデザイン力を身につけます。
+        </p>
+
+        <!-- 装飾 -->
+    <img class="about-deco4" src="img/about/about_deco4.png" alt="">
+    </div>
+
+    <!-- イラスト -->
+    <img class="about-deco" src="img/about/about_deco2.png" alt="">
+
+</div>
+    <!-- 動画制作 -->
+<div class="about-content">
+
+    <!-- イラスト -->
+    <img class="about-deco" src="img/about/about_deco3.png" alt="">
+
+    <!-- サブタイトル＋文章 -->
+    <div class="about-text">
+        <img class="about-subtitle" src="img/about/about_subtitl3.png" alt="">
+
+        <p>
+            動画制作を中心に、デザインやWebなど幅広い表現を学び、映像を活用<br>
+            したプロモーションの企画・制作に必要な知識と技術を身につけます。<br>
+            企画から撮影、編集、演出までを学び、見る人の心を動かすコンテンツ<br>
+            を生み出す力を育てます。
+        </p>
+
+        <!-- 装飾 -->
+    <img class="about-deco5" src="img/about/about_deco5.png" alt="">
+    </div>
+
+</div>
+</section>
+ 
+<!--担当教師紹介-->
+<section class="teacher" id="teacher">
+
+    <!-- 先生の画像 -->
+    <div class="teacher-window">
+    <div class="teacher-list">
+
+        <div class="teacher-item">
+            <img src="img/teacher/teacher_gionn.png" alt="">
+        </div>
+
+        <div class="teacher-item">
+            <img src="img/teacher/teacher_sugahara.png" alt="">
+        </div>
+
+        <div class="teacher-item">
+            <img src="img/teacher/teacher_okamura.png" alt="">
+        </div>
+
+        <div class="teacher-item">
+            <img src="img/teacher/teacher_kitamura.png" alt="">
+        </div>
+
+    </div>
+</div>
+
+    <!-- ボタン＋タイトル -->
+    <div class="teacher-control">
+
+        <button class="teacher-btn teacher-prev">
+            <img src="img/teacher/teacher_btn1.png" alt="前へ">
+        </button>
+
+        <img
+            class="teacher-title"
+            src="img/teacher/teacher_titl.png"
+            alt="担当教師紹介">
+
+        <button class="teacher-btn teacher-next">
+            <img src="img/teacher/teacher_btn2.png" alt="次へ">
+        </button>
+
+    </div>
+
+</section>
+ 
+<section class="nyusi" id="nyusi">
+<div class="admission">
+
+    <div class="admission_card">
+        <img src="img/admission/admission.png" alt="">
+    </div>
+
+</div>
+</section>
+<section class="genzaichiten" id="genzaichiten">
+<div class="genzaichi">
+    <img class="genzai_main" src="img/genzaichi/genzaichi_design.png" alt="">
+
+    <img class="maru1" src="img/genzaichi/genzaichi_maru1.png" alt="">
+    <img class="maru2" src="img/genzaichi/genzaichi_maru2.png" alt="">
+    <img class="maru3" src="img/genzaichi/genzaichi_maru3.png" alt="">
+    <img class="maru4" src="img/genzaichi/genzaichi_maru4.png" alt="">
+    <img class="maru5" src="img/genzaichi/genzaichi_maru5.png" alt="">
+    <img class="maru6" src="img/genzaichi/genzaichi_maru6.png" alt="">
+    <img class="sikaku" src="img/genzaichi/genzaichi_sikaku.png" alt="">
+    <a href="https://kobedenshi-graphic.net/genzaichiten/">
+        <img class="button" src="img/genzaichi/genzaichi_button.png" alt="">
+    </a>
+</div>
+</section>
+<section class="account" id="account">
+<!-- 上のテロップ -->
+<div class="telop telop-top">
+    <div class="telop-track">
+        <img src="img/icon/sns_telop.png" alt="">
+        <img src="img/icon/sns_telop.png" alt="">
+    </div>
+</div>
+<div class="sns">
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/kobedenshi_graphicdesign?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D" target="_blank">
+        <img src="img/icon/instagram_icon.png" alt="Instagram">
+    </a>
+
+    <!-- X -->
+    <a href="https://x.com/graphicdesignkd" target="_blank">
+        <img src="img/icon/x_icon.png" alt="X">
+    </a>
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/graphicdesign.kd/?locale=ja_JP" target="_blank">
+        <img src="img/icon/facebook_icon.png" alt="Facebook">
+    </a>
+
+    <!-- YouTube -->
+    <a href="https://www.youtube.com/channel/UCXVMwbdycYf3E4g_x-x6ZZw" target="_blank">
+        <img src="img/icon/youtube_icon.png" alt="YouTube">
+    </a>
+
+</div>
+<!-- 下のテロップ -->
+<div class="telop telop-bottom">
+    <div class="telop-track">
+        <img src="img/icon/sns_telop.png" alt="">
+        <img src="img/icon/sns_telop.png" alt="">
+    </div>
+</div>
+</section>
+<!-- フッター -->
+<footer class="footer" id="footer">
+
+    <!-- フッターナビ -->
+    <nav class="footer-nav">
+        <a href="#top">TOP</a>
+        <a href="#event">イベント情報</a>
+        <a href="#feature">神戸電子の魅力</a>
+        <a href="#about">学科紹介</a>
+        <a href="#teacher">主な担当教師</a>
+        <a href="#nyusi">入試ガイド</a>
+        <a href="#genzaichiten">現在地展</a>
+        <a href="#account">SNS</a>
+    </nav>
+
+    <!-- 学校情報 -->
+    <div class="footer-info">
+
+        <img src="img/footer_logo.png" alt="神戸電子専門学校">
+
+        <p>〒650-0002 兵庫県神戸市中央区北野町1-1-8</p>
+
+    </div>
+
+    <!-- コピーライト -->
+    <p class="copyright">
+        © Kobe Institute of Computing - College of Computing
+    </p>
+
+</footer>
 </body>
 </html>

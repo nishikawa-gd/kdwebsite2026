@@ -1,0 +1,963 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #eef1f8;
+    font-family: "Zen Maru Gothic", sans-serif;
+}
+
+/*トップに戻るボタン*/
+
+.page-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 90px;
+    z-index: 9998;
+    transition: 0.3s;
+}
+
+.page-top img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.page-top:hover {
+    transform: translateY(-5px);
+}
+
+/*ロゴ*/
+
+.logo {
+    position: fixed;
+    left: 30px;
+    top: 0;
+    width: 140px;
+    height: auto;
+    z-index: 10001;
+}
+
+/* メインビジュアル */
+.mainvisual {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    margin-top: -30px;
+}
+
+/* 画像共通 */
+.mainvisual img {
+    position: absolute;
+    height: auto;
+    opacity: 0;
+    transform: scale(0.3);
+    transition: 
+        opacity 0.5s ease,
+        transform 0.7s cubic-bezier(0.17, 0.67, 0.35, 1.3);
+}
+
+/* --------------------
+   重なり順
+-------------------- */
+
+.mv8 {
+    z-index: 2;
+    top: 15%;
+    left: 21%;
+}
+
+.mv2 {
+    z-index: 1;
+    top: 7%;
+    left: 10%;
+}
+
+.mv6 {
+    z-index: 3;
+    top: 36%;
+    left: 61%;
+}
+
+.mv3 {
+    z-index: 4;
+   
+    top: 42%;
+    left: 4%;
+}
+
+.mv1 {
+    z-index: 5;
+  
+    top: 7%;
+    left: 13%;
+}
+
+.mv7 {
+    z-index: 6;
+    
+    top: 5%;
+    left: 53%;
+}
+
+.mv4 {
+    z-index: 7;
+   
+    top: 56%;
+    left: 35%;
+}
+
+.mv5 {
+    z-index: 8;
+  
+    top: 65%;
+    left: 58%;
+}
+
+.title {
+    z-index: 10;
+    width: 65%;
+    top: 34%;
+    left: 18%;
+}
+
+.mainvisual img.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/*テロップ*/
+.telop {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 100px;
+}
+
+.telop_inner {
+    display: flex;
+    width: max-content;
+    animation: telop 10s linear infinite;
+}
+
+.telop_inner img {
+    width: 100vw;
+    height: auto;
+    flex-shrink: 0;
+}
+
+@keyframes telop {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100vw);
+    }
+}
+/* メインビジュアル */
+
+/* イベント一覧 */
+
+.event {
+    margin-top: 81px;
+    text-align: center;
+}
+
+.event-wrapper {
+    width: 100%;
+    overflow: hidden;
+    margin: 120px auto 0;
+}
+
+.event-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    width: max-content;
+}
+
+.event-item {
+    flex-shrink: 0;
+}
+
+.event-item img {
+    display: block;
+}
+
+/* 魅力紹介 */
+.feature {
+    width: 100%;
+    text-align: center;
+    padding: 81px 0;
+}
+
+.feature-title {
+    width: 600px;
+    height: auto;
+}
+
+.feature-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 130px;
+}
+
+.feature-item:nth-child(2),
+.feature-item:nth-child(4) {
+    transform: translateY(-80px);
+}
+
+.btn {
+    margin-top: 60px;
+    margin-left: 70%;
+}
+
+/* 魅力紹介 */
+.feature {
+    width: 100%;
+    text-align: center;
+    padding: 81px 0;
+}
+
+.feature-title {
+    width: 600px;
+    height: auto;
+}
+
+.feature-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 130px;
+}
+
+.feature-item:nth-child(2),
+.feature-item:nth-child(4) {
+    transform: translateY(-80px);
+}
+
+.btn {
+    margin-top: 60px;
+    margin-left: 70%;
+}
+ 
+
+/* 学科紹介 */
+.about {
+    width: 100%;
+    text-align: center;
+    padding: 81px 0;
+}
+
+    /* タイトル */
+.about-title {
+    width: 411px;
+    height: auto;
+}
+
+    /* 学科紹介の内容 */
+.about-content {
+    width: fit-content;
+    margin: 120px auto 0;
+
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+    /* 最初のWEBだけ少し近づける */
+.about-title + .about-content {
+    margin-top: 67px;
+}
+
+    /* グラフィック */
+.about-content-reverse {
+    margin-top: 120px;
+}
+
+    /* WEBのタイトル＋文章 */
+.about-text {
+    position: relative;
+}
+
+    /* WEBタイトル */
+.about-subtitle {
+    position: absolute;
+
+    /* 白い箱の上から30px */
+    top: 10px;
+
+    /* 中央配置 */
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: auto;
+    height: auto;
+
+    z-index: 2;
+}
+
+    /* テキスト */
+.about-text p {
+    font-size: 18px;
+    line-height: 2;
+    text-align: left;
+
+    /* テキストの背景 */
+    background: #fff;
+
+    /* 上・左右・下の余白 */
+    padding: 112px 53px 57px;
+
+    /* 角丸 */
+    border-radius: 30px;
+
+    position: relative;
+    z-index: 1;
+}
+
+/* about_deco4の装飾 */
+.about-deco4 {
+    position: absolute;
+    left: -10px;
+    bottom: -25px;
+    width: auto;
+    height: auto;
+    z-index: 3;
+}
+
+/* about_deco5の装飾 */
+.about-deco5 {
+    position: absolute;
+    right: -30px;
+    bottom: -25px;
+    width: auto;
+    height: auto;
+    z-index: 3;
+}
+
+/* 担当教師紹介 */
+.teacher {
+    width: 100%;
+    margin-top: 120px;
+    text-align: center;
+}
+
+
+    /* 先生を表示する窓 */
+
+.teacher-window {
+    width: 1003px;
+    height: 371px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+
+    /* 先生4人の横並び */
+.teacher-list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    width: max-content;
+
+    transition: transform 0.6s ease;
+}
+
+
+    /* 先生1人分 */
+
+.teacher-item {
+    width: 286px;
+    height: 371px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+    /* 先生画像 */
+.teacher-item img {
+    width: 286px;
+    height: auto;
+
+    display: block;
+}
+
+
+    /* 真ん中に来る先生大きく表示 */
+.teacher-item.is-center {
+    width: 371px;
+}
+
+
+.teacher-item.is-center img {
+    width: 371px;
+}
+
+
+    /* ボタン＋タイトル */
+.teacher-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 50px;
+
+    margin-top: 50px;
+}
+
+
+    /* ボタン */
+.teacher-btn {
+    border: none;
+    background: none;
+    padding: 0;
+
+    cursor: pointer;
+}
+
+
+.teacher-btn img {
+    width: auto;
+    height: auto;
+
+    display: block;
+}
+
+
+    /* タイトル */
+
+.teacher-title {
+    width: auto;
+    height: auto;
+}
+
+    /* 担当教師紹介：ボタン */
+.teacher-btn {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+
+    transition: transform 0.2s ease;
+}
+
+    /* ホバー */
+.teacher-btn:hover {
+    transform: translateY(-4px) scale(1.05);
+}
+
+    /* クリック */
+.teacher-btn:active {
+    transform: translateY(2px) scale(0.9);
+}
+
+
+
+/* 入試ガイド */
+
+.admission {
+    padding-top: 70px;
+    padding-left: 400px;
+}
+
+.admission_card {
+    position: relative;
+    width: 60%;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.admission_card img {
+    width: 100%;
+    display: block;
+}
+
+/* キラン✨ */
+.admission_card::after {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 60%;
+    height: 100%;
+
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.8),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+
+    animation: kirakira 3s infinite;
+}
+
+@keyframes kirakira {
+
+    0% {
+        left: -100%;
+    }
+
+    30% {
+        left: 150%;
+    }
+
+    100% {
+        left: 150%;
+    }
+
+}
+
+/* 入試ガイド */
+
+
+/*現在地展*/
+.genzaichi {
+    position: relative;
+}
+
+.genzai_main {
+    width: 60%;
+    padding: 100px 0 0 280px;
+}
+
+.genzaichi img {
+    position: relative;
+}
+/*現在地展ロゴ画像*/
+.genzaichi .maru1 {
+    width: 15%;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+}
+
+.genzaichi .maru2 {
+    position: absolute;
+    top: 100px;
+    left: 1100px;
+}
+.genzaichi .maru3 {
+    position: absolute;
+    top: 600px;
+    left: 200px;
+}
+.genzaichi .maru4 {
+    width: 13%;
+    position: absolute;
+    top: 450px;
+    left: 940px;
+}
+.genzaichi .maru5 {
+    width: 15%;
+    position: absolute;
+    top: 800px;
+    left: 60px;
+}
+.genzaichi .maru6 {
+    width: 23%;
+    position: absolute;
+    top: 600px;
+    left: 1100px;
+}
+.genzaichi .sikaku {
+    width: 15%;
+    position: absolute;
+    top: 1200px;
+    left: 270px;
+}
+/* ふわふわ浮くアニメーション */
+.genzaichi .maru1,
+.genzaichi .maru2,
+.genzaichi .maru3,
+.genzaichi .maru4,
+.genzaichi .maru5,
+.genzaichi .maru6,
+.genzaichi .sikaku {
+
+    animation: fuwafuwa 4s ease-in-out infinite;
+}
+
+
+/* 上下にふわふわ */
+@keyframes fuwafuwa {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* それぞれ開始タイミングをずらす */
+.genzaichi .maru1 {
+    animation-delay: 0s;
+}
+
+.genzaichi .maru2 {
+    animation-delay: 1s;
+}
+
+.genzaichi .maru3 {
+    animation-delay: 2s;
+}
+
+.genzaichi .maru4 {
+    animation-delay: 0.5s;
+}
+
+.genzaichi .maru5 {
+    animation-delay: 1.5s;
+}
+
+.genzaichi .maru6 {
+    animation-delay: 2.5s;
+}
+
+.genzaichi .sikaku {
+    animation-delay: 3s;
+}
+@keyframes fuwafuwa {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(3deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+}
+/*ボタンホバー*/
+.genzaichi .button {
+    position: absolute;
+    top: 1160px;
+    left: 960px;
+    transition: 0.3s;
+}
+
+.genzaichi .button:hover {
+    filter: brightness(1.3) saturate(0.8);
+}
+
+.genzaichi .button:active {
+   filter: brightness(1.5) saturate(0.6);
+}
+/*現在地展*/
+
+/*SNS*/
+
+.sns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    padding-top: 100px;
+}
+
+.sns img {
+    width: 100px;
+    transition: 0.2s;
+}
+
+.sns a:hover img {
+    transform: scale(1.08);
+    opacity: 0.7;
+}
+
+/*テロップアニメーション*/
+
+.telop {
+    width: 100%;
+    overflow: hidden;
+}
+
+.telop-track {
+    display: flex;
+    width: max-content;
+    animation: telop-move 15s linear infinite;
+}
+
+.telop-track img {
+    display: block;
+    width: 100vw;
+    flex-shrink: 0;
+}
+
+@keyframes telop-move {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100vw);
+    }
+}
+
+/*テロップ上*/
+
+.telop-top .telop-track {
+    animation: telop-left 15s linear infinite;
+}
+
+@keyframes telop-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100vw);
+    }
+}
+
+/*テロップ下*/
+
+.telop-bottom .telop-track {
+    animation: telop-right 15s linear infinite;
+}
+
+@keyframes telop-right {
+    from {
+        transform: translateX(-100vw);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+/* =========================
+   MENUボタン
+========================= */
+
+.menu-btn {
+    position: fixed;
+
+    top: 20px;
+    right: 20px;
+
+    width: 90px;
+    height: 90px;
+
+    padding: 0;
+    margin: 0;
+
+    border: none;
+    background: none;
+
+    cursor: pointer;
+
+    z-index: 9999;
+}
+
+.menu-btn img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    opacity: 1;
+    transform: none;
+}
+
+
+/* =========================
+   メニュー画面
+========================= */
+
+.menu {
+    position: fixed;
+
+    top: 0;
+    right: 0;
+    left: auto;
+
+    width: 90%;
+    height: 100vh;
+
+    background-image: url("../img/menu:haikei.png");
+    background-size: 40% 84%;
+    background-position: top right;
+    background-repeat: no-repeat;
+
+    z-index: 10000;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.4s ease;
+}
+
+
+/* =========================
+   メニューを開いた状態
+========================= */
+
+.menu.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =========================
+   閉じるボタン
+========================= */
+
+.menu-close {
+    position: absolute;
+
+    top: 40px;
+    right: 50px;
+
+    width: 50px;
+    height: 50px;
+
+    padding: 0;
+    margin: 0;
+
+    border: none;
+    background: none;
+
+    cursor: pointer;
+
+    /* メニュー画面よりさらに前 */
+    z-index: 10001;
+}
+
+.menu-close img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+}
+
+
+/* =========================
+   メニュー文字
+========================= */
+
+.menu-nav {
+    width: 280px;
+
+    margin-left: auto;
+    margin-right: 120px;
+
+    padding-top: 60px;
+}
+
+
+.menu-nav a {
+    display: block;
+    padding: 16px 0;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.menu-nav a:hover {
+    color: #f45b9d;
+}
+
+
+/* =========================
+   点線
+========================= */
+
+.menu-nav a::after {
+    content: "";
+
+    display: block;
+
+    width: 240px;
+
+    margin: 10px auto 0;
+
+    border-bottom: 2px dotted #f45b9d;
+}
+/* フッター */
+.footer {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 45px 8% 25px;
+    background-color: #4c4b65;
+    color: white;
+}
+
+/* ナビゲーション */
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+.footer-nav a:hover {
+    opacity: 0.6;
+}
+
+/* 学校情報 */
+
+.footer-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 950px;
+    margin: 0 auto 40px;
+}
+
+.footer-info img {
+    width: 220px;
+    height: auto;
+}
+
+.footer-info p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* コピーライト */
+.copyright {
+    margin: 0;
+    text-align: center;
+    font-size: 13px;
+}
