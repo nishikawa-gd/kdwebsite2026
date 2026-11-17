@@ -1,0 +1,388 @@
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+
+    /* 文字部分一旦非表示 */
+    header ul {
+        display: none;
+    }
+
+    header {
+        padding: 8px 0px;
+    }
+
+
+
+    /* ハンバーガーメニュー */
+    .hmnls-inner {
+        display: grid;
+        gap: 40px;
+    }
+
+    .hmnls-inner::before {
+        top: 60px;
+        right: -140px;
+        max-width: 110px;
+        height: 380px;
+    }
+
+    .hmnls-inner::after {
+        top: 400px;
+        left: -160px;
+        max-width: 180px;
+        height: 180px;
+    }
+
+    #up_btn {
+        right: 30px;
+        bottom: 20px;
+    }
+
+
+    /* メインビジュアル */
+    #main-visual .inner {
+        padding: 0px 50px;
+    }
+
+    .m-catchcopy {
+        font-size: 34px;
+    }
+
+    #m-content {
+        width: 100%;
+    }
+
+    #m-content .inner {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    #m-content h1 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    #m-content p {
+        grid-column: 1;
+        grid-row: 3;
+        font-size: 18px;
+    }
+
+    #m-content .m-btns {
+        grid-column: 1;
+        grid-row: 4;
+        width: 100%;
+        height: auto;
+        gap: 16px;
+    }
+
+    #m-content .m-btns a {
+        width: 100%;
+    }
+
+
+    /* 学科全体/概要 - コンテンツ */
+
+    #allcourse-description .inner {
+        padding: 100px 50px;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #allcourse-description span {
+        font-size: 16px;
+    }
+
+    .ad-text {
+        margin: 0 0px;
+    }
+
+    .ad-pic {
+        gap: 0;
+    }
+
+    .ad-pic-girl01 {
+        max-width: 440px;
+        transform: translate(-50px, 200px);
+    }
+
+    .ad-pic-girl02 {
+        max-width: 460px;
+        transform: translate(-50px, -50px);
+    }
+
+    .ad-pic-boy01 {
+        max-width: 260px;
+        transform: translate(50px, 150px);
+    }
+
+    .ad-pic-boy{
+        display: none;
+    }
+
+    /* 学科全体/ポイント - コンテンツ */
+
+    #allcourse-point .inner {
+        gap: 200px;
+    }
+
+    .ap-textimg {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 40px;
+    }
+
+
+    .ap-textimg img {
+        grid-row: 1;
+        justify-self: center;
+        max-width: 400px;
+        height: 345px;
+        object-fit: contain;
+    }
+
+    .ap-textimg span {
+        font-size: 16px;
+    }
+
+    .ap-text {
+        grid-row: 2;
+    }
+
+
+    /* 目指せる職種紹介 - コンテンツ */
+    #careers-description .inner {
+        padding: 100px 50px
+    }
+
+
+    /* 3つの選べるコース紹介 - コンテンツ */
+    #subcourse-description .inner {
+        padding: 100px 50px;
+    }
+
+    .sd-main span {
+        font-size: 16px;
+    }
+
+    /* グラフィック、web、動画のところ */
+    .sd-item {
+        padding: 100px 70px;
+    }
+
+    .sd-inner {
+        padding: 50px 50px;
+    }
+
+    .sd-cinfo span,
+    .sd-ainfo span {
+        font-size: 16px;
+    }
+
+    .sd-ainfo-subtexts {
+        display: grid;
+        gap: 10px;
+    }
+
+    .sd-ainfo-subtext {
+        display: block;
+    }
+
+    .sd-ainfo-subtext-title::after {
+        content: "";
+    }
+
+    /* 小物 */
+    #sd-gd .sd-deco-wrap::before,
+    #sd-web .sd-deco-wrap::before,
+    #sd-mov .sd-deco-wrap::before {
+        top: -100px;
+        left: -110px;
+    }
+
+    #sd-gd .sd-deco-wrap::after,
+    #sd-web .sd-deco-wrap::after,
+    #sd-mov .sd-deco-wrap::after {
+        right: -110px;
+    }
+
+
+
+    /* 一日のスケジュール */
+    #daily-schedule .inner {
+        padding: 100px 50px;
+    }
+
+    .ds-texts {
+        padding: 30px;
+        background-color: var(--color-gray);
+    }
+
+    .ds-texts-wrapper::before {
+        display: none;
+    }
+
+    .ds-texts li span {
+        font-size: 16px;
+    }
+
+
+
+
+    /* 教職員図鑑 */
+    #teachers-description .inner {
+        margin: 100px 50px;
+        padding: 50px 50px;
+    }
+
+    .td-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        row-gap: 40px;
+    }
+
+    .td-cardinfo {
+        grid-column: 1;
+        grid-row: 1;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        row-gap: 24px;
+    }
+
+    .td-item03 {
+        grid-column: 1;
+        grid-row: 1;
+        margin-bottom: 40px;
+    }
+
+    .td-item02 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .td-item04 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+
+
+    /* 教職員図鑑 - ボタン */
+    .td-btns {
+        justify-content: center;
+    }
+
+
+    /* 教職員図鑑 - カード/内容 */
+    .td-cardpic {
+        justify-self: center;
+    }
+
+    .td-cardtitle {
+        text-align: center;
+    }
+
+    .td-cardtext p {
+        color: #fff;
+        font-weight: 400;
+        writing-mode: horizontal-tb;
+    }
+
+    .td-cardtext {
+        display: grid;
+        background-color: #222222;
+        width: fit-content;
+        justify-self: center;
+        padding: 4px 20px;
+    }
+
+    .td-text01 {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: end;
+    }
+
+    .td-text02 {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: start;
+        margin-top: 0px;
+    }
+
+
+
+
+    /* 先輩たちの声 */
+    #student-voices .inner {
+        padding: 100px 50px 130px 50px;
+    }
+
+    #student-voices h2 {
+        margin-bottom: 60px;
+    }
+
+    .sv-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        justify-self: initial;
+        gap: 40px;
+    }
+
+    #sv-gd-TD_wrapper {
+        justify-self: end;
+    }
+
+    #sv-web-KH_wrapper {
+        transform: rotate(10deg) translate(20px, -28px);
+    }
+
+    #sv-web-MH_wrapper {
+        transform: rotate(-8deg) translate(0, -50px);
+        justify-self: end;
+    }
+
+    #sv-mov-OH_wrapper {
+        transform: rotate(-4deg) translate(0px, -60px);
+    }
+
+    #sv-mov-KK_wrapper {
+        transform: rotate(8deg) translate(0, -50px);
+        justify-self: end;
+    }
+
+
+
+    /* オープンキャンパス */
+    #open-campus {
+        padding: 100px 50px;
+    }
+
+    #open-campus::before {
+        display: none;
+    }
+
+    #open-campus::after {
+        bottom: -150px;
+        right: -100px;
+    }
+
+    #open-campus span {
+        font-size: 16px;
+    }
+
+
+    /* フッター */
+    footer .inner {
+        padding: 50px 50px;
+    }
+
+    #f-content .inner {
+        display: grid;
+    }
+
+
+
+
+}

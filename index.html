@@ -1,11 +1,1163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" href="./img/siteicon.svg" type="image/svg" alt="アイコン">
+    <title>神戸電子専門学校グラフィックデザイン学科｜公式ポータルサイト</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:wght@700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/sp.css">
+    <link rel="stylesheet" href="./css/tb.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal" defer></script>
+    <script src="./js/script.js" defer></script>
 </head>
+
 <body>
-    <p>testtestaaa</p>
+
+    <div class="loading">
+        <div class="l-pic"><img src="img/sp/sp_logo_black.svg" alt="ローディング画像"></div>
+        <p class="l-text">now loading<span></span></p>
+    </div>
+
+    <div class="wrapper">
+        <!-- ハンバーガー/中身 -->
+        <section id="hamburger-menu-info">
+            <div class="inner">
+                <div id="hm-marquee-top" class="cmp-marquee hm-marquee">
+                    <div id="hm-marquee-track" class="cmp-marquee-track">
+                        <p>GRAPHIC DESIGN</p>
+                    </div>
+                </div>
+
+
+                <div class="hm-nav-logo-sns">
+                    <div class="hmnls-inner">
+                        <div class="hm-logo-sns">
+                            <div class="hm-logo">
+                                <a href="#"><img src="./img/logo_black.svg" alt="ロゴ"></a>
+                            </div>
+                            <ul class="hm-sns">
+                                <li class="hms-instagram">
+                                    <a href="https://www.instagram.com/kobedenshi_graphicdesign/" target="_blank"
+                                        rel="noopener noreferrer"><span></span></a>
+                                </li>
+                                <li class="hms-x">
+                                    <a href="https://x.com/graphicdesignkd" target="_blank"
+                                        rel="noopener noreferrer"><span></span></a>
+                                </li>
+                                <li class="hms-facebook">
+                                    <a href="https://www.facebook.com/graphicdesign.kd/?locale=ja_JP" target="_blank"
+                                        rel="noopener noreferrer"><span></span></a>
+                                </li>
+                                <li class="hms-youtube">
+                                    <a href="https://www.youtube.com/channel/UCXVMwbdycYf3E4g_x-x6ZZw" target="_blank"
+                                        rel="noopener noreferrer"><span></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <nav>
+                            <ul id="hm-nav-left" class="hm-nav-item">
+                                <li>
+                                    <a href="https://kobedenshi-graphic.net/genzaichiten/" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <p>現在地展公式Webサイト</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/kobedenshi_graphicdesign/" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <p>公式Instagram</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#allcourse-description">
+                                        <p>学科全体の紹介</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#careers-description">
+                                        <p>目指せる職種紹介</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#subcourse-description">
+                                        <p>3つの選べるコース紹介</p>
+                                    </a>
+                                </li>
+                                <li class="hmn-subtext hmn-margintop">
+                                    <a href="#sd-gd">
+                                        <span>グラフィックデザイン</span>
+                                    </a>
+                                </li>
+                                <li class="hmn-subtext">
+                                    <a href="#sd-web">
+                                        <span>Web</span>
+                                    </a>
+                                </li>
+                                <li class="hmn-subtext">
+                                    <a href="#sd-mov">
+                                        <span>動画プロモーション</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul id="hm-nav-right" class="hm-nav-item">
+                                <li>
+                                    <a href="#daily-schedule">
+                                        <p>1日のスケジュール</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#student-voices">
+                                        <p>先輩たちの声</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#teachers-description">
+                                        <p>教職員図鑑</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#open-campus">
+                                        <p>オープンキャンパス</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#latest-news">
+                                        <p>最新情報</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div id="hm-marquee-bottom" class="cmp-marquee hm-marquee">
+                    <div id="hm-marquee-track" class="cmp-marquee-track">
+                        <p>GRAPHIC DESIGN</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!-- メインビジュアル -->
+        <section id="main-visual">
+            <header id="m-header" class="header">
+                <div class="inner">
+                    <nav>
+                        <div class="h-logo">
+                            <a href="#main-visual">
+                                <!-- index.html追加部分:1.headerのロゴのimg pictureタグ追加(33行目) -->
+                                <picture>
+                                    <source media="(max-width: 767px)" srcset="./img/sp/sp_logo_white.svg" alt="sp_ロゴ">
+                                    <img src="./img/logo_white.svg" alt="ロゴ">
+                                </picture>
+                            </a>
+                        </div>
+
+                        <button id="mv-openbtn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+
+                        <!-- <ul>
+                            <li class="h-nav-textitem">
+                                <a href="#allcourse-description">
+                                    <p>学科全体の紹介</p>
+                                </a>
+                            </li>
+
+                            <li class="h-nav-textitem">
+                                <a href="#mejiro-date">
+                                    <p>数字で見る神戸電子</p>
+                                </a>
+                            </li>
+
+                            <li class="h-nav-textitem">
+                                <a href="#careers-description">
+                                    <p>目指せる職種紹介</p>
+                                </a>
+                            </li>
+
+                            <li class="h-nav-textitem">
+                                <a href="#subcourse-description">
+                                    <p>3つの選べるコース紹介</p>
+                                </a>
+                            </li>
+
+                            <li class="h-nav-textitem">
+                                <a href="#daily-schedule">
+                                    <p>1日のスケジュール</p>
+                                </a>
+                            </li>
+
+                            <li class="h-nav-textitem">
+                                <a href="#student-voices">
+                                    <p>先輩たちの声</p>
+                                </a>
+                            </li>
+
+                            <li class="h-nav-textitem">
+                                <a href="#teachers-description">
+                                    <p>教職員図鑑</p>
+                                </a>
+                            </li>
+                        </ul> -->
+                    </nav>
+                </div>
+                
+                <div id="up_btn" class="up_btn">
+                    <p>↑</p>
+                </div>
+            </header>
+
+
+            <div id="m-content">
+                <div class="inner">
+                    <h1>
+                        <span id="m-catchcopy-up" class="m-catchcopy">好きを全部、</span>
+                        <span id="m-catchcopy-down" class="m-catchcopy">カタチにしよう。</span>
+                    </h1>
+
+                    <p class="m-catchcopy">#神戸電子専門学校　グラフィックデザイン学科</p>
+
+                    <!-- html追加部分::1.mvのbtnのpictureタグ追加(101行目) -->
+                    <div class="m-btns">
+                        <a href="https://kobedenshi-graphic.net/genzaichiten/" target="_blank" rel="noopener noreferrer"
+                            class="m-btn-item" id="m-btn-genzaititen">
+                            <picture>
+                                <!-- スマホ用 -->
+                                <source media="(max-width: 1023px)" srcset="./img/sp/sp_btn_genzaititen.png"
+                                    alt="現在地展公式webサイト_sp">
+                                <!-- PC用（768px以上） -->
+                                <img src="./img/mainvisual/m_genzaititen.png" alt="現在地展公式webサイト">
+                            </picture>
+                        </a>
+                        <a href="https://www.instagram.com/kobedenshi_graphicdesign/" target="_blank"
+                            rel="noopener noreferrer" class="m-btn-item" id="m-btn-instagram">
+                            <picture>
+                                <!-- スマホ用 -->
+                                <source media="(max-width: 1023px)" srcset="./img/sp/sp_btn_instagram.png"
+                                    alt="グラフィックデザイン学科公式Instagram_sp">
+                                <!-- PC用（768px以上） -->
+                                <img src="./img/mainvisual/m_instagram.png" alt="グラフィックデザイン学科公式Instagram">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="m-visual">
+                <div id="m-visual-track">
+                    <img src="./img/mainvisual/mainvisual.png" alt="">
+                </div>
+            </div>
+
+
+            <div id="m-marquee" class="cmp-marquee">
+                <div id="m-marquee-track" class="cmp-marquee-track">
+                    <p>GRAPHIC DESIGN</p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- 学科全体の紹介/概要 -->
+        <section id="allcourse-description">
+            <div class="inner">
+                <div class="ad-pic">
+                    <img class="ad-pic-girl01" src="./img/allcourse/ad_pic01.png" alt="キャラクターの画像">
+                    <img class="ad-pic-girl02" src="./img/allcourse/ad_pic02.png" alt="キャラクターの画像">
+                </div>
+
+                <div class="ad-text">
+                    <p>「デザインが好き」</p>
+                    <p>「Webや動画にも興味がある！」 </p>
+                    <span>その好奇心、神戸電子なら全部叶えられます。</span>
+                    <span>神戸電子のグラフィックデザイン学科は、<br>未経験からでも安心してスタートできる場所。 </span>
+                    <span>最新のMacとプロと同じツールを使って、</span>
+                    <span>ゼロから表現する楽しさを学べます。</span>
+                </div>
+                <!-- 追加:ここ、spのcssで順番変えるのでad-pic-boyのクラスを追加しています -->
+                <div class="ad-pic ad-pic-boy">
+                    <img class="ad-pic-boy01" src="./img/allcourse/ad_pic03.png" alt="キャラクターの画像">
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- 学科全体の紹介/ポイント -->
+        <section id="allcourse-point">
+            <div class="inner">
+                <div id="ap-01" class="ap-item">
+                    <div class="ap-title">
+                        <p>グラフィックだけじゃない！</p>
+                        <p>1年目から「Web・動画」もぜんぶ学べる</p>
+                    </div>
+
+                    <div class="ap-textimg">
+                        <div class="ap-text">
+                            <span>「デザイン」といっても紙だけではありません。</span>
+                            <span>神戸電子では、1年目のスタートから<br>【グラフィックデザイン × Webデザイン ×動画制作】の3分野を同時に幅広く学習！</span>
+                            <span>ポスターやパッケージなどの紙媒体はもちろん、<br>みんなが普段見ているスマホサイトやSNSの動画制作まで網羅できるから<br>あなたの「できること」と「将来の選択肢」がぐーんと広がります！</span>
+                            <!-- ここ、文章が長いと思ったので最後の一文を消しています -->
+                            <!-- <span>デザインの基礎から応用まで、さまざまな表現に触れ「伝える力」を身につけます。</span> -->
+                        </div>
+                        <img src="./img/allcourse/ap_pic01.png" alt="ポイントの画像">
+                    </div>
+                </div>
+
+                <div id="ap-02" class="ap-item">
+                    <div class="ap-title">
+                        <p> 街がキャンパス！</P>
+                        <p>「神戸の企業」とコラボしてプロの現場を体感</p>
+                    </div>
+
+                    <div class="ap-textimg">
+                        <img src="./img/allcourse/ap_pic02.png" alt="ポイントの画像">
+                        <div class="ap-text">
+                            <span>授業は教室の中だけじゃ終わらない！</span>
+                            <span>神戸電子がある大好きな街・神戸の地元企業や団体と<br>タッグを組んだ「企業連携課題」が充実。</span>
+                            <span>実際の店舗のパッケージ、洋菓子の販促企画、<br>神戸の魅力を伝えるWebサイトなど、本物の仕事をプロの指導のもとで制作します。</span>
+                            <span>自分が作ったデザインが実際の街や商品として届く感動は、<br>ここでしか味わえない最高の体験です！</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- 数字で見る神戸電子 -->
+        <section id="mejiro-date">
+            <div class="inner">
+                <h2>
+                    <small>kOBEDENSHI DATE</small>
+                    数字で見る神戸電子
+                </h2>
+
+
+                <div class="md-slider">
+                    <div class="md-btns">
+                        <button id="mdb-back">
+                            <img src="./img/arrow_black.svg" alt="戻るボタン">
+                        </button>
+
+                        <button id="mdb-next">
+                            <img src="./img/arrow_black.svg" alt="進むボタン">
+                        </button>
+                    </div>
+
+
+                    <div class="md-slides">
+                        <div id="mds-item01" class="mds-item is-active">
+                            <img src="./img/mejirodate/md_pic01.png" alt="就職率の画像">
+                        </div>
+
+                        <div id="mds-item02" class="mds-item">
+                            <img src="./img/mejirodate/md_pic02.png" alt="学校の歴史の画像">
+                        </div>
+
+                        <div id="mds-item03" class="mds-item">
+                            <img src="./img/mejirodate/md_pic03.png" alt="グローバルの画像">
+                        </div>
+
+                        <div id="mds-item04" class="mds-item">
+                            <img src="./img/mejirodate/md_pic04.png" alt="生活環境の画像">
+                        </div>
+
+                        <div id="mds-item05" class="mds-item">
+                            <img src="./img/mejirodate/md_pic05.png" alt="男女比の画像">
+                        </div>
+
+                        <div id="mds-item06" class="mds-item">
+                            <img src="./img/mejirodate/md_pic06.png" alt="都市型キャンパスの画像">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="md-text">
+                    <div id="mdt-item01" class="mdt-item is-active">
+                        <span>高水準の就職実績を基盤に、<br>一人あたり20.6件の求人と650社以上の業界連携でサポート。<br>個々の夢や目標に寄り添い、<br>希望する業界への確実な就職活動を実現します。</span>
+                    </div>
+
+                    <div id="mdt-item02" class="mdt-item">
+                        <span>1958年創立、<br>兵庫県第1号の認可校として日本のIT・ものづくり教育を先駆けて牽引。<br>時代を切り拓いてきた60年以上の歴史と確かな実績で、<br>次世代のクリエイターを育みます。</span>
+                    </div>
+
+                    <div id="mdt-item03" class="mdt-item">
+                        <span>留学生が16％在籍し、<br>多様な感性が交差するグローバルなキャンパス。<br>国籍を超えた仲間と共に学び、<br>表現の幅と国際的な視点を広げます。</span>
+                    </div>
+
+                    <div id="mdt-item04" class="mdt-item">
+                        <span>女子学生が65％を占め、<br>誰もが自分らしく作品づくりに没頭できる環境。<br>和気あいあいとした雰囲気の中で、<br>互いの感性を高め合い成長できます。</span>
+                    </div>
+
+                    <div id="mdt-item05" class="mdt-item">
+                        <span>約3割の学生が一人暮らしで、<br>全国から夢を持った仲間が集まる学び場。<br>直営寮や生活サポートも充実し、<br>初めての自立生活でも安心して通えます。</span>
+                    </div>
+
+                    <div id="mdt-item06" class="mdt-item">
+                        <span>各線三宮・新神戸駅から徒歩10分の好立地に13棟の校舎が<br>立ち並ぶ都市型キャンパス。</span>
+                    </div>
+                </div>
+
+
+                <div class="md-pagination">
+                    <button class="mdp-item is-active"></button>
+                    <button class="mdp-item"></button>
+                    <button class="mdp-item"></button>
+                    <button class="mdp-item"></button>
+                    <button class="mdp-item"></button>
+                    <button class="mdp-item"></button>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- 目指せる職種紹介 -->
+        <section id="careers-description">
+            <div class="inner">
+                <h2>
+                    <small>CAREERS</small>
+                    目指せる職種紹介
+                </h2>
+
+                <div class="cd-grid">
+                    <div class="cd-item">
+                        <div class="cd-pic">
+                            <img src="./img/careers/c_pic_graphicdesigner.png" alt="職種の画像">
+                        </div>
+                        <div class="cd-text">
+                            <p>グラフィックデザイナー</p>
+                            <span>ポスター、本の表紙、お菓子のパッケージ、ロゴマークなど、身の回りにあるあらゆる「目に見えるデザイン」を作る仕事！</span>
+                        </div>
+                    </div>
+
+                    <div class="cd-item">
+                        <div class="cd-pic">
+                            <img src="./img/careers/c_pic_dtpoperator.png" alt="職種の画像">
+                        </div>
+                        <div class="cd-text">
+                            <p>DTPオペレーター</p>
+                            <span>デザイナーが作った案を、実際に印刷できるデータへと正確に仕上げる印刷・レイアウトのスペシャリスト！</span>
+                        </div>
+                    </div>
+
+                    <div class="cd-item">
+                        <div class="cd-pic">
+                            <img src="./img/careers/c_pic_Illustrator.png" alt="職種の画像">
+                        </div>
+                        <div class="cd-text">
+                            <p>商業イラストレーター</p>
+                            <span>広告、雑誌、Webサイト、商品のパッケージなどに使われる「目的のあるイラスト」を描いてプロモーションを支える仕事！</span>
+                        </div>
+                    </div>
+
+                    <div class="cd-item">
+                        <div class="cd-pic">
+                            <img src="./img/careers/c_pic_webdesigner.png" alt="職種の画像">
+                        </div>
+                        <div class="cd-text">
+                            <p>Web/UI/UXデザイナー</p>
+                            <span>スマホやPCで見かけるWebサイトの「見た目」をおしゃれに、そして読みやすくレイアウト・デザインする仕事！</span>
+                        </div>
+                    </div>
+
+                    <div class="cd-item">
+                        <div class="cd-pic">
+                            <img src="./img/careers/c_pic_webcoder.png" alt="職種の画像">
+                        </div>
+                        <div class="cd-text">
+                            <p>Webコーダー</p>
+                            <span>Webデザイナーが作ったデザインを、プログラミング言語（コード）を使って実際にブラウザで動くサイトに組み立てる仕事！</span>
+                        </div>
+                    </div>
+
+                    <div class="cd-item">
+                        <div class="cd-pic">
+                            <img src="./img/careers/c_pic_webdirector.png" alt="職種の画像">
+                        </div>
+                        <div class="cd-text">
+                            <p>Webディレクター</p>
+                            <span>みんなが作ったものをまとめたり、デザイナーやコーダーに指示を出しながらプロジェクトの方向性を決めていく仕事！</span>
+                        </div>
+                    </div>
+
+                    <div class="cd-item">
+                        <div class="cd-pic">
+                            <img src="./img/careers/c_pic_movdirector.png" alt="職種の画像">
+                        </div>
+                        <div class="cd-text">
+                            <p>映像ディレクター</p>
+                            <span>動画制作の現場監督！どんな映像にするかアイデアを出し、撮影や編集のスタッフに指示を出して作品を完成に導く仕事。</span>
+                        </div>
+                    </div>
+
+                    <div class="cd-item">
+                        <div class="cd-pic">
+                            <img src="./img/careers/c_pic_movengineer.png" alt="職種の画像">
+                        </div>
+                        <div class="cd-text">
+                            <p>映像編集エンジニア</p>
+                            <span>撮影された映像素材をカットしたり、テロップ（文字）や効果音、CGエフェクトを加えて一つの見応えある映像に仕上げるプロ！</span>
+                        </div>
+                    </div>
+
+                    <div class="cd-item">
+                        <div class="cd-pic">
+                            <img src="./img/careers/c_pic_movcreator.png" alt="職種の画像">
+                        </div>
+                        <div class="cd-text">
+                            <p>動画・映像クリエイター</p>
+                            <span>CM、YouTube動画、プロモーション映像など、映像表現全般の企画から撮影・編集までマルチにこなすクリエイター！</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- 3つの選べるコース紹介 -->
+        <section id="subcourse-description">
+            <div class="inner">
+                <!-- html追加部分::2.3つの選べるコース紹介のh2にspan追加 -->
+                <h2>
+                    <small>COURSE</small>
+                    <span class="sd-h2title">3つの選べる<span>コース紹介</span></span>
+                </h2>
+
+                <!-- html追加部分::3.3つの選べるコース紹介　mvのpictureタグ追加(325行目) -->
+                <div class="sd-main">
+                    <div class="sd-pic">
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="./img/sp/sp_sc_mainpic.png" alt="3つのコースの画像_sp">
+                            <img src="./img/subcourse/sc_mainpic.png" alt="3つのコースの画像">
+                        </picture>
+                    </div>
+                    <span>1年の前期で「グラフィック・Web・動画」の3つを幅広く体験したあと、<br>1年の後期からは自分の「好き」や「やりたいこと」に合わせて専門コースを選択！<br>基礎を身につけた上で進むから、「自分に何が向いているか分からない…」という人でも大丈夫。<br>それぞれのプロを目指して、より深い実践的なスキルを磨いていきます。</span>
+                </div>
+            </div>
+
+            <div class="sd-contents">
+                <div id="sd-marquee01" class="sd-marquee cmp-marquee">
+                    <div class="sd-marquee-track cmp-marquee-track">
+                        <p>GRAPHIC DESIGN</p>
+                    </div>
+                </div>
+                <div id="sd-marquee02" class="sd-marquee cmp-marquee">
+                    <div class="sd-marquee-track cmp-marquee-track">
+                        <p>GRAPHIC DESIGN</p>
+                    </div>
+                </div>
+
+                <div id="sd-gd" class="sd-item">
+                    <div class="sd-inner">
+                        <div class="sd-pic"><img src="./img/subcourse/sc_gd_pic.png" alt="グラフィックデザインの画像"></div>
+
+                        <div class="sd-deco-wrap">
+                            <div id="sdg-courseinfo" class="sd-cinfo">
+                                <p>グラフィックデザインコース</p>
+                                <span>ポスター、パッケージ、ロゴ、書籍…人の心を動かす「視覚デザイン」のプロへ！<br>パッケージデザインや広告、タイポグラフィ（文字デザイン）など、グラフィック表現を極めるコース。<br>人の目にとまる配色やレイアウトの思考法をしっかり学び、手に取った人がワクワクするようなデザインを生み出します。</span>
+                            </div>
+                            <div id="sdg-assignmentinfo" class="sd-ainfo">
+                                <p>こんな授業・課題をやります！</p>
+                                <div class="sd-ainfo-subtexts">
+                                    <div class="sd-ainfo-subtext">
+                                        <span class="sd-ainfo-subtext-title">パッケージ＆販促企画</span>
+                                        <span>洋菓子やテイクアウト専門店のパッケージ・ポスター・POPなどの総合デザイン</span>
+                                    </div>
+                                    <div class="sd-ainfo-subtext">
+                                        <span class="sd-ainfo-subtext-title">タイポグラフィ＆エディトリアル</span>
+                                        <span>雑誌のレイアウトやロゴデザインの制作</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="sd-web" class="sd-item">
+                    <div class="sd-inner">
+                        <div class="sd-pic"><img src="./img/subcourse/sc_web_pic.png" alt="webの画像"></div>
+
+                        <div class="sd-deco-wrap">
+                            <div id="sdg-courseinfo" class="sd-cinfo">
+                                <p>Webコース</p>
+                                <span>スマホサイト、Web広告、アプリUI…
+                                    時代が求める「デジタル表現」のプロへ！<br>見やすいWebサイトのデザインだけでなく、実際に画面上で動かすためのコード（HTML/CSS/JavaScript）や、<br>使いやすさを追求する「UI/UXデザイン」を学ぶコース。スマホ時代に引っ張りだこなWebデザイナーを目指します。</span>
+                            </div>
+                            <div id="sdw-assignmentinfo" class="sd-ainfo">
+                                <p>こんな授業・課題をやります！</p>
+                                <div class="sd-ainfo-subtexts">
+                                    <div class="sd-ainfo-subtext">
+                                        <span class="sd-ainfo-subtext-title">Webサイト制作・コーディング</span>
+                                        <span>実在するショップやイベントのWebサイトを企画からデザイン・実装まで担当</span>
+                                    </div>
+                                    <div class="sd-ainfo-subtext">
+                                        <span class="sd-ainfo-subtext-title">UI/UXデザイン</span>
+                                        <span>ユーザーが使いやすいスマホアプリの画面デザインと導線設計</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="sd-mov" class="sd-item">
+                    <div class="sd-inner">
+                        <div class="sd-pic"><img src="./img/subcourse/sc_mov_pic.png" alt="動画プロモーションの画像"></div>
+
+                        <div class="sd-deco-wrap">
+                            <div id="sdm-courseinfo" class="sd-cinfo">
+                                <p>動画プロモーションコース</p>
+                                <span>YouTube広告、SNS動画、PV、MV… ストーリーで魅せる「映像表現」のプロへ！<br>映像編集ソフト（Premiere Pro、After
+                                    Effects）を駆使し、企画・撮影から編集・モーショングラフィックスまでをマスターするコース。実写映像の編集からポップなアニメーション動画まで、SNSやWebでバズる映像コンテンツを制作します。</span>
+                            </div>
+                            <div id="sdm-assignmentinfo" class="sd-ainfo">
+                                <p>こんな授業・課題をやります！</p>
+                                <div class="sd-ainfo-subtexts">
+                                    <div class="sd-ainfo-subtext">
+                                        <span class="sd-ainfo-subtext-title">モーショングラフィックス制作</span>
+                                        <span>イラストや文字に動きをつけた印象的なPR動画の作成</span>
+                                    </div>
+                                    <div class="sd-ainfo-subtext">
+                                        <span class="sd-ainfo-subtext-title">プロモーション動画編集</span>
+                                        <span>商品やお店の魅力、楽曲に合わせた映像コンテンツの企画・編集</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- １日のスケジュール -->
+        <section id="daily-schedule">
+            <div class="inner">
+                <h2>
+                    <small>SCHEDULE</small>
+                    １日のスケジュール
+                </h2>
+
+
+                <div class="ds-contents">
+                    <div class="ds-pic-wrap">
+                        <div class="ds-deco">
+                            <img src="./img/dailyschedule/ds_deco.png" alt="スマホのカメラ素材">
+                        </div>
+
+                        <div class="ds-title">
+                            <span></span> <!-- 9:10 みたいなテキスト（ds-timeに応じて切り替わるようにしたい） -->
+                            <p></p> <!-- 1時間目開始 みたいなテキスト（ds-timeに応じて切り替わるようにしたい） -->
+                        </div>
+
+                        <div class="ds-hashtag">
+                            <span></span> <!-- ＃グラフィック みたいなテキスト（ds-timeに応じて切り替わるようにしたい） -->
+                            <span></span> <!-- ＃1限目 みたいなテキスト（ds-timeに応じて切り替わるようにしたい） -->
+                        </div>
+
+                        <div class="ds-mainpic">
+                            <div class="ds-pic" id="ds-pic-0910"></div> <!-- 9:10の時だけ表示される画像（ds-timeに応じて切り替わるようにしたい）-->
+                            <div class="ds-pic" id="ds-pic-0920"></div>
+                            <div class="ds-pic" id="ds-pic-1020"></div>
+                            <div class="ds-pic" id="ds-pic-1120"></div>
+                            <div class="ds-pic" id="ds-pic-1210"></div>
+                            <div class="ds-pic" id="ds-pic-1310"></div>
+                            <div class="ds-pic" id="ds-pic-1410"></div>
+                            <div class="ds-pic" id="ds-pic-1600"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="ds-texts-wrapper">
+                        <div class="ds-texts-inner">
+                            <div class="ds-texts">
+                                <ul>
+                                    <li id="ds-time-0910">
+                                        <p>9:10　登校</p>
+                                        <span>早めに登校して、授業の準備をします！<br>カリキュラムによっては2時間目からになることも！</span>
+                                    </li>
+                                    <li id="ds-time-0920">
+                                        <p>9:20　1時間目　グラフィック</p>
+                                        <span>今日1日の課題内容が説明されます。<br>先生によっては週を跨いで大きな課題をすることもあります！</span>
+                                    </li>
+                                    <li id="ds-time-1020">
+                                        <p>10:20　2時間目　グラフィック</p>
+                                        <span>大体２時間目はデザイン作業にあたることが多いです。<br>課題はポスターやロゴ、パッケージなどさまざまな種類があります！</span>
+                                    </li>
+                                    <li id="ds-time-1120">
+                                        <p>11:20　3時間目　Webコーディング</p>
+                                        <span>HtmlやCSSを中心にWebサイト構築を学びます。<br>難しいですが、初めてでも丁寧に教えます！</span>
+                                    </li>
+                                    <li id="ds-time-1210">
+                                        <p>12:10　お昼ご飯</p>
+                                        <span>お昼はお弁当、コンビニ、近所のご飯屋さんなどさまざま。<br>学校にお弁当屋さんも来ます。安くて美味しいですよ！</span>
+                                    </li>
+                                    <li id="ds-time-1310">
+                                        <p>13:10　4時間目　Webコーディング</p>
+                                        <span>先生によって実習型か、授業かは変わってきます。<br>アシスタントの先生もいるので安心して学べます。</span>
+                                    </li>
+                                    <li id="ds-time-1410">
+                                        <p>14:10　5時間目　動画</p>
+                                        <span>動画でプレミアプロの実習や座学として動画の作り方、<br>撮影の基礎などを学びます。</span>
+                                    </li>
+                                    <li id="ds-time-1600">
+                                        <p>16:00　6時間目　動画</p>
+                                        <span>夏休みや大きい期間にわたって課題を出されることがほとんどなので、自分のペースで制作に集中できます！</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- 先輩たちの声 -->
+        <section id="student-voices">
+            <div class="inner">
+                <h2>
+                    <small>STUDENTS</small>
+                    先輩たちの声
+                </h2>
+
+                <div class="sv-cards">
+                    <div id="sv-gd-KR_wrapper">
+                        <div id="sv-gd-KR" class="sv-item sv-gd">
+                            <div class="sv-border">
+                                <span></span>
+                            </div>
+
+                            <div class="sv-contents">
+                                <img src="./img/studentvoices/sv_pic01.png" alt="証明写真">
+
+                                <div class="sv-text">
+                                    <div class="sv-name">
+                                        <p>K.Rさん</p>
+                                        <span>グラフィックデザインコース2年</span>
+                                    </div>
+                                    <div class="sv-textinfo">
+                                        <span>怠惰でも大丈夫!!!<br>やる気さえ出せれば大体なんとかなる!!</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="sv-gd-TD_wrapper">
+                        <div id="sv-gd-TD" class="sv-item sv-gd">
+                            <div class="sv-border">
+                                <span></span>
+                            </div>
+
+                            <div class="sv-contents">
+                                <img src="./img/studentvoices/sv_pic02.png" alt="証明写真">
+
+                                <div class="sv-text">
+                                    <div class="sv-name">
+                                        <p>T.Dさん</p>
+                                        <span>グラフィックデザインコース2年</span>
+                                    </div>
+                                    <div class="sv-textinfo">
+                                        <span>作品制作を通してデザインをつくる技術だけでなく、考える力や伝える力が自然と身につきます。失敗を恐れず、色々なことに挑戦してみてください</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="sv-web-KH_wrapper">
+                        <div id="sv-web-KH" class="sv-item sv-web">
+                            <div class="sv-border">
+                                <span></span>
+                            </div>
+
+                            <div class="sv-contents">
+                                <img src="./img/studentvoices/sv_pic03.png" alt="証明写真">
+
+                                <div class="sv-text">
+                                    <div class="sv-name">
+                                        <p>K.Hさん</p>
+                                        <span>Webコース2年</span>
+                                    </div>
+                                    <div class="sv-textinfo">
+                                        <span>後輩達よ、やりたいことはとことん挑戦しよう！失敗も怒られるのも恐れるなよ！周りの仲間と切磋琢磨しながら学生生活を楽しんで！</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="sv-web-MH_wrapper">
+                        <div id="sv-web-MH" class="sv-item sv-web">
+                            <div class="sv-border">
+                                <span></span>
+                            </div>
+
+                            <div class="sv-contents">
+                                <img src="./img/studentvoices/sv_pic04.png" alt="証明写真">
+
+                                <div class="sv-text">
+                                    <div class="sv-name">
+                                        <p>M.Hさん</p>
+                                        <span>Webコース2年</span>
+                                    </div>
+                                    <div class="sv-textinfo">
+                                        <span>不安はあると思います。けど、自分のやれる精一杯を尽くせばきっと結果につながります。失敗を恐れず、頑張りましょう！</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="sv-mov-OH_wrapper">
+                        <div id="sv-mov-OH" class="sv-item sv-mov">
+                            <div class="sv-border">
+                                <span></span>
+                            </div>
+
+                            <div class="sv-contents">
+                                <img src="./img/studentvoices/sv_pic05.png" alt="証明写真">
+
+                                <div class="sv-text">
+                                    <div class="sv-name">
+                                        <p>O.Hさん</p>
+                                        <span>動画プロモーションコース2年</span>
+                                    </div>
+                                    <div class="sv-textinfo">
+                                        <span>動画コースは撮影、動画制作の技術を実践的に学ぶことができます！先生たちも優しく気軽に相談したりおしゃべりしたりします！気になってる方はぜひ動画コースでお待ちしてます！！</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="sv-mov-KK_wrapper">
+                        <div id="sv-mov-KK" class="sv-item sv-mov">
+                            <div class="sv-border">
+                                <span></span>
+                            </div>
+
+                            <div class="sv-contents">
+                                <img src="./img/studentvoices/sv_pic06.png" alt="証明写真">
+
+                                <div class="sv-text">
+                                    <div class="sv-name">
+                                        <p>K.Kさん</p>
+                                        <span>動画プロモーションコース2年</span>
+                                    </div>
+                                    <div class="sv-textinfo">
+                                        <span>分からないことがあっても全然大丈夫です！先生や友達と相談しながら挑戦すれば、必ず成長できます！ぜひ自分の「好き」を大切にして、制作を楽しんでください！！</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- 教職員図鑑 -->
+        <section id="teachers-description">
+            <div class="inner">
+                <h2>
+                    <small>TEACHERS</small>
+                    教職員図鑑
+                </h2>
+
+                <div class="td-grid">
+
+                    <div id="td-btns" class="td-btns td-item01">
+                        <button class="td-back"></button>
+                        <div class="tdbtn-text"><span class="td-current">1</span><span>/ 4</span></div>
+                        <button class="td-next"></button>
+                    </div>
+
+
+                    <div id="td-sugahara" class="td-cardinfo active">
+                        <div class="td-cardtitle td-item02">
+                            <p>情報デザイン担当</p>
+                            <p>菅原 弘貴 先生</p>
+                        </div>
+
+                        <div class="td-cardpic td-item03">
+                            <img src="./img/teachers/t_pic_sugahara.png" alt="菅原先生の画像">
+                        </div>
+
+                        <div class="td-cardtext td-item04">
+                            <p class="td-text01">多くのデザインに触れ</p>
+                            <p class="td-text02">実力を伸ばそう</p>
+                        </div>
+                    </div>
+
+
+                    <!-- 先生を追加する場合は「.td-cardinfo」を増やしてください！-->
+                    <!-- また、追加した場合は上記の「#td-btns」の「/4」を対応する人数に変更してください！ -->
+                    <div id="td-gion" class="td-cardinfo">
+                        <div class="td-cardtitle td-item02">
+                            <p>ビジュアルデザイン担当</p>
+                            <p>祗園 博之 先生</p>
+                        </div>
+
+                        <div class="td-cardpic td-item03">
+                            <img src="./img/teachers/t_pic_gion.png" alt="祗園先生の画像">
+                        </div>
+
+                        <div class="td-cardtext td-item04">
+                            <p class="td-text01">デジタルの力で</p>
+                            <p class="td-text02">広がる表現の幅</p>
+                        </div>
+                    </div>
+
+
+                    <div id="td-okamura" class="td-cardinfo">
+                        <div class="td-cardtitle td-item02">
+                            <p>動画制作担当</p>
+                            <p>岡村 祐樹 先生</p>
+                        </div>
+
+                        <div class="td-cardpic td-item03">
+                            <img src="./img/teachers/t_pic_okamura.png" alt="岡村先生の画像">
+                        </div>
+
+                        <div class="td-cardtext td-item04">
+                            <p class="td-text01">伝えたい想いを</p>
+                            <p class="td-text02">映像で届ける</p>
+                        </div>
+                    </div>
+
+
+                    <div id="td-kitamura" class="td-cardinfo">
+                        <div class="td-cardtitle td-item02">
+                            <p>Webデザイン担当</p>
+                            <p>北村 元伸 先生</p>
+                        </div>
+
+                        <div class="td-cardpic td-item03">
+                            <img src="./img/teachers/t_pic_kitamura.png" alt="北村先生の画像">
+                        </div>
+
+                        <div class="td-cardtext td-item04">
+                            <p class="td-text01">ウェブデザインの</p>
+                            <p class="td-text02">魅力を伝えます</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- オーキャン情報 -->
+        <section id="open-campus">
+            <div class="inner">
+                <h3>
+                    OPEN CAMPUS
+                </h3>
+
+                <span>神戸電子専門学校のオープンキャンパスでは、午前・午後で最大2つの学科を体験できます。<br>興味のある分野を比較しながら、自分にぴったりの学びを見つけられるのが魅力です。<br>夕方開催のオープンキャンパスなら、学校が終わってからでも参加できるので、忙しい高校生にもおすすめ。<br>服装は私服でも制服でもOKなので、お気軽にご参加ください。</span>
+                <a href="https://www.kobedenshi.ac.jp/event/?pi_ad_source=adwords&pi_ad_campaign=1&pi_ad_group=%E7%A5%9E%E6%88%B8%E9%9B%BB%E5%AD%90%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%91%E3%82%B9&pi_ad_lpurl=https://www.kobedenshi.ac.jp/event/&pi_ad_device=c&pi_ad_term=%E7%A5%9E%E6%88%B8%E9%9B%BB%E5%AD%90%20%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%91%E3%82%B9&gad_source=1&gad_campaignid=389773330&gbraid=0AAAAADc3Q8YGMPVWmNSk4zhWCWuYgpJjW&gclid=CjwKCAjwwL_UBhAjEiwAEhuT5Nl6Oi3QE-pxPL_S-gJIeX8w9FoZdYuI6Vo-UnuFL77mlGmvxDDS2RoCHd4QAvD_BwE"
+                    target="_blank" rel="noopener noreferrer">詳細はこちら</a>
+            </div>
+        </section>
+
+
+
+        <!-- 最新情報 -->
+        <section id="latest-news">
+            <div class="inner">
+                <h4>
+                    最新情報
+                </h4>
+
+                <div class="ln-btn">
+                    <a href="https://kobedenshi-graphic.net/genzaichiten/" target="_blank" rel="noopener noreferrer"
+                        class="m-btn-item" id="m-btn-genzaititen">
+                        <picture>
+                            <!-- スマホ用 -->
+                            <source media="(max-width: 767px)" srcset="./img/sp/sp_btn_genzaititen.png"
+                                alt="現在地展公式webサイト_sp">
+                            <!-- PC用（768px以上） -->
+                            <img src="./img/mainvisual/m_genzaititen.png" alt="現在地展公式webサイト">
+                        </picture>
+                    </a>
+                    <a href="https://www.instagram.com/kobedenshi_graphicdesign/" target="_blank"
+                        rel="noopener noreferrer" class="m-btn-item" id="m-btn-instagram">
+                        <picture>
+                            <!-- スマホ用 -->
+                            <source media="(max-width: 767px)" srcset="./img/sp/sp_btn_instagram.png"
+                                alt="グラフィックデザイン学科公式Instagram_sp">
+                            <!-- PC用（768px以上） -->
+                            <img src="./img/mainvisual/m_instagram.png" alt="グラフィックデザイン学科公式Instagram">
+                        </picture>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- フッター -->
+        <footer>
+            <div id="f-content">
+                <div class="inner">
+                    <div class="f-logo-sns">
+                        <div class="f-logo">
+                            <a href="#"><img src="./img/logo_black.svg" alt="ロゴ"></a>
+                        </div>
+
+                        <ul class="f-sns">
+                            <li class="fs-instagram">
+                                <a href="https://www.instagram.com/kobedenshi_graphicdesign/" target="_blank"
+                                    rel="noopener noreferrer"><span></span></a>
+                            </li>
+                            <li class="fs-x">
+                                <a href="https://x.com/graphicdesignkd" target="_blank"
+                                    rel="noopener noreferrer"><span></span></a>
+                            </li>
+                            <li class="fs-facebook">
+                                <a href="https://www.facebook.com/graphicdesign.kd/?locale=ja_JP" target="_blank"
+                                    rel="noopener noreferrer"><span></span></a>
+                            </li>
+                            <li class="fs-youtube">
+                                <a href="https://www.youtube.com/channel/UCXVMwbdycYf3E4g_x-x6ZZw" target="_blank"
+                                    rel="noopener noreferrer"><span></span></a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+                    <nav>
+                        <ul id="f-nav-left" class="f-nav-item">
+                            <li>
+                                <a href="https://kobedenshi-graphic.net/genzaichiten/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <p>現在地展公式Webサイト</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.instagram.com/kobedenshi_graphicdesign/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <p>公式Instagram</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#allcourse-description">
+                                    <p>学科全体の紹介</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#careers-description">
+                                    <p>目指せる職種紹介</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#subcourse-description">
+                                    <p>3つの選べるコース紹介</p>
+                                </a>
+                            </li>
+
+                            <li class="fn-subtext fn-margintop">
+                                <a href="#sd-gd">
+                                    <span>グラフィックデザイン</span>
+                                </a>
+                            </li>
+
+                            <li class="fn-subtext">
+                                <a href="#sd-web">
+                                    <span>Web</span>
+                                </a>
+                            </li>
+
+                            <li class="fn-subtext">
+                                <a href="#sd-mov">
+                                    <span>動画プロモーション</span>
+                                </a>
+                            </li>
+                        </ul>
+
+
+
+                        <ul id="f-nav-right" class="f-nav-item">
+                            <li>
+                                <a href="#daily-schedule">
+                                    <p>1日のスケジュール</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#student-voices">
+                                    <p>先輩たちの声</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#teachers-description">
+                                    <p>教職員図鑑</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#open-campus">
+                                    <p>オープンキャンパス</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#latest-news">
+                                    <p>最新情報</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+
+
+                <div id="f-marquee" class="cmp-marquee">
+                    <div id="f-marquee-track" class="cmp-marquee-track">
+                        <p>GRAPHIC DESIGN</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div id="f-copyright">
+                <p>Copyright © Kobe Institute of Computing - College of Computing</p>
+            </div>
+        </footer>
+    </div>
 </body>
+
 </html>

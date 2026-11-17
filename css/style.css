@@ -1,0 +1,2849 @@
+/* メモ
+
+・あとで「仮」をまとめて消す！
+・rootの色を変える
+・rootなどでフォントサイズ/フォントファミリーを設定
+・ベースのフォントファミリーはbodyで　1箇所だけのファミリーならrootはなし
+
+・デフォのフォントサイズは18px（ちょっと小さい場合は16px）
+・PCの横幅（innerのパディング）は120px
+
+*/
+
+
+/* 共通 - ローディング */
+.loading {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    inset: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    background-color: var(--color-yellow-dark);
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.loading.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loading img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+}
+
+.l-pic {
+    animation: l-picanm 2s ease-in-out infinite;
+}
+
+.l-text {
+    font-size: 20px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    --color-black: #222222;
+    font-weight: 500;
+}
+
+.l-text span::after {
+    content: "";
+    animation: l-textanm 2s steps(4, end) infinite;
+}
+
+@keyframes l-picanm {
+    0% {
+        transform: scale(1.0);
+    }
+
+    50% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+
+@keyframes l-textanm {
+    0% {
+        content: "";
+    }
+
+    25% {
+        content: ".";
+    }
+
+    50% {
+        content: "..";
+    }
+
+    75%,
+    100% {
+        content: "...";
+    }
+}
+
+
+
+/* 共通 - ベース */
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --font-en: "Roboto", sans-serif;
+    --color-white: #fff;
+    --color-gray: #f3f3f3;
+    --color-black: #222222;
+    --color-black-lite: #9f9f9f;
+    --color-orange: #FF9500;
+    --color-yellow: #E8E060;
+    --color-yellow-dark: #FFCB12;
+    --color-blue: #63D5EC;
+    --color-blue-dark: #44c0d8;
+    --color-red: #FE8686;
+    --color-red-dark: #ed6767;
+    --color-green: #47D3A0;
+    --color-green-dark: #1bbd82;
+}
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+}
+
+#main-visual .inner {
+    padding: 0px 60px;
+}
+
+
+
+/* 共通 - 背景ノイズ */
+body {
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 999;
+    pointer-events: none;
+    background-image: url(../img/bg_noise.png);
+    opacity: 0.6;
+}
+
+header,
+main,
+footer {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+/* 共通 - 見出し */
+h2 {
+    display: flex;
+    color: var(--color-black);
+    flex-direction: column;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+h2 small {
+    font-size: 22px;
+    font-family: "Ubuntu", sans-serif;
+    margin-bottom: -10px;
+    color: var(--color-white);
+    -webkit-text-stroke: 1.1px var(--color-black);
+}
+
+
+
+/* 共通 - マーキー */
+.cmp-marquee {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.cmp-marquee-track {
+    display: flex;
+    width: max-content;
+}
+
+.cmp-marquee-track p {
+    flex-shrink: 0;
+    padding-right: 0.5em;
+}
+
+
+
+/* 共通 - アニメーション */
+@keyframes right-shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(4deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes left-shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-4deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes poyon {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(0.96, 1.04);
+    }
+
+    45% {
+        transform: scale(1.04, 0.96);
+    }
+
+    65% {
+        transform: scale(0.99, 1.01);
+    }
+
+    80% {
+        transform: scale(1.01, 0.99);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes animPopup {
+    0% {
+        transform: scale(0);
+    }
+
+    5.11% {
+        transform: scale(0.98);
+    }
+
+    7.71% {
+        transform: scale(1.025);
+    }
+
+    10.21% {
+        transform: scale(1.04);
+    }
+
+    13.21% {
+        transform: scale(1.025);
+    }
+
+    16.12% {
+        transform: scale(1.01);
+    }
+
+    19.02% {
+        transform: scale(0.995);
+    }
+
+    21.92% {
+        transform: scale(0.99);
+    }
+
+    33.73% {
+        transform: scale(1.01);
+    }
+
+    45.55% {
+        transform: scale(0.998);
+    }
+
+    57.26%,
+    69.07%,
+    80.88%,
+    92.59%,
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+/* ------ ハンバーガー ------ */
+
+
+
+
+
+/* ハンバーガー - 中身/コンテンツ */
+#hamburger-menu-info {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-yellow-dark);
+    z-index: 99;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.4s ease-in-out;
+}
+
+#hamburger-menu-info.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+#hamburger-menu-info::before {
+    position: absolute;
+    content: "";
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 360px;
+    background: url("../img/hamburger/hm_deco01.png") center / cover no-repeat;
+    z-index: 1;
+}
+
+
+
+/* ハンバーガー - 中身/マーキー */
+.hm-marquee {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    background-color: var(--color-black);
+    z-index: 2;
+}
+
+#hm-marquee-top {
+    top: 0px;
+}
+
+#hm-marquee-bottom {
+    bottom: 0px;
+}
+
+.hm-marquee p {
+    color: var(--color-black);
+    -webkit-text-stroke: 1.2px var(--color-white);
+    font-size: 40px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+}
+
+/* ハンバーガー - 中身/ナビゲーション */
+.hm-nav-logo-sns {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-30px);
+    z-index: 10;
+}
+
+.hmnls-inner {
+    position: relative;
+    display: flex;
+    gap: 100px;
+}
+
+.hmnls-inner::before {
+    position: absolute;
+    content: "";
+    top: 160px;
+    right: -60px;
+    width: 100%;
+    max-width: 110px;
+    height: 320px;
+    background: url("../img/illustration/character_girl01.png") center / contain no-repeat;
+    z-index: 1;
+    animation: right-shake 4s infinite;
+}
+
+.hmnls-inner::after {
+    position: absolute;
+    content: "";
+    top: 160px;
+    left: -60px;
+    width: 100%;
+    max-width: 220px;
+    height: 220px;
+    background: url("../img/hamburger/hm_deco02.png") center / contain no-repeat;
+    z-index: 1;
+    animation: poyon 2s infinite;
+}
+
+.hm-logo-sns {
+    position: relative;
+    z-index: 10;
+}
+
+.hm-logo a {
+    transition: all 0.2s ease-in-out;
+}
+
+.hm-logo a:hover {
+    opacity: 0.8;
+}
+
+.hm-sns {
+    padding: 10px 0px;
+    display: flex;
+    gap: 14px;
+}
+
+.hm-sns li a span {
+    display: block;
+    width: 24px;
+    height: 24px;
+    transition: all 0.2s ease-in-out;
+}
+
+.hm-sns li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background-color: var(--color-black);
+    transition: all 0.2s ease-in-out;
+}
+
+.hm-sns li a:hover {
+    background-color: var(--color-yellow-dark);
+    border-color: var(--color-black);
+}
+
+.hms-instagram span {
+    background: url(../img/footer/f_sns_instagram.svg) center / contain no-repeat;
+}
+
+.hms-instagram a:hover span {
+    background-image: url("../img/footer/f_sns_instagram_hover.svg");
+}
+
+.hms-x span {
+    background: url(../img/footer/f_sns_x.svg) center / contain no-repeat;
+}
+
+.hms-x a:hover span {
+    background-image: url("../img/footer/f_sns_x_hover.svg");
+}
+
+.hms-facebook span {
+    background: url(../img/footer/f_sns_facebook.svg) center / contain no-repeat;
+}
+
+.hms-facebook a:hover span {
+    background-image: url("../img/footer/f_sns_facebook_hover.svg");
+}
+
+.hms-youtube span {
+    background: url(../img/footer/f_sns_youtube.svg) center / contain no-repeat;
+}
+
+.hms-youtube a:hover span {
+    background-image: url("../img/footer/f_sns_youtube_hover.svg");
+}
+
+
+
+/* ハンバーガー - ナビゲーション */
+.hm-nav-logo-sns nav {
+    display: flex;
+    gap: 26px;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.hm-nav-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hm-nav-item p {
+    display: inline-block;
+    color: var(--color-black);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.hmn-subtext {
+    margin-top: -10px;
+}
+
+.hmn-margintop {
+    margin-top: 0px;
+}
+
+
+
+/* ハンバーガー - ナビゲーション/ホバー時の下線 */
+.hm-nav-item li {
+    position: relative;
+}
+
+.hm-nav-item a {
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.hm-nav-item a:hover {
+    text-decoration: none;
+}
+
+.hm-nav-item a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background-color: var(--color-black);
+}
+
+.hmn-subtext a::after {
+    height: 1px;
+}
+
+.hm-nav-item li:hover a::after {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.2s ease;
+}
+
+.hm-nav-item li:not(:hover) a::after {
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.2s ease;
+}
+
+
+
+
+
+/* ------ ヘッダー ------ */
+
+
+
+
+
+/* ヘッダー - メイン/リスト */
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    padding: 10px 0px;
+    background-color: var(--color-black);
+    border-bottom: 1.8px var(--color-black) solid;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.h-nav-textitem a {
+    color: var(--color-white);
+    font-size: 16px;
+    font-weight: medium;
+}
+
+.h-nav-btnitem {
+    color: var(--color-black);
+    font-size: 18px;
+    padding: 10px 14px;
+    background-color: var(--color-white);
+    border-radius: 40px;
+}
+
+.h-nav-btnitem p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+
+/* ヘッダー - ハンバーガーボタン */
+#mv-openbtn {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    background-color: var(--color-black);
+    z-index: 100;
+}
+
+#mv-openbtn span {
+    position: absolute;
+    left: 50%;
+    width: 30px;
+    height: 2px;
+    background-color: var(--color-white);
+    transform: translateX(-50%);
+    transition: all 0.3s ease;
+}
+
+#mv-openbtn span:nth-child(1) {
+    top: 14px;
+}
+
+#mv-openbtn span:nth-child(2) {
+    top: 23px;
+}
+
+#mv-openbtn span:nth-child(3) {
+    top: 32px;
+}
+
+/* 開いた状態 → × */
+#mv-openbtn.is-open span:nth-child(1) {
+    top: 23px;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+#mv-openbtn.is-open span:nth-child(2) {
+    opacity: 0;
+}
+
+#mv-openbtn.is-open span:nth-child(3) {
+    top: 23px;
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+#hamburger-menu-info {
+    position: fixed;
+    inset: 0;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease,
+        visibility 0.4s ease;
+}
+
+#hamburger-menu-info.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+
+
+/* ヘッダー - ナビゲーション/ホバー時の下線 */
+.h-nav-textitem a {
+    position: relative;
+    display: inline-block;
+    border: 2px solid transparent;
+}
+
+.h-nav-textitem a:hover {
+    text-decoration: none;
+}
+
+.h-nav-textitem a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-white);
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.h-nav-textitem a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.2s ease-in-out;
+}
+
+.h-nav-textitem a:not(:hover)::after {
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.2s ease-in-out;
+}
+
+
+
+
+
+/* ヘッダー - ロゴ */
+.h-logo img {
+    width: 100%;
+    max-width: 300px;
+}
+
+.h-logo a {
+    transition: all 0.2s ease-in-out;
+}
+
+.h-logo a:hover {
+    opacity: 0.8;
+}
+
+
+
+/* topへ戻るbtn */
+
+#up_btn {
+    position: fixed;
+    right: 30px;
+    bottom: 20px;
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--color-black);
+    color: #fff;
+
+    border-radius: 50%;
+    cursor: pointer;
+
+    z-index: 9999;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+#up_btn.is-show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#up_btn p {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1;
+}
+
+
+
+
+
+/* ------ メインビジュアル ------ */
+
+
+
+
+
+/* メインビジュアル */
+#main-visual {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+#m-visual {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#m-visual-track {
+    display: flex;
+    width: max-content;
+}
+
+#m-visual img {
+    display: block;
+    height: 100vh;
+    max-width: none;
+    flex-shrink: 0;
+}
+
+
+
+/* メインビジュアル - マーキー */
+#m-marquee {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: var(--color-black);
+}
+
+#m-marquee p {
+    color: var(--color-black);
+    -webkit-text-stroke: 1.2px var(--color-white);
+    font-size: 40px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+}
+
+
+
+/* メインビジュアル - コンテンツ */
+.m-catchcopy {
+    display: block;
+    color: var(--color-white);
+    font-size: 36px;
+    width: fit-content;
+    padding: 12px 30px;
+    background-color: var(--color-orange);
+    border: 1.8px var(--color-black) solid;
+}
+
+#m-content h1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#m-content p {
+    font-size: 26px;
+    font-weight: bold;
+    height: fit-content;
+}
+
+
+
+/* メインビジュアル - コンテンツ/グリッド */
+#main-visual {
+    position: relative;
+}
+
+#m-content {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+
+
+#m-content .inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: minmax(0, 0.6fr) minmax(0, 0.2fr) minmax(0, 0.6fr);
+    align-items: center;
+    height: 70vh;
+}
+
+#m-content h1 {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    align-self: end;
+    opacity: 1;
+    animation: animPopup 3s linear 2s both;
+}
+
+#m-content p {
+    grid-column: 1;
+    grid-row: 3;
+    justify-self: start;
+    align-self: end;
+    opacity: 1;
+    animation: animPopup 3s linear 2s both;
+}
+
+#m-content .m-btns {
+    display: grid;
+    grid-column: 3;
+    grid-row: 2 / 4;
+    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+    min-height: 0;
+    height: 100%;
+    gap: 40px;
+}
+
+.m-btn-item {
+    min-height: 0;
+}
+
+#m-btn-genzaititen {
+    align-self: end;
+}
+
+#m-btn-instagram {
+    align-self: end;
+    justify-self: end;
+}
+
+
+
+/* メインビジュアル - ボタン */
+.m-btns a {
+    display: block;
+    width: fit-content;
+    transition: all 0.2s ease-in-out;
+}
+
+.m-btns a img {
+    animation: animPopup 3s linear 2s both;
+}
+
+#m-btn-genzaititen img {
+    width: 100%;
+    max-width: 320px;
+    object-fit: contain;
+}
+
+#m-btn-instagram img {
+    width: 100%;
+    max-width: 320px;
+    object-fit: contain;
+}
+
+.m-btns a:hover {
+    transform: translateY(-6px);
+}
+
+
+
+
+
+/* ------ 学科全体の紹介/概要 ------ */
+/* style.css追加部分 */
+/* 1.フォントカラーを変更(469行目・480行目)
+    pとspanをcolor: #0C3167;に変更 */
+
+
+
+
+/* 学科全体/概要 - コンテンツ */
+#allcourse-description .inner {
+    display: flex;
+    padding: 90px 120px;
+    align-items: center;
+    gap: 100px;
+}
+
+.ad-text {
+    width: 100%;
+    max-width: 400px;
+}
+
+#allcourse-description p {
+    font-size: 26px;
+    font-weight: bold;
+    padding: 2px 0px;
+    color: #0C3167;
+    /* フォントカラーの変更 */
+}
+
+#allcourse-description p:nth-child(2) {
+    margin-bottom: 20px;
+}
+
+#allcourse-description span {
+    display: block;
+    font-size: 18px;
+    padding: 2px 0px;
+    color: #0C3167;
+    /* フォントカラーの変更 */
+}
+
+
+
+/* 学科全体/概要 - 画像 */
+.ad-pic {
+    display: flex;
+    gap: 20px;
+    min-width: 0;
+    padding-bottom: 100px;
+}
+
+.ad-pic:last-child {
+    margin-left: -50px;
+}
+
+.ad-pic img {
+    min-width: 0;
+    object-fit: contain;
+}
+
+.ad-pic-girl01 {
+    position: relative;
+    top: 100px;
+    flex: 340 1 0;
+    max-width: 340px;
+}
+
+.ad-pic-girl02 {
+    flex: 160 1 0;
+    max-width: 160px;
+}
+
+.ad-pic-boy01 {
+    position: relative;
+    top: 100px;
+    flex: 160 1 0;
+    max-width: 160px;
+}
+
+
+
+
+
+/* ------ 学科全体の紹介/ポイント ------ */
+
+
+
+
+
+/* 学科全体/ポイント - コンテンツ */
+#allcourse-point {
+    border-top: 1.8px var(--color-black) solid;
+    border-bottom: 1.8px var(--color-black) solid;
+    background-color: var(--color-green);
+}
+
+#allcourse-point .inner {
+    display: flex;
+    flex-direction: column;
+    gap: 140px;
+    padding: 140px 120px 90px 120px;
+}
+
+
+
+/* 学科全体/ポイント - アイテム */
+.ap-item {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+}
+
+/* #ap-01 {
+    opacity: 1;
+    animation: animPopup 1.6s linear 0.7s both;
+} */
+/* 
+#ap-02 {
+    opacity: 1;
+    animation: animPopup 1.6s linear 0.7s both;
+} */
+
+
+.ap-item p {
+    color: var(--color-black);
+    font-size: 26px;
+    font-weight: bold;
+    width: fit-content;
+    padding: 10px 20px;
+    background-color: var(--color-white);
+    border: 1.8px var(--color-black) solid;
+}
+
+.ap-title p {
+    z-index: 2;
+}
+
+.ap-title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.ap-title::before {
+    position: absolute;
+    content: "";
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 100px;
+    height: 100px;
+    background: url("../img/allcourse/ap_deco01.png") center / contain no-repeat;
+    z-index: 1;
+}
+
+#ap-02 .ap-title::before {
+    background: url("../img/allcourse/ap_deco02.png") center / contain no-repeat;
+}
+
+.ap-textimg {
+    display: flex;
+    align-items: center;
+    gap: 42px;
+    justify-content: space-between;
+}
+
+.ap-textimg img {
+    width: 100%;
+    max-width: 400px;
+    height: 345px;
+    object-fit: contain;
+}
+
+.ap-textimg span {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 1.6;
+    padding-bottom: 20px;
+}
+
+.ap-textimg span:last-child {
+    padding-bottom: 0px;
+}
+
+.ap-text {
+    padding: 38px 32px;
+    background-color: var(--color-white);
+    border: 1.8px var(--color-black) solid;
+
+    border-radius: 32px;
+    corner-shape: bevel;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+
+
+
+
+/* ------ 数字で見る神戸電子 ------ */
+
+
+
+
+
+/* 数字で見る - コンテンツ */
+#mejiro-date .inner {
+    padding: 90px 0px;
+}
+
+#mejiro-date h2 {
+    margin-bottom: 60px;
+}
+
+
+
+/* 数字で見る - ボタン */
+.md-slider {
+    position: relative;
+}
+
+.md-btns {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    width: min(600px, calc(100% - 20px));
+    transform: translate(-50%, -50%);
+    justify-content: space-between;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.md-btns button {
+    display: flex;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--color-yellow-dark);
+    border: 1.8px var(--color-black) solid;
+    transition: all 0.2s ease-in-out;
+    pointer-events: auto;
+}
+
+.md-btns button img {
+    display: block;
+    object-fit: contain;
+    width: 28px;
+    height: 28px;
+}
+
+#mdb-back img {
+    transform: translate(-2px, -1px) rotate(180deg);
+}
+
+.md-btns button:hover {
+    transform: scale(1.08);
+}
+
+
+
+/* 数字で見る - スライダー/ベース */
+.md-slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.md-slides {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    align-items: center;
+}
+
+.mds-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 310px;
+    height: 310px;
+}
+
+.mds-item img {
+    display: block;
+    object-fit: contain;
+    width: 310px;
+    height: 310px;
+}
+
+.mds-item.is-active {
+    width: 500px;
+    height: 500px;
+}
+
+.mds-item.is-active img {
+    width: 500px;
+    height: 500px;
+}
+
+
+
+/* 数字で見る - 説明文 */
+.md-text {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 540px;
+    height: 180px;
+    margin: 0 auto;
+    padding: 60px 0px;
+}
+
+.mdt-item {
+    position: absolute;
+    display: flex;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+}
+
+.mdt-item.is-active {
+    opacity: 1;
+}
+
+.md-text::before {
+    position: absolute;
+    content: "";
+    bottom: -40px;
+    right: -130px;
+    width: 100%;
+    max-width: 200px;
+    height: 300px;
+    background: url("../img/illustration/character_boy04.png") center / contain no-repeat;
+    z-index: 5;
+}
+
+
+
+/* 数字で見る - ページネーション */
+.md-pagination {
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+}
+
+.mdp-item {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--color-gray);
+    border: 1.8px var(--color-black) solid;
+}
+
+.mdp-item.is-active {
+    background-color: var(--color-yellow-dark);
+}
+
+
+
+
+
+/* ------ 目指せる職種紹介 ------ */
+
+
+
+
+
+/* 職種紹介 - コンテンツ */
+#careers-description {
+    border-top: 1.8px var(--color-black) solid;
+    background-image: repeating-linear-gradient(120deg, #63d5ec, #63d5ec 20px, #7de9ff 20px, #7de9ff 24px);
+}
+
+#careers-description .inner {
+    padding: 90px 120px 120px 120px;
+}
+
+.cd-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+#careers-description h2 {
+    margin-bottom: 60px;
+}
+
+
+
+/* 職種紹介 - アイテム */
+.cd-item {
+    display: block;
+    height: 460px;
+    padding: 30px;
+    background-color: var(--color-white);
+    border: 1.8px var(--color-black) solid;
+    box-shadow: 6px 8px 0 var(--color-black);
+    border-radius: 20px;
+}
+
+.cd-pic {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border: 1.8px var(--color-black) solid;
+    border-radius: 10px;
+}
+
+.cd-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cd-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: var(--color-black);
+    margin-top: 20px;
+}
+
+.cd-text p {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.cd-text span {
+    font-size: 16px;
+}
+
+
+
+
+
+/* ------ 3つの選べるコース紹介 ------ */
+
+
+
+
+
+/* コース紹介 - コンテンツ */
+#subcourse-description {
+    border-top: 1.8px var(--color-black) solid;
+    background-color: var(--color-yellow);
+    border-bottom: 1.8px var(--color-black) solid;
+}
+
+#subcourse-description .inner {
+    padding: 90px 120px;
+    border-bottom: 1.8px var(--color-black) solid;
+}
+
+#subcourse-description h2 {
+    margin-bottom: 60px;
+}
+
+.sd-h2title {
+    display: inline;
+}
+
+
+
+/* コース紹介 - メイン/画像 */
+.sd-main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.sd-pic {
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid var(--color-black);
+}
+
+.sd-main img {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.sd-item img {
+    object-fit: cover;
+}
+
+.sd-main span {
+    display: inline-block;
+    font-size: 18px;
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+    padding: 4px 0px;
+}
+
+
+
+/* コース紹介 */
+.sd-contents {
+    position: relative;
+    overflow: hidden;
+}
+
+.sd-marquee {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 80px;
+    z-index: 10;
+    overflow: hidden;
+}
+
+#sd-marquee01 {
+    left: 0px;
+}
+
+#sd-marquee02 {
+    right: 0px;
+}
+
+.sd-marquee-track {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sd-marquee-track p {
+    color: var(--color-white);
+    -webkit-text-stroke: 1.8px var(--color-black);
+    writing-mode: vertical-rl;
+    font-size: 70px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    margin: 0px;
+}
+
+#sd-marquee01 p {
+    transform: translateX(-20px);
+}
+
+
+
+/* コース紹介 - 擬似要素 */
+.sd-deco-wrap {
+    position: relative;
+}
+
+.sd-deco-wrap::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    z-index: 10;
+    animation: poyon 2s infinite;
+}
+
+#sd-gd .sd-deco-wrap::before {
+    width: clamp(150px, 20vw, 270px);
+    height: 200px;
+    top: -130px;
+    left: -160px;
+    background: url("../img/subcourse/sc_gd_deco01.png") center / contain no-repeat;
+
+    animation:
+        animPopup 3s linear 2s both,
+        poyon 2s ease-in-out 5s infinite;
+}
+
+.sd-deco-wrap::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    z-index: 10;
+    animation: poyon 2s infinite;
+}
+
+#sd-gd .sd-deco-wrap::after {
+    width: clamp(150px, 20vw, 270px);
+    height: 100px;
+    bottom: -40px;
+    right: -180px;
+    background: url("../img/subcourse/sc_gd_deco02.png") center / contain no-repeat;
+}
+
+#sd-web .sd-deco-wrap::before {
+    width: clamp(150px, 20vw, 270px);
+    height: 150px;
+    top: -120px;
+    left: -160px;
+    background: url("../img/subcourse/sc_web_deco01.png") center / contain no-repeat;
+}
+
+#sd-web .sd-deco-wrap::after {
+    width: clamp(150px, 20vw, 270px);
+    height: 100px;
+    bottom: -40px;
+    right: -180px;
+    background: url("../img/subcourse/sc_web_deco02.png") center / contain no-repeat;
+}
+
+#sd-mov .sd-deco-wrap::before {
+    width: clamp(150px, 20vw, 270px);
+    height: 150px;
+    top: -120px;
+    left: -160px;
+    background: url("../img/subcourse/sc_mov_deco01.png") center / contain no-repeat;
+}
+
+#sd-mov .sd-deco-wrap::after {
+    width: clamp(150px, 20vw, 270px);
+    height: 150px;
+    bottom: -40px;
+    right: -180px;
+    background: url("../img/subcourse/sc_mov_deco02.png") center / contain no-repeat;
+}
+
+
+
+/* コース紹介 - サブ/共通 */
+.sd-item {
+    padding: 90px 120px;
+    border-top: 1.8px var(--color-black) solid;
+}
+
+#sd-gd {
+    border-top: none;
+}
+
+.sd-inner {
+    padding: 80px 100px;
+    background-color: var(--color-white);
+    border: 1.8px var(--color-black) solid;
+    border-radius: 40px;
+}
+
+.sd-item img {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    height: 360px;
+    background-color: var(--color-black);
+    /* 仮 */
+}
+
+.sd-cinfo {
+    margin: 40px 0px;
+}
+
+.sd-cinfo,
+.sd-ainfo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sd-cinfo p,
+.sd-ainfo p {
+    font-size: 20px;
+    font-weight: 500;
+    width: 100%;
+    max-width: 450px;
+    padding: 10px 70px;
+    border-radius: 40px;
+    text-align: center;
+    align-self: center;
+}
+
+.sd-cinfo span,
+.sd-ainfo span {
+    display: block;
+    font-size: 18px;
+}
+
+.sd-ainfo-subtext {
+    display: flex;
+}
+
+.sd-ainfo-subtext-title {
+    position: relative;
+    width: 300px;
+    flex-shrink: 0;
+    /* font-family: 500; */
+}
+
+.sd-ainfo-subtext-title::after {
+    position: absolute;
+    content: "：";
+    right: 0px;
+}
+
+
+
+/* コース紹介 - サブ/GD */
+#sd-gd {
+    background-color: var(--color-red);
+}
+
+#sd-gd .sd-cinfo p {
+    color: var(--color-white);
+    background-color: var(--color-red-dark);
+}
+
+#sd-gd .sd-ainfo p {
+    color: var(--color-red-dark);
+    background-color: var(--color-white);
+    border: 2.4px var(--color-red-dark) solid;
+}
+
+#sd-gd .sd-ainfo-subtext-title {
+    color: var(--color-red-dark);
+}
+
+
+
+/* コース紹介 - サブ/Web */
+#sd-web {
+    background-color: var(--color-blue);
+}
+
+#sd-web .sd-cinfo p {
+    color: var(--color-white);
+    background-color: var(--color-blue-dark);
+}
+
+#sd-web .sd-ainfo p {
+    color: var(--color-blue-dark);
+    background-color: var(--color-white);
+    border: 2.4px var(--color-blue-dark) solid;
+}
+
+#sd-web .sd-ainfo-subtext-title {
+    color: var(--color-blue-dark);
+}
+
+
+
+/* コース紹介 - サブ/Mov */
+#sd-mov {
+    background-color: var(--color-green);
+}
+
+#sd-mov .sd-cinfo p {
+    color: var(--color-white);
+    background-color: var(--color-green-dark);
+}
+
+#sd-mov .sd-ainfo p {
+    color: var(--color-green-dark);
+    background-color: var(--color-white);
+    border: 2.4px var(--color-green-dark) solid;
+}
+
+#sd-mov .sd-ainfo-subtext-title {
+    color: var(--color-green-dark);
+}
+
+
+
+
+
+/* ------ １日のスケジュール ------ */
+
+
+
+
+
+/* スケジュール - コンテンツ */
+#daily-schedule .inner {
+    padding: 90px 120px 120px 120px;
+}
+
+#daily-schedule h2 {
+    margin-bottom: 60px;
+}
+
+.ds-contents {
+    display: flex;
+    gap: 28px;
+}
+
+
+
+/* スケジュール - コンテンツ/画像(ベース) */
+.ds-pic-wrap {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 360px;
+    height: 580px;
+
+    align-items: center;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 2px var(--color-black) solid;
+    border-radius: 20px;
+    padding: 24px;
+    background-color: var(--color-black);
+}
+
+.ds-deco img {
+    width: 100%;
+    max-width: 100px;
+    object-fit: contain;
+}
+
+.ds-title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+}
+
+.ds-title span {
+    display: block;
+    color: var(--color-white);
+    -webkit-text-stroke: 1.4px var(--color-black);
+    font-size: 26px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    margin-bottom: -10px;
+}
+
+.ds-title p {
+    color: var(--color-white);
+    -webkit-text-stroke: 1.4px var(--color-black);
+    font-size: 36px;
+    font-weight: 900;
+}
+
+.ds-hashtag {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.ds-hashtag span {
+    display: block;
+    width: fit-content;
+    color: var(--color-white);
+    -webkit-text-stroke: 1px var(--color-black);
+    font-size: 18px;
+    font-weight: 900;
+}
+
+
+
+/* スケジュール - コンテンツ/画像(動作) */
+.ds-mainpic {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.ds-pic {
+    position: absolute;
+    inset: 0;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.ds-pic.is-active {
+    opacity: 1;
+}
+
+#ds-pic-0910 {
+    background: url(../img/dailyschedule/ds_pic_0910.png);
+}
+
+#ds-pic-0920 {
+    background: url(../img/dailyschedule/ds_pic_0920.png);
+}
+
+#ds-pic-1020 {
+    background: url(../img/dailyschedule/ds_pic_1020.png);
+}
+
+#ds-pic-1120 {
+    background: url(../img/dailyschedule/ds_pic_1120.png);
+}
+
+#ds-pic-1210 {
+    background: url(../img/dailyschedule/ds_pic_1210.png);
+}
+
+#ds-pic-1310 {
+    background: url(../img/dailyschedule/ds_pic_1310.png);
+}
+
+#ds-pic-1410 {
+    background: url(../img/dailyschedule/ds_pic_1410.png);
+}
+
+#ds-pic-1600 {
+    background: url(../img/dailyschedule/ds_pic_1600.png);
+}
+
+
+
+/* スケジュール - コンテンツ/テキスト */
+.ds-texts {
+    position: relative;
+    width: 100%;
+    height: 580px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    /* border: 2px var(--color-black) solid;
+    border-radius: 20px; */
+    padding: 50px 80px 50px 160px;
+    background-color: var(--color-gray);
+}
+
+.ds-texts-wrapper,
+.ds-texts-inner {
+    position: relative;
+}
+
+.ds-texts-inner {
+    overflow: hidden;
+    border: 2px var(--color-black) solid;
+    border-radius: 20px;
+}
+
+.ds-texts-wrapper::before {
+    position: absolute;
+    content: "";
+    bottom: -40px;
+    left: -100px;
+    width: 100%;
+    max-width: 180px;
+    height: 440px;
+    background: url("../img/illustration/character_girl04.png") center / contain no-repeat;
+    z-index: 5;
+}
+
+.ds-texts-inner::before {
+    position: absolute;
+    content: "";
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 150px;
+    background: url("../img/dailyschedule/ds_text_deco.png") center / cover no-repeat;
+    z-index: 1;
+}
+
+.ds-texts ul {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 360px;
+}
+
+.ds-texts li {
+    padding: 50px 0px;
+    z-index: 10;
+}
+
+.ds-texts li p {
+    position: relative;
+    color: var(--color-black);
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.ds-texts li span {
+    color: var(--color-black);
+    font-size: 18px;
+}
+
+.ds-texts li p::before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    left: -30px;
+    transform: translate(-40px, -46%);
+    border-radius: 50%;
+    background-color: var(--color-black-lite);
+    transition: all 0.2s ease-in-out;
+}
+
+.ds-texts li.is-active p::before {
+    background-color: var(--color-black);
+    /* 仮 */
+}
+
+
+
+/* スケジュール - スクロールバー */
+.ds-texts {
+    scrollbar-width: none;
+}
+
+.ds-texts::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+
+/* ------ 先輩たちの声 ------ */
+
+
+
+
+
+/* 先輩たちの声 - コンテンツ */
+#student-voices {
+    border-top: 1.8px var(--color-black) solid;
+    background-image: repeating-linear-gradient(120deg, #63d5ec, #63d5ec 20px, #7de9ff 20px, #7de9ff 24px);
+}
+
+#student-voices .inner {
+    padding: 90px 120px;
+}
+
+#student-voices h2 {
+    margin-bottom: 90px;
+}
+
+.sv-cards {
+    display: grid;
+    justify-self: center;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    gap: 80px;
+}
+
+#sv-gd-KR_wrapper {
+    transform: rotate(-6deg);
+}
+
+#sv-gd-TD_wrapper {
+    transform: rotate(4deg) translateX(-20px);
+}
+
+#sv-web-KH_wrapper {
+    transform: rotate(10deg) translate(40px, -20px);
+}
+
+#sv-web-MH_wrapper {
+    transform: rotate(-8deg) translate(40px, 0);
+}
+
+#sv-mov-OH_wrapper {
+    transform: rotate(-4deg) translate(0px, -20px);
+}
+
+#sv-mov-KK_wrapper {
+    transform: rotate(8deg) translateX(-20px);
+}
+
+
+
+/* 先輩たちの声 - 学生証 */
+/* ここの box-shadowの色を #3BA4BAに変更してます！ */
+.sv-item {
+    overflow: hidden;
+    width: 100%;
+    max-width: 520px;
+    background-color: var(--color-white);
+    border: 1.8px var(--color-black) solid;
+    border-radius: 6px;
+    box-shadow: 6px 8px 0 #3BA4BA;
+}
+
+.sv-border {
+    padding: 12px 0px;
+}
+
+.sv-gd .sv-border {
+    background-color: var(--color-red);
+}
+
+.sv-web .sv-border {
+    background-color: var(--color-blue);
+}
+
+.sv-mov .sv-border {
+    background-color: var(--color-green);
+}
+
+.sv-contents {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.sv-contents img {
+    width: 100%;
+    max-width: 160px;
+    height: 200px;
+    background-color: var(--color-black);
+    /* 仮 */
+}
+
+.sv-text {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    color: var(--color-black);
+}
+
+.sv-text .sv-name {
+    font-weight: 600;
+}
+
+.sv-text .sv-name p {
+    font-size: 22px;
+}
+
+
+
+
+
+/* ------ 教職員図鑑 ------ */
+
+
+
+
+
+/* 教職員図鑑 - コンテンツ */
+#teachers-description .inner {
+    margin: 90px 120px;
+    padding: 90px 60px;
+    border-radius: 40px;
+    border: 1.8px var(--color-black) solid;
+    background: url("../img/teachers/t_bg.png") repeat;
+}
+
+#teachers-description h2 {
+    margin-bottom: 90px;
+}
+
+
+
+/* 教職員図鑑 - カード/グリッド */
+.td-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.td-cardinfo {
+    grid-column: 1 / 4;
+    grid-row: 1 / 3;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    min-width: 0;
+}
+
+.td-item02 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.td-item03 {
+    grid-column: 2;
+    grid-row: 1 / 3;
+}
+
+.td-item04 {
+    grid-column: 3;
+    grid-row: 1 / 3;
+}
+
+.td-item01 {
+    grid-column: 1;
+    grid-row: 2;
+    z-index: 10;
+}
+
+.td-cardinfo.active {
+    display: grid;
+}
+
+.td-cardinfo {
+    display: none;
+}
+
+
+
+/* 教職員図鑑 - カード/内容 */
+.td-cardpic {
+    position: relative;
+}
+
+.td-cardpic img {
+    width: 388px;
+    height: 352px;
+    object-fit: contain;
+    transform: rotate(-4deg);
+}
+
+.td-cardpic::before {
+    content: "";
+    position: absolute;
+    width: 388px;
+    height: 352px;
+    top: 0px;
+    left: 0px;
+    background: url("../img/teachers/t_pic_deco.png") center / contain no-repeat;
+    transform: rotate(10deg);
+    z-index: 0;
+}
+
+.td-cardtitle {
+    color: var(--color-black);
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.td-cardtext {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 4px;
+    justify-content: center;
+    z-index: 2;
+    padding-left: 60px;
+}
+
+.td-cardtext p {
+    color: var(--color-black);
+    font-size: 24px;
+    font-weight: 500;
+    writing-mode: vertical-rl;
+}
+
+.td-text02 {
+    margin-top: 140px;
+}
+
+
+
+/* 教職員図鑑 - カード/ボタン（数字） */
+.td-btns {
+    display: flex;
+    align-items: end;
+    gap: 14px;
+}
+
+.tdbtn-text {
+    text-align: center;
+    width: 100%;
+    max-width: 100px;
+}
+
+.td-btns span {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.td-current {
+    display: inline-block;
+    width: 30px;
+    font-family: "Ubuntu", sans-serif;
+    color: var(--color-white);
+    -webkit-text-stroke: 1.8px var(--color-black);
+}
+
+.tdbtn-text {
+    display: flex;
+    width: 100%;
+    max-width: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.td-current {
+    flex: 0 0 40px;
+    width: 40px;
+}
+
+
+
+/* 教職員図鑑 - カード/ボタン（矢印） */
+.td-back,
+.td-next {
+    position: relative;
+    width: 90px;
+    height: 48px;
+    border: 2px var(--color-black) solid;
+    background-color: var(--color-white);
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.td-back::before,
+.td-back::after,
+.td-next::before,
+.td-next::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 12px;
+    height: 2px;
+    background: var(--color-black);
+    transition: all 0.2s ease-in-out;
+}
+
+.td-back::before,
+.td-back::after {
+    left: 50%;
+    transform-origin: left center;
+}
+
+.td-back::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.td-back::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.td-next::before,
+.td-next::after {
+    right: 52%;
+    transform-origin: right center;
+}
+
+.td-next::before {
+    transform: translate(50%, -50%) rotate(45deg);
+}
+
+.td-next::after {
+    transform: translate(50%, -50%) rotate(-45deg);
+}
+
+.td-back:hover,
+.td-next:hover {
+    background-color: var(--color-black);
+}
+
+.td-back:hover:before,
+.td-back:hover:after,
+.td-next:hover::before,
+.td-next:hover:after {
+    background: var(--color-white);
+}
+
+
+
+
+
+/* ------ オープンキャンパス ------ */
+
+
+
+
+
+/* オーキャン - コンテンツ/装飾 */
+#open-campus {
+    position: relative;
+    text-align: center;
+    padding: 160px 120px;
+    background-color: var(--color-yellow);
+    border-top: 1.8px var(--color-black) solid;
+    border-bottom: 1.8px var(--color-black) solid;
+}
+
+#open-campus .inner {
+    padding: 60px;
+    border: 1.8px var(--color-black) solid;
+    border-radius: 40px;
+    background-color: var(--color-white);
+}
+
+#open-campus::before {
+    content: "";
+    position: absolute;
+    width: clamp(150px, 20vw, 270px);
+    height: 428px;
+    top: 0px;
+    left: -20px;
+    background: url("../img/illustration/character_girl05.png") center / contain no-repeat;
+    animation: right-shake 6s infinite;
+}
+
+#open-campus::after {
+    content: "";
+    position: absolute;
+    width: clamp(250px, 35vw, 482px);
+    height: 412px;
+    bottom: -250px;
+    right: -100px;
+    background: url("../img/illustration/character_girl02.png") center / contain no-repeat;
+    animation: left-shake 4s infinite;
+}
+
+
+
+/* オーキャン - テキスト/ボタン */
+#open-campus h3 {
+    color: var(--color-yellow);
+    -webkit-text-stroke: 1.8px var(--color-black);
+    font-size: 80px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+}
+
+#open-campus span {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    text-align: left;
+    font-size: 18px;
+}
+
+#open-campus a {
+    position: relative;
+    display: inline-block;
+    color: var(--color-white);
+    font-size: 20px;
+    padding: 10px 70px 10px 60px;
+    margin-top: 20px;
+    border-radius: 80px;
+    border: 2px solid transparent;
+    background-color: var(--color-black);
+    transition: all 0.2s ease-in-out;
+}
+
+#open-campus a::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    background: url("../img/arrow_white.svg") center / contain no-repeat;
+    transition: all 0.2s ease-in-out;
+}
+
+#open-campus a:hover {
+    color: var(--color-black);
+    border-color: var(--color-black);
+    background-color: var(--color-white);
+    text-decoration: none;
+}
+
+#open-campus a:hover::after {
+    background-image: url("../img/arrow_black.svg");
+}
+
+
+
+
+
+/* ------ 最新情報 ------ */
+
+
+
+
+
+/* 最新情報 - コンテンツ/見出し */
+#latest-news {
+    padding: 150px 120px;
+}
+
+#latest-news h4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--color-black);
+}
+
+#latest-news h4::before,
+#latest-news h4::after {
+    content: "";
+    width: 60px;
+    border-top: 2px solid var(--color-black);
+}
+
+#latest-news h4::before {
+    transform: rotate(40deg);
+}
+
+#latest-news h4::after {
+    transform: rotate(-40deg);
+}
+
+
+
+/* 最新情報 - ボタン */
+.ln-btn {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.ln-btn a {
+    display: block;
+    transition: all 0.2s ease-in-out;
+}
+
+.ln-btn a img {
+    width: 100%;
+    height: 100%;
+    max-width: 440px;
+    max-height: 160px;
+}
+
+.ln-btn a:hover {
+    transform: translateY(-6px);
+}
+
+
+
+
+
+/* ------ フッター ------ */
+
+
+
+
+
+/* フッター - コンテンツ */
+footer {
+    border-top: 1.8px var(--color-black) solid;
+    background-color: var(--color-gray);
+}
+
+footer .inner {
+    padding: 90px 160px 60px 160px;
+}
+
+#f-content .inner {
+    display: flex;
+}
+
+
+
+/* フッター - ロゴ/SNSボタン */
+.f-logo a {
+    transition: all 0.2s ease-in-out;
+}
+
+.f-logo a:hover {
+    opacity: 0.8;
+}
+
+.f-sns {
+    padding: 10px 0px;
+    display: flex;
+    gap: 14px;
+}
+
+.f-sns li a span {
+    display: block;
+    width: 24px;
+    height: 24px;
+    transition: all 0.2s ease-in-out;
+}
+
+.f-sns li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background-color: var(--color-black);
+    transition: all 0.2s ease-in-out;
+}
+
+.f-sns li a:hover {
+    background-color: var(--color-white);
+    border-color: var(--color-black);
+}
+
+.fs-instagram span {
+    background: url(../img/footer/f_sns_instagram.svg) center / contain no-repeat;
+}
+
+.fs-instagram a:hover span {
+    background-image: url("../img/footer/f_sns_instagram_hover.svg");
+}
+
+.fs-x span {
+    background: url(../img/footer/f_sns_x.svg) center / contain no-repeat;
+}
+
+.fs-x a:hover span {
+    background-image: url("../img/footer/f_sns_x_hover.svg");
+}
+
+.fs-facebook span {
+    background: url(../img/footer/f_sns_facebook.svg) center / contain no-repeat;
+}
+
+.fs-facebook a:hover span {
+    background-image: url("../img/footer/f_sns_facebook_hover.svg");
+}
+
+.fs-youtube span {
+    background: url(../img/footer/f_sns_youtube.svg) center / contain no-repeat;
+}
+
+.fs-youtube a:hover span {
+    background-image: url("../img/footer/f_sns_youtube_hover.svg");
+}
+
+
+
+/* フッター - ナビゲーション */
+footer nav {
+    display: flex;
+    gap: 26px;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.f-nav-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.f-nav-item p {
+    display: inline-block;
+    color: var(--color-black);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.fn-subtext {
+    margin-top: -10px;
+}
+
+.fn-margintop {
+    margin-top: 0px;
+}
+
+
+
+/* フッター - ナビゲーション/ホバー時の下線 */
+.f-nav-item li {
+    position: relative;
+}
+
+.f-nav-item a {
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.f-nav-item a:hover {
+    text-decoration: none;
+}
+
+.f-nav-item a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background-color: var(--color-black);
+}
+
+.fn-subtext a::after {
+    height: 1px;
+}
+
+.f-nav-item li:hover a::after {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.2s ease;
+}
+
+.f-nav-item li:not(:hover) a::after {
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.2s ease;
+}
+
+
+
+/* フッター - マーキー */
+#f-marquee p {
+    color: var(--color-white);
+    -webkit-text-stroke: 1.8px var(--color-black);
+    font-size: 70px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    margin-bottom: -18px;
+}
+
+
+
+/* フッター - コピーライト */
+#f-copyright {
+    background-color: var(--color-black);
+    padding: 8px 0px;
+    text-align: center;
+}
+
+#f-copyright p {
+    display: inline-block;
+    color: var(--color-white);
+    font-size: 10px;
+}
+
+
+
+
+
+/* ------ レスポンシブ（微調整） ------ */
+
+
+
+
+
+@media (max-width: 1400px) {
+
+    /* 教職員図鑑 - コンテンツ */
+    .td-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        row-gap: 40px;
+    }
+
+    .td-cardinfo {
+        grid-column: 1;
+        grid-row: 1;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        row-gap: 24px;
+    }
+
+    .td-item03 {
+        grid-column: 1;
+        grid-row: 1;
+        margin-bottom: 40px;
+    }
+
+    .td-item02 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .td-item04 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+
+
+    /* 教職員図鑑 - ボタン */
+    .td-btns {
+        justify-content: center;
+    }
+
+
+    /* 教職員図鑑 - カード/内容 */
+    .td-cardpic {
+        justify-self: center;
+    }
+
+    .td-cardtitle {
+        text-align: center;
+    }
+
+    .td-cardtext p {
+        color: #fff;
+        font-weight: 400;
+        writing-mode: horizontal-tb;
+    }
+
+    .td-cardtext {
+        display: grid;
+        background-color: #222222;
+        width: fit-content;
+        justify-self: center;
+        padding: 4px 20px;
+    }
+
+    .td-text01 {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: end;
+    }
+
+    .td-text02 {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: start;
+        margin-top: 0px;
+    }
+}
+
+
+
+/* アニメーション */
+.is-visible {
+    opacity: 1 !important;
+}
+
+.is-visible {
+    animation: animPopup 1.6s linear both;
+}
+
+/* ========================================
+スクロールアニメーション
+======================================== */
+
+/* 初期状態 */
+.ad-pic-girl01,
+.ad-pic-girl02,
+.ad-pic-boy01,
+#ap-01 .ap-textimg img,
+#ap-02 .ap-textimg img,
+#latest-news h4,
+#sv-gd-KR,
+#sv-gd-TD,
+#sv-web-KH,
+#sv-web-MH,
+#sv-mov-OH,
+#sv-mov-KK,
+.cd-item,
+.active{
+    opacity: 0;
+}
+
+.ad-pic-girl01.is-visible,
+.ad-pic-girl02.is-visible,
+.ad-pic-boy01.is-visible,
+#ap-01 .ap-textimg img.is-visible,
+#ap-02 .ap-textimg img.is-visible,
+#latest-news h4.is-visible,
+#sv-gd-KR.is-visible,
+#sv-gd-TD.is-visible,
+#sv-web-KH.is-visible,
+#sv-web-MH.is-visible,
+#sv-mov-OH.is-visible,
+#sv-mov-KK.is-visible,
+.cd-item.is-visible,
+.active{
+    opacity: 1;
+    animation: animPopup 1.6s linear both;
+}
+
+
+.ds-texts-wrapper::before,
+.sd-deco-wrap::before,
+.sd-deco-wrap::after {
+    opacity: 0;
+}
+
+.ds-texts-wrapper.deco-visible::before,
+.sd-deco-wrap.deco-visible::before,
+.sd-deco-wrap.deco-visible::after {
+    opacity: 1;
+    animation: animPopup 1.6s linear both;
+}

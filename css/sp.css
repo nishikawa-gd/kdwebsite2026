@@ -1,0 +1,627 @@
+@media screen and (max-width: 599px) {
+
+    /* spについて
+    grid・paddingの調整・見出し22px,本文サイズ16pxの調整が多め
+    9/23の進捗:先輩たちの声まで大体できてます
+
+    index.html追加部分
+    1.headerのロゴのimg pictureタグ追加(33行目)
+    2.mvのbtnのpictureタグ追加(101行目)
+    3.3つの選べるコース紹介のh2にspan追加(322行目)
+    4.3つの選べるコース紹介　mvのpictureタグ追加(325行目)
+    5.最新情報のbtnのpictureタグ追加(700行目)
+     */
+
+    /* img追加 
+    imgの中のspファイルに上記(html)の変更の画像を追加しています */
+
+    /* style.css追加部分 
+
+    1.フォントカラーを変更(469行目・480行目)
+    pとspanをcolor: #0C3167;に変更 
+    -----------------------------------
+    2.職種紹介の背景追加(660行目)
+    #careers-description {
+    background-color: #63D5EC;}　水色にしてます
+    ---------------------------------
+    3.謎のcss削除(975行目)
+    .sd-ainfo-subtext-title の font-family: 500; をコメントアウト
+    ----------------------------------------------
+    4.生徒たちの学生証のbox-shadowの色を変更(1366行目)
+    box-shadow: 6px 8px 0 #3BA4BA;
+    */
+
+
+    /* 全体 */
+    h2 {
+        font-size: 30px;
+    }
+
+    /* メインビジュアル
+    現時点でわかんない・おかしいところ
+    ・公式インスタグラムbtnの比率がおかしい
+    ・神戸電子専門学校のところが2行になっている
+    ・神戸電子専門学校・各btnはもう少し下にしたいけどやり方がわかんない
+
+    補足
+    ・ハンバーガーメニューにするため一旦headerのulは非表示にしてます */
+
+    /* 文字部分一旦非表示 */
+    header ul {
+        display: none;
+    }
+
+    header {
+        padding: 6px 0px;
+    }
+
+
+
+
+    /* ハンバーガーメニュー */
+    .hmnls-inner {
+        display: grid;
+        gap: 40px;
+    }
+
+    .hmnls-inner::before {
+        display: none;
+    }
+
+    .hmnls-inner::after {
+        top: 380px;
+        left: 180px;
+        max-width: 160px;
+        height: 160px;
+    }
+
+    #up_btn {
+        right: 30px;
+        bottom: 20px;
+    }
+
+    .hm-nav-item p {
+        font-size: 16px;
+    }
+
+    a img {
+        max-width: 320px;
+    }
+
+    #hm-closebtn {
+        right: 30px;
+    }
+
+    .hmnls-inner::after{
+        display: none;
+    }
+
+
+
+    .m-catchcopy {
+        font-size: 26px;
+        padding: 6px 10px;
+    }
+
+    /* メインビジュアルの幅サイズ調整 */
+    #main-visual .inner {
+        padding: 0px 30px;
+    }
+
+    #m-content {
+        width: 100%;
+    }
+
+    #m-content .inner {
+        width: 100%;
+        /* SPでは1列にする */
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    #m-content h1 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    #m-content p {
+        grid-column: 1;
+        grid-row: 3;
+        font-size: 18px;
+        /* align-self: self-start; */
+    }
+
+    #m-content .m-btns {
+        grid-column: 1;
+        grid-row: 4;
+        width: 100%;
+        height: auto;
+        gap: 16px;
+    }
+
+    #m-content .m-btns a {
+        width: 100%;
+    }
+
+
+
+    /* 学科紹介説明文
+    ほとんど完了
+    あとはフォントカラーのみ */
+
+    #allcourse-description .inner {
+        padding: 60px 30px;
+        gap: 0;
+    }
+
+    #allcourse-description p {
+        font-size: 22px;
+        padding: 2px 0px;
+    }
+
+    #allcourse-description span {
+        font-size: 16px;
+        padding: 0;
+        line-height: 180%;
+    }
+
+    #allcourse-description .inner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #allcourse-description .ad-text {
+        order: 1;
+    }
+
+    #allcourse-description .ad-pic {
+        order: 2;
+    }
+
+    .ad-pic-girl01 {
+        max-width: 240px;
+    }
+
+    .ad-pic-girl02 {
+        max-width: 110px;
+    }
+
+    #allcourse-description .ad-pic-boy {
+        display: none;
+    }
+
+
+
+
+    /* 学科全体/ポイント - コンテンツ
+    ほとんど完了・やることは余白調整ぐらい */
+
+    #allcourse-point .inner {
+        gap: 140px;
+        padding: 140px 30px 65px 30px;
+    }
+
+    .ap-textimg {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 40px;
+    }
+
+    .ap-textimg img {
+        grid-row: 1;
+        justify-self: center;
+        max-width: 400px;
+        height: 345px;
+        object-fit: contain;
+    }
+
+    .ap-item p {
+        font-size: 20px;
+        padding: 10px 15px;
+    }
+
+    .ap-textimg {
+        gap: 0px;
+    }
+
+    /* ここの本文、最後の一文のみ消してます。
+        詳しくはhtmlを参照してね */
+    .ap-textimg span {
+        font-size: 16px;
+    }
+
+    /* ここは下との余白を調整しています */
+    #ap-01 .ap-textimg img {
+        margin-bottom: 30px;
+    }
+
+    #ap-02 .ap-textimg img {
+        margin: 20px 0px;
+    }
+
+    .ap-item:nth-child(2) {
+        gap: 0;
+    }
+
+
+    /* 数字で見る神戸電子 */
+    #mejiro-date h2 {
+        margin-bottom: 40px;
+    }
+
+    .md-btns {
+        top: 90%
+    }
+
+    .md-btns button {
+        display: none;
+    }
+
+    .md-text::before {
+        display: none;
+    }
+
+    .mdt-item {
+        padding: 0 20px;
+    }
+
+    #mdt-item06 {
+        font-size: 16px;
+    }
+
+    .mds-item.is-active {
+        width: 400px;
+        height: 400px;
+    }
+
+    .mds-item.is-active img {
+        width: 400px;
+        height: 400px;
+    }
+
+
+    /* ------ 目指せる職種紹介 ------
+    ほとんど完了 */
+
+    #careers-description .inner {
+        padding: 65px 15px 65px 15px;
+    }
+
+    /* ここ(職種紹介の背景)style.css追加 
+    #careers-description {
+    background-color: #63D5EC;}*/
+
+
+
+
+    /* ------ 3つの選べるコース紹介 ------
+    ほとんど完了 */
+
+    #subcourse-description .inner {
+        padding: 65px 30px;
+    }
+
+    /* html追加::2.3つの選べるコース紹介　h2にspan追加(322行目) */
+    #subcourse-description .inner h2 small {
+        margin-bottom: 0;
+    }
+
+    #subcourse-description h2 {
+        margin-bottom: 30px;
+    }
+
+    .sd-h2title>span {
+        display: block;
+    }
+
+    /* html追加::3.3つの選べるコース紹介　mvのpictureタグ追加(325行目)  */
+    .sd-main img {
+        max-width: 600px;
+        height: 279px;
+    }
+
+    .sd-main span {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .sd-item {
+        padding: 65px 0;
+    }
+
+    .sd-inner {
+        border-radius: 0;
+        padding: 65px 30px;
+    }
+
+    /* 横の流れている文字を削除 */
+    #sd-marquee01,
+    #sd-marquee02 {
+        display: none;
+    }
+
+    /* スマホの時パソコン・コーヒーが途切れて見えていたので一旦削除してみた */
+    #sd-gd .sd-deco-wrap::before {
+        display: none;
+    }
+
+    #sd-mov .sd-deco-wrap::before {
+        display: none;
+    }
+
+    .sd-cinfo span,
+    .sd-ainfo span {
+        font-size: 16px;
+    }
+
+    .sd-ainfo-subtext {
+        display: block;
+    }
+
+    .sd-ainfo-subtext-title::after {
+        display: none;
+    }
+
+
+
+
+    /* ------ １日のスケジュール ------
+    一応見れる状態までは完了
+    形状については要相談 */
+
+    #daily-schedule .inner {
+        padding: 65px 30px 90px 30px;
+    }
+
+    #daily-schedule h2 {
+        margin-bottom: 30px;
+    }
+
+    .ds-texts-wrapper::before {
+        display: none;
+    }
+
+    .ds-contents {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ds-pic-wrap {
+        order: 2;
+        margin-top: 30px;
+    }
+
+    .ds-texts-wrapper {
+        order: 1;
+    }
+
+    .ds-texts {
+        padding: 30px 20px;
+    }
+
+    .ds-texts li {
+        padding: 40px 0px;
+    }
+
+    /* .ds-title span(スクロール部分見出し)のフォントサイズ */
+    .ds-texts li p {
+        font-size: 20px;
+    }
+
+    /* .ds-hashtag span (スクロール部分本文)のフォントサイズ */
+    .ds-texts li span {
+        font-size: 16px;
+    }
+
+
+    /* ------ 先輩たちの声 ------
+    大体完成 */
+
+    #student-voices .inner {
+        padding: 65px 0 140px 0;
+    }
+
+    #student-voices h2 {
+        margin-bottom: 40px;
+    }
+
+    .sv-cards {
+        display: block;
+    }
+
+    #sv-gd-KR_wrapper {
+        transform: rotate(-6deg);
+    }
+
+    #sv-gd-TD_wrapper {
+        transform: rotate(4deg) translateX(0px);
+    }
+
+    #sv-web-KH_wrapper {
+        transform: rotate(10deg) translate(0, 0);
+    }
+
+    #sv-web-MH_wrapper {
+        transform: rotate(-8deg) translate(20px, 0);
+    }
+
+    #sv-mov-OH_wrapper {
+        transform: rotate(-4deg) translate(0, 0);
+    }
+
+    #sv-mov-KK_wrapper {
+        transform: rotate(8deg) translateX(0);
+    }
+
+
+
+    /* ------ 教職員図鑑 ------ */
+    #teachers-description .inner {
+        margin: 0 0;
+        padding: 65px 0px;
+        border-radius: 0;
+    }
+
+    .td-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        row-gap: 40px;
+    }
+
+    .td-cardinfo {
+        grid-column: 1;
+        grid-row: 1;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        row-gap: 24px;
+    }
+
+    .td-item03 {
+        grid-column: 1;
+        grid-row: 1;
+        margin-bottom: 40px;
+    }
+
+    .td-item02 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .td-item04 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+
+
+    /* 教職員図鑑 - ボタン */
+    .td-btns {
+        justify-content: center;
+    }
+
+
+    /* 教職員図鑑 - カード/内容 */
+    .td-cardpic {
+        justify-self: center;
+    }
+
+    .td-cardtitle {
+        text-align: center;
+    }
+
+    .td-cardtext p {
+        color: #fff;
+        font-weight: 400;
+        writing-mode: horizontal-tb;
+    }
+
+    .td-cardtext {
+        display: grid;
+        background-color: #222222;
+        width: fit-content;
+        justify-self: center;
+        padding: 4px 20px;
+    }
+
+    .td-text01 {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: end;
+    }
+
+    .td-text02 {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: start;
+        margin-top: 0px;
+    }
+
+
+
+
+
+    /* ------ オープンキャンパス ------ */
+    #open-campus {
+        padding: 65px 30px;
+    }
+
+    #open-campus .inner {
+        padding: 65px 30px;
+    }
+
+    #open-campus::before,
+    #open-campus::after {
+        display: none;
+    }
+
+
+    #open-campus h3 {
+        font-size: 56px;
+        line-height: 1.0;
+        text-align: center;
+    }
+
+    #open-campus span {
+        margin: 20px auto;
+        text-align: left;
+        font-size: 16px;
+    }
+
+    #open-campus a {
+        font-size: 18px;
+    }
+
+
+
+    /* ------ 最新情報 ------
+    インスタのbtnだけサイズが違う問題があります */
+
+    #latest-news {
+        padding: 65px 30px;
+    }
+
+    #latest-news h4 {
+        font-size: 30px;
+    }
+
+    #latest-news h4::before,
+    #latest-news h4::after {
+        width: 40px;
+    }
+
+    .ln-btn {
+        display: grid;
+        row-gap: 10px;
+    }
+
+
+
+    /* ------ footer ------ */
+    footer .inner {
+        padding: 55px 30px 10px 30px;
+    }
+
+    #f-content .inner {
+        display: block;
+    }
+
+    footer nav {
+        display: block;
+    }
+
+    .f-nav-item {
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .f-nav-item p {
+        font-size: 16px;
+    }
+
+    .f-logo a img {
+        max-width: 320px;
+    }
+
+}
