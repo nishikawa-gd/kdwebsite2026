@@ -1,0 +1,777 @@
+body{
+    background-color: #FCEEE7;
+}
+.zen-maru-gothic-regular {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .zen-maru-gothic-bold {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+
+html {
+    scroll-behavior: smooth;
+    
+  }
+.all{
+    margin: 0 auto;
+    /*max-width: 1200px;*/
+    background-color: #FCEEE7;
+    background-image: linear-gradient(90deg, #ffe0da80 10px, transparent 10px), linear-gradient(#ffe0da80 10px, transparent 10px);
+background-position: 10px 10px;
+background-size: 70px 70px;
+  
+}
+
+
+.main {
+    position: relative;
+
+   
+}
+.main_top h1{
+    padding-left: 174px;
+    background-image: url(../img/hhaikei.png);
+    background-repeat: no-repeat;
+    background-position:left;
+   
+}
+.main_top .logo{
+    width: 350px;
+    height: auto;
+    transform: rotate(11deg);
+    position: absolute;
+    right: -1px;
+    top: 180px;
+
+}
+.main_top .heart{
+    width: 252px;
+    height: auto;
+    position: absolute;
+    right: 46px;
+    top: 205px;
+
+}
+.top_right{
+    width: 464px;
+    height: auto;
+    position: absolute;
+    right:0px;
+    top: 0;
+}
+.map{
+    width: 377px;
+    height: auto;
+}
+.map-container{
+    position: relative;
+}
+.map-container .map_1{
+    position: absolute;
+    top: 90px;
+    left: 51px;
+    font-family: Zen Maru Gothic;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex; /* テキストと疑似要素を横並びにする */
+    align-items: center; /* 上下中央に揃える */
+  }
+  
+  .map_1::before {
+    width: 0; /* 初期表示は表示しないようにする */
+    height: 0;
+    content: "";
+    background-color: transparent;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+  
+  .map_1:hover::before {
+    width: 0.25em; /* ホバー時に表示 */
+    height: 0.25em;
+    margin-right: 20px;
+    background-color: #000;
+  }
+.map-container .map_2{
+    position: absolute;
+    top: 184px;
+    left: 51px;
+    font-family: Zen Maru Gothic;
+    font-size: 16px;
+    font-weight: 700;
+display: flex; /* テキストと疑似要素を横並びにする */
+align-items: center; /* 上下中央に揃える */
+}
+
+.map_2::before {
+width: 0; /* 初期表示は表示しないようにする */
+height: 0;
+content: "";
+background-color: transparent;
+border-radius: 50%;
+transition: 0.3s;
+}
+
+.map_2:hover::before {
+width: 0.25em; /* ホバー時に表示 */
+height: 0.25em;
+margin-right: 20px;
+background-color: #000;
+}
+.map-container .map_3{
+    position: absolute;
+    top: 287px;
+    left: 51px;
+    font-family: Zen Maru Gothic;
+    font-size: 16px;
+    font-weight: 700;
+display: flex; /* テキストと疑似要素を横並びにする */
+align-items: center; /* 上下中央に揃える */
+}
+
+.map_3::before {
+width: 0; /* 初期表示は表示しないようにする */
+height: 0;
+content: "";
+background-color: transparent;
+border-radius: 50%;
+transition: 0.3s;
+}
+
+.map_3:hover::before {
+width: 0.25em; /* ホバー時に表示 */
+height: 0.25em;
+margin-right: 20px;
+background-color: #000;
+}
+.sukima{
+    background-color: #FB8372;
+    height: 94px;
+    width: auto;
+}
+.main_setumei{
+    position: relative;
+    background-color: #FFDDC0;
+    background-image: url(../img/kousi.png);
+}
+.main_setumei h2{
+    font-size: 48px;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 700;
+    padding-left: 100px;
+    padding-top: 23px;
+    margin-bottom: 88px;
+}
+.main_setumei p{
+    margin-left: 200px;
+    position: relative;
+    margin-bottom: 40px;
+    display: table;
+  background-color: #fff;
+  padding: 10px 20px;
+  font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 400;
+
+}
+.setumei_img{
+    display: flex;
+  flex-direction: column;
+}
+.main_1{
+    position: absolute;
+    width: 374px;
+    height: auto;
+    top: 73px;
+    right: 150px;
+}
+.main_2{
+    position: absolute;
+    width: 374px;
+    height: auto;
+    top: 311px;
+    right: 150px;
+}
+.main_3{
+    position: absolute;
+    width: 374px;
+    height: auto;
+    top: 525px;
+    right: 150px;
+}
+.btn_setumei img{
+    width: 277px;
+    height: auto;
+    margin-top: 250px;
+    margin-left: 1000px;
+    transition-duration: .4s;
+}
+.btn_setumei img:hover{
+    transform: scale(1.1);
+}
+.mix{
+    width: 774px;
+    height: auto;
+    position: absolute;
+    bottom: 0px;
+    left: 90px;
+}
+.step{
+    background-image: url(../img/back2.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.step h3{
+    font-size: 48px;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 700;
+    padding-top: 46px;
+    padding-bottom: 43px;
+    padding-left: 98px;
+}
+.step_img{
+    width: 950px;
+    height: auto;
+   margin-left: 260px;
+   padding-bottom: 78px;
+}
+.gakka{
+    background-image: url(../img/back3.png);
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: 100%;
+}
+.gakka h3{
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    padding-top: 44px;
+    padding-left: 100px;
+    padding-bottom: 30px;
+
+}
+.gakka_img{
+    padding-bottom: 52px;
+    display: flex;
+}
+.gd_img{
+    width: 354px;
+    height: auto;
+    margin-left: 200px;
+}
+
+.gd svg{
+    position: absolute;
+    top: 200px;
+    left: 460px;
+    transition-duration: .4s;
+}
+.gd svg:hover{
+    transform: scale(1.1);
+}
+
+.web_img{
+    width: 354px;
+    height: auto;
+}
+.web_1 svg{
+    position: absolute;
+    top: 200px;
+    left: 820px;
+    transition-duration: .4s;
+}
+.web_1 svg:hover{
+    transform: scale(1.1);
+}
+
+
+.mov_img{
+    width: 354px;
+    height: auto;
+}
+.mov svg{
+    position: absolute;
+    top: 200px;
+    right: 220px;
+    transition-duration: .4s;
+}
+.mov svg:hover{
+    transform: scale(1.1);
+}
+.text {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .picture__img{
+    display: flex;
+    
+  }
+  .picture__img img{
+    width: 300px;
+    height: auto;
+  }
+
+  
+  .kobe__text {
+    display: inline-block;
+    padding-right: 0.5em;
+    animation: marquee 10s linear infinite;
+    font-size: 128px;
+    font-weight: 900;
+    color: #5378D5;
+    background-color: #5FCEB4;
+  }
+  
+  @keyframes marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+  .top-btn {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 80px;
+    z-index: 1000;
+  }
+  
+  .top-btn img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .top-btn:hover {
+    opacity: 0.7;
+  }
+  .tenji{
+    background-image: url(../img/back4.png);
+    background-repeat: no-repeat;
+    background-size:100%;
+    height: 572px;
+    
+    display: flex;
+    position: relative;
+  }
+  .tenji svg{
+    margin-top: 25px;
+    margin-left: 250px;
+  }
+
+  .tenji-img{
+    position: absolute;
+    width: 774px;
+    right:150px;
+    overflow: visible;
+  }
+  .tenji-img img{
+    display: block;
+    transition-duration: 0.5s;
+  }
+  .tenji-img:hover {
+    transform: scale(1.1,1.1);
+    transition-duration: 0.5s;
+    }
+  .footer{
+    background-color: #FCEEE7;
+  }
+  .footer h3{
+    font-size: 48px;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 700;
+    margin-left: 101px;
+  }
+  .sns-link{
+    padding-bottom: 34px;
+    padding-left: 300px;
+  }
+  .inst{
+    width: 108px;
+    height: auto;
+    margin-left: 559px;
+    
+  }
+  .twitter{
+    width: 108px;
+    height: auto;
+    margin-left: 35px;
+  }
+  .facebook{
+    width: 108px;
+    height: auto;
+    margin-left: 35px;
+  }
+  .youtube{
+    width: 108px;
+    height: auto;
+    margin-left:35px ;
+  }
+  .copy{
+    background-color: #000;
+    display: flex;
+  }
+  .copy img{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 100px;
+  }
+  .copy p{
+    color: #fff;
+    padding-top: 34px;
+    padding-bottom: 34px;
+    margin-left: 200px;
+  }
+
+  .map-container_2{
+    position: relative;
+    margin-top: 100px;
+}
+.map-container_2 .map_1{
+    position: absolute;
+    top: 90px;
+    left: 51px;
+    font-family: Zen Maru Gothic;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex; /* テキストと疑似要素を横並びにする */
+    align-items: center; /* 上下中央に揃える */
+  }
+  
+  .map_1::before {
+    width: 0; /* 初期表示は表示しないようにする */
+    height: 0;
+    content: "";
+    background-color: transparent;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+  
+  .map_1:hover::before {
+    width: 0.25em; /* ホバー時に表示 */
+    height: 0.25em;
+    margin-right: 20px;
+    background-color: #000;
+  }
+.map-container_2 .map_2{
+    position: absolute;
+    top: 184px;
+    left: 51px;
+    font-family: Zen Maru Gothic;
+    font-size: 16px;
+    font-weight: 700;
+display: flex; /* テキストと疑似要素を横並びにする */
+align-items: center; /* 上下中央に揃える */
+}
+
+.map_2::before {
+width: 0; /* 初期表示は表示しないようにする */
+height: 0;
+content: "";
+background-color: transparent;
+border-radius: 50%;
+transition: 0.3s;
+}
+
+.map_2:hover::before {
+width: 0.25em; /* ホバー時に表示 */
+height: 0.25em;
+margin-right: 20px;
+background-color: #000;
+}
+.map-container_2 .map_3{
+    position: absolute;
+    top: 287px;
+    left: 51px;
+    font-family: Zen Maru Gothic;
+    font-size: 16px;
+    font-weight: 700;
+display: flex; /* テキストと疑似要素を横並びにする */
+align-items: center; /* 上下中央に揃える */
+}
+
+.map_3::before {
+width: 0; /* 初期表示は表示しないようにする */
+height: 0;
+content: "";
+background-color: transparent;
+border-radius: 50%;
+transition: 0.3s;
+}
+
+.map_3:hover::before {
+width: 0.25em; /* ホバー時に表示 */
+height: 0.25em;
+margin-right: 20px;
+background-color: #000;
+}
+.brock{
+  background-color: #FF8D8D;
+  width: auto;
+  height: 90px;
+}
+.gd_top{
+  max-width: none;
+}
+.graphicdesign h3{
+  font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    padding-top: 63px;
+}
+.graphicdesign{
+  background:linear-gradient(#FFDDC0, #FFEB94); 
+  background-size: 100%;
+  height: 2700px;
+  max-width: none;
+}
+.gd_txt{
+  margin-top: 166px;
+  position: relative;
+}
+.gd_txt p{
+  margin-left: 200px;
+  position:relative;
+  margin-bottom: 40px;
+  display: table;
+background-color: #fff;
+padding: 10px 20px;
+font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 400;
+}
+.gd_img_1{
+  width: 500px;
+  height: auto;
+  position: absolute;
+  right: 180px;
+  top: -50px;
+
+}
+.gd_txt_1{
+  position: relative;
+  margin-top: 500px;
+}
+.gd_txt_1 p{
+  margin-left: 800px;
+  position:relative;
+  margin-bottom: 40px;
+  display: table;
+background-color: #fff;
+padding: 10px 20px;
+font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 400;
+
+}
+.gd_img_2{
+  width: 500px;
+  height: auto;
+  position: absolute;
+  left: 180px;
+  top: -50px;
+
+}
+.gd_work h3{
+  margin-top: 600px;
+  margin-bottom: 80px;
+}
+.gd_work{
+  position: relative;
+}
+.gd_work_box{
+  display: flex;
+}
+.brock2{
+  background-color: #fff;
+  width: 600px;
+  height: 600px;
+  text-align: center;
+  align-items: center;
+  margin-left: 80px;
+  border: #FB8372 10px solid;
+}
+.gd_img1{
+  width: 500px;
+  height: auto;
+  position: absolute;
+  left: 150px;
+  top: 260px;
+
+}
+.gd_img2{
+  width: 400px;
+  height: auto;
+  position: absolute;
+  right: 180px;
+  top:200px ;
+}
+.brock3{
+  background-color: #fff;
+  width: 600px;
+  height: 600px;
+  text-align: center;
+  align-items: center;
+  margin-left: 100px;
+  border: #FB8372 10px solid;
+}
+.gd_work_neme{
+  display: flex;
+  position: relative;
+}
+.brock4{
+  background-color: #fff;
+  width: 600px;
+  height: 100px;
+  margin-left: 80px;
+  margin-top: 30px;
+}
+.brock5{
+  background-color: #fff;
+  width: 600px;
+  height: 100px;
+  margin-left: 100px;
+  margin-top: 30px;
+}
+.gd_work_neme p{
+  font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+
+}
+.gd_work_neme .name_txt1{
+  position: absolute;
+  left: 260px;
+  top: 70px;
+}
+.gd_work_neme .name_txt2{
+  position: absolute;
+  right: 340px;
+  top: 70px;
+}
+.web{
+  background:linear-gradient(#FFDDC0, #C1DDFF); 
+  background-size: 100%;
+  height: 2700px;
+  max-width: none;
+}
+.web h3{
+  font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    padding-top: 63px;
+}
+.web_img1{
+  width: 350px;
+  height: auto;
+  position: absolute;
+  left: 190px;
+  top: 220px;
+
+}
+.web_img2{
+  width: 500px;
+  height: auto;
+  position: absolute;
+  right: 135px;
+  top:300px ;
+}
+.brock6{
+  background-color: #f8f8f8;
+  width: 600px;
+  height: 600px;
+  text-align: center;
+  align-items: center;
+  margin-left: 80px;
+  border: #FB8372 10px solid;
+}
+.video{
+  background:linear-gradient(#FFDDC0, #FFC0C0); 
+  background-size: 100%;
+  height: 2700px;
+  max-width: none;
+}
+.video h3{
+  font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    padding-top: 63px;
+}
+.mov_img1{
+  width: 500px;
+  height: auto;
+  position: absolute;
+  left: 130px;
+  top: 320px;
+
+}
+.mov_2{
+  width: 500px;
+  height: auto;
+  position: absolute;
+  right: 135px;
+  top:320px ;
+}
+.gd_top svg{
+  margin-left: 60px;
+  margin-top: 40px;
+}
+.web_top svg{
+  margin-left: 60px;
+  margin-top: 40px;
+}
+.mov_top svg{
+  margin-left: 60px;
+  margin-top: 40px;
+}
+.camera{
+  width: 320px;
+  height: auto;
+  position: absolute;
+  top: 400px;
+  right: 200px;
+  animation: bounce 2s ease-in-out infinite;
+  
+}
+.pc{
+  width: 340px;
+  height: auto;
+  position: absolute;
+  top:400px ;
+  right:200px ;
+  animation: bounce 2s ease-in-out infinite;
+}
+.camera1{
+  width: 320px;
+  height: auto;
+  position: absolute;
+  top: 350px;
+  right: 250px;
+  
+}
+.pc1{
+  width: 340px;
+  height: auto;
+  position: absolute;
+  top:380px ;
+  right:600px ;
+  transform: rotate(-20deg);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { 
+    transform: translateY(0);
+  }
+  40% { 
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
