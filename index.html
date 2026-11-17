@@ -1,11 +1,758 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" href="./img/logo.png" width="32px 32px">
+    <link rel="stylesheet" href="./css/destyle.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <title>神戸電子専門学校グラフィックデザイン学科サイト</title>
 </head>
+
 <body>
-    <p>testtestaaa</p>
+    <div class="inner">
+        <div class="mv_wrap" id="mv">
+            <div class="header">
+                <a href="#"><img src="./img/logo.png" alt="グラデザ学科ロゴ"></a>
+                <div class="header_right">
+                    <a href="#">
+                        <p class="go_top">トップ</p>
+                    </a>
+                    <div class="header_course_wrap">
+                        <a href="#">
+                            <div class="header_course">
+                                <p class="go_course">コース紹介</p>
+                                <div class="header_btn_arrow"><img src="./img/header_btn_arrow.png" alt="右矢印"></div>
+                            </div>
+                        </a>
+                        <!-- ドロップダウン -->
+                        <ul class="dropdown_menu">
+                            <li><a href="web.html">WEBコース</a></li>
+                            <li><a href="graphic.html">グラフィックコース</a></li>
+                            <li><a href="move.html">動画コース</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 無限スクロール　上側 -->
+            <div class="infinite_scllor">
+                <div class="slider-wrapper">
+                    <ul class="slider">
+                        <li class="slide">
+                            <img src="./img/infinite_scllor_top_txt.png" alt="Kobe Institute of Computing" />
+                        </li>
+                        <li class="slide">
+                            <img src="./img/infinite_scllor_top_txt.png" alt="Kobe Institute of Computing" />
+                        </li>
+                        <li class="slide">
+                            <img src="./img/infinite_scllor_top_txt.png" alt="Kobe Institute of Computing" />
+                        </li>
+                    </ul>
+                    <ul class="slider">
+                        <li class="slide">
+                            <img src="./img/infinite_scllor_top_txt.png" alt="Kobe Institute of Computing" />
+                        </li>
+                        <li class="slide">
+                            <img src="./img/infinite_scllor_top_txt.png" alt="Kobe Institute of Computing" />
+                        </li>
+                        <li class="slide">
+                            <img src="./img/infinite_scllor_top_txt.png" alt="Kobe Institute of Computing" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="MV_deco">
+                <div class="deco_1"><img src="./img/deco_1.png" alt=""></div>
+                <div class="deco_2"><img src="./img/deco_2.png" alt=""></div>
+                <div class="deco_3"><img src="./img/deco_3.png" alt=""></div>
+                <div class="deco_4"><img src="./img/deco_4.png" alt=""></div>
+                <div class="deco_5"><img src="./img/deco_5.png" alt=""></div>
+                <div class="deco_6"><img src="./img/deco_6.png" alt=""></div>
+                <div class="deco_7"><img src="./img/deco_7.png" alt=""></div>
+                <div class="deco_8"><img src="./img/deco_8.png" alt=""></div>
+                <div class="deco_9"><img src="./img/deco_9.png" alt=""></div>
+                <div class="deco_10"><img src="./img/deco_10.png" alt=""></div>
+                <div class="deco_11"><img src="./img/deco_11.png" alt=""></div>
+                <div class="deco_12"><img src="./img/deco_12.png" alt=""></div>
+                <div class="deco_13"><img src="./img/deco_13.png" alt=""></div>
+                <div class="deco_14"><img src="./img/deco_14.png" alt=""></div>
+                <div class="deco_15"><img src="./img/deco_15.png" alt=""></div>
+                <div class="deco_16"><img src="./img/deco_16.png" alt=""></div>
+                <div class="deco_17"><img src="./img/deco_17.png" alt=""></div>
+                <div class="deco_18"><img src="./img/deco_18.png" alt=""></div>
+                <div class="deco_19"><img src="./img/deco_19.png" alt=""></div>
+                <div class="deco_20"><img src="./img/deco_20.png" alt=""></div>
+                <div class="deco_21"><img src="./img/deco_21.png" alt=""></div>
+
+            </div>
+            <div class="MV_human">
+                <div class="human_reika"><img src="./img/MV_reika.png" alt="麗華"></div>
+                <div class="human_tatsuki"><img src="./img/MV_tatsuki.png" alt="樹"></div>
+                <div class="human_miki"><img src="./img/MV_miki.png" alt="三木"></div>
+                <div class="human_daina"><img src="./img/MV_daina.png" alt="大成"></div>
+            </div>
+            <div class="MV_tit"><img src="./img/MV_tit.png" alt="誰かの心に、まっすーぐ届ける・"></div>
+
+            <a href="https://kobedenshi-graphic.net/genzaichiten/" class="MV_btn" target="_blank">
+                <p class="MV_btn_txt">現在地展へ</p>
+                <!-- <div class="MV_btn_arrow"><img src="./img/MV_btn_arrow.png" alt="右矢印"></div> -->
+                <div class="sns_arrow"></div>
+            </a>
+
+            <!-- 無限スクロール　下側 -->
+            <div class="infinite_scllor_bottom">
+                <div class="slider-wrapper">
+                    <ul class="slider_bottom">
+                        <li class="slide">
+                            <img src="./img/infinite_scllor_bottom_txt.png" alt="Kobe Institute of Computing" />
+                        </li>
+                        <li class="slide">
+                            <img src="./img/infinite_scllor_bottom_txt.png" alt="Kobe Institute of Computing" />
+                        </li>
+                        <li class="slide">
+                            <img src="./img/infinite_scllor_bottom_txt.png" alt="Kobe Institute of Computing" />
+                        </li>
+                    </ul>
+                    <ul class="slider_bottom">
+                        <li class="slide">
+                            <img src="./img/infinite_scllor_bottom_txt.png" alt="Kobe Institute of Computing" />
+                        </li>
+                        <li class="slide">
+                            <img src="./img/infinite_scllor_bottom_txt.png" alt="Kobe Institute of Computing" />
+                        </li>
+                        <li class="slide">
+                            <img src="./img/infinite_scllor_bottom_txt.png" alt="Kobe Institute of Computing" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- 学科紹介 -->
+        <section class="introduction_wrap" id="introduction">
+            <div class="introduction_bg">
+                <div class="introduction_deco_1"><img src="./img/introduction_deco_1.png" alt=""></div>
+                <div class="introduction_deco_2"><img src="./img/introduction_deco_2.png" alt=""></div>
+                <div class="introduction_deco_3"><img src="./img/introduction_deco_3.png" alt=""></div>
+                <div class="introduction_deco_4"><img src="./img/introduction_deco_4.png" alt=""></div>
+                <div class="introduction_deco_5"><img src="./img/introduction_deco_5.png" alt=""></div>
+                <div class="introduction_deco_6"><img src="./img/introduction_deco_6.png" alt=""></div>
+                <div class="introduction_deco_7"><img src="./img/introduction_deco_7.png" alt=""></div>
+                <div class="introduction_deco_8"><img src="./img/introduction_deco_8.png" alt=""></div>
+                <div class="introduction_deco_9"><img src="./img/introduction_deco_9.png" alt=""></div>
+            </div>
+            <div class="introduction_reading fade-in">Department Overview</div>
+            <h2 class="introduction_tit fade-in">
+                学科<span class="h2_color">紹介</span>
+            </h2>
+            <div class="introduction_txt fade-in">何かをカタチにするのが<span class="introduction_txt_color">ワクワクする——。</span><br>
+                その強い想いこそが、デザインの第一歩です。<br>
+                あなたの描いたアイデアを、確かなカタチにして社会へ届けましょう！
+            </div>
+        </section>
+
+
+        <!-- コース詳細 -->
+        <section class="course" id="course">
+            <div class="course_reading fade-in">Course Overview</div>
+            <h2 class="course_tit fade-in">
+                コース<span class="h2_color">紹介</span>
+            </h2>
+            <div class="course_content">
+
+                <!-- WEBコースのコンテンツ -->
+                <div class="web_course scale-up">
+                    <div class="web_course_flex">
+                        <p class="web_course_num">01</p>
+                        <p class="web_course_name">WEBコース</p>
+                    </div>
+                    <div class="web_course_img"><img src="./img/web_course.jpg" alt="WEBコースの授業風景"></div>
+                    <p class="web_course_txt">「見やすくてかっこいいWebサイト」をつくる技術をまるごと学べるコースです。
+                        自分のアイデアがそのままネット上で動くワクワク感を体験しよう！</p>
+
+                    <!-- ボタン -->
+                    <a href="web.html" class="web_course_btn" target="_blank">
+                        <p class="web_course_btn_txt">詳細へ</p>
+                        <!-- <div class="web_course_btn_arrow"><img src="./img/course_btn_arrow.png" alt="右矢印"></div> -->
+                        <div class="sns_arrow"></div>
+                    </a>
+                </div>
+
+                <!-- グラフィックコースのコンテンツ -->
+                <div class="graphic_course scale-up delay-1">
+                    <div class="graphic_course_flex">
+                        <p class="graphic_course_num">02</p>
+                        <p class="graphic_course_name">グラフィックコース</p>
+                    </div>
+                    <div class="graphic_course_img"><img src="./img/graphic_course.jpg" alt="グラフィックコースの授業風景"></div>
+                    <p class="graphic_course_txt">「人の心を惹きつけるグラフィック」を生み出す技術を基礎から学べるコースです。
+                        あなたの世界観をポスターやパッケージとしてカタチにする感動を体験しよう！</p>
+
+                    <!-- ボタン -->
+                    <a href="graphic.html" class="graphic_course_btn" target="_blank">
+                        <p class="graphic_course_btn_txt">詳細へ</p>
+                        <!-- <div class="graphic_course_btn_arrow"><img src="./img/course_btn_arrow.png" alt="右矢印"></div> -->
+                        <div class="sns_arrow"></div>
+                    </a>
+                </div>
+
+                <!-- 動画コースのコンテンツ -->
+                <div class="movie_course scale-up delay-2">
+                    <div class="movie_course_flex">
+                        <p class="movie_course_num">03</p>
+                        <p class="movie_course_name">動画コース</p>
+                    </div>
+                    <div class="movie_course_img"><img src="./img/movie_course.jpg" alt="動画コースの授業風景"></div>
+                    <p class="movie_course_txt">「視線を釘付けにする映像作品」をつくる技術をゼロから学べるコースです。 音と映像でストーリーを動かし、観る人をワクワクさせる快感を体験しよう！
+                    </p>
+
+                    <!-- ボタン -->
+                    <a href="move.html" class="movie_course_btn" target="_blank">
+                        <p class="movie_course_btn_txt">詳細へ</p>
+                        <!-- <div class="movie_course_btn_arrow"><img src="./img/course_btn_arrow.png" alt="右矢印"></div> -->
+                        <div class="sns_arrow"></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 現在地点の紹介 -->
+        <!-- 現在地点無限スクロール上 -->
+        <div class="infinite_scllor_genzaititen" id="genzaichiten">
+            <div class="slider-wrapper">
+                <ul class="slider">
+                    <li class="slide">
+                        <img src="./img/genzaititen_infinite_txt.png" alt="Kobe Institute of Computing" />
+                    </li>
+                    <li class="slide">
+                        <img src="./img/genzaititen_infinite_txt.png" alt="Kobe Institute of Computing" />
+                    </li>
+                    <li class="slide">
+                        <img src="./img/genzaititen_infinite_txt.png" alt="Kobe Institute of Computing" />
+                    </li>
+                </ul>
+                <ul class="slider">
+                    <li class="slide">
+                        <img src="./img/genzaititen_infinite_txt.png" alt="Kobe Institute of Computing" />
+                    </li>
+                    <li class="slide">
+                        <img src="./img/genzaititen_infinite_txt.png" alt="Kobe Institute of Computing" />
+                    </li>
+                    <li class="slide">
+                        <img src="./img/genzaititen_infinite_txt.png" alt="Kobe Institute of Computing" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <section class="genzaititen_wrap">
+            <div class="genzaititen_inner">
+                <div class="genzaititen_reading fade-in">Genzai Titen Overview</div>
+                <h2 class="genzaititen_tit fade-in">
+                    現在地展の<span class="h2_color">紹介</span>
+                </h2>
+                <div class="genzaititen_flex">
+                    <div class="genzaititen_img_box">
+                        <div class="genzaititen_img_1 fade-in"><img src="./img/genzaititen_img_1.jpg" alt="集合写真"></div>
+                        <div class="genzaititen_img_2 fade-in"><img src="./img/genzaititen_img_2.jpg" alt="作品写真"></div>
+                        <div class="genzaititen_img_3 fade-in"><img src="./img/genzaititen_img_3.jpg" alt="ロゴ写真"></div>
+                    </div>
+                    <div class="genzaititen_content scale-up fade-in">
+                        <p class="genzaititen_Q">現在地展とは？</p>
+                        <p class="genzaititen_A">「現在地展」は、グラフィックデザイン学科の学生が企画から展示までを自ら手がける、年に一度の合同作品展です。<br>
+                            多くのデザイン企業も来場し、プロのデザイナーに作品を直接プレゼンできる機会となっています。
+                        </p>
+                    </div>
+                </div>
+                <a href="https://kobedenshi-graphic.net/genzaichiten/" class="go_genzaititen_btn fade-in" target="_blank">
+                    <div class="genzaititen_btn_logo"><img src="./img/genzaititen_btn_logo.png" alt="現在地展"></div>
+                    <p class="genzaititen_btn_txt">サイトへ</p>
+                    <!-- <div class="genzaititen_btn_arrow"><img src="./img/course_btn_arrow.png" alt="右矢印"></div> -->
+                    <div class="sns_arrow"></div>
+                </a>
+            </div>
+
+            <!-- 現在地点無限スクロール下 -->
+            <div class="infinite_scllor_genzaititen_bottom">
+                <div class="slider-wrapper">
+                    <ul class="slider_bottom">
+                        <li class="slide">
+                            <img src="./img/genzaititen_infinite_txt.png" alt="Kobe Institute of Computing" />
+                        </li>
+                        <li class="slide">
+                            <img src="./img/genzaititen_infinite_txt.png" alt="Kobe Institute of Computing" />
+                        </li>
+                        <li class="slide">
+                            <img src="./img/genzaititen_infinite_txt.png" alt="Kobe Institute of Computing" />
+                        </li>
+                    </ul>
+                    <ul class="slider_bottom">
+                        <li class="slide">
+                            <img src="./img/genzaititen_infinite_txt.png" alt="Kobe Institute of Computing" />
+                        </li>
+                        <li class="slide">
+                            <img src="./img/genzaititen_infinite_txt.png" alt="Kobe Institute of Computing" />
+                        </li>
+                        <li class="slide">
+                            <img src="./img/genzaititen_infinite_txt.png" alt="Kobe Institute of Computing" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- tuika -->
+
+        <!-- 企業連携 -->
+        <section class="corporate_wrap" id="corporate">
+            <div class="corporate_reading fade-in">Corporate Collaboration</div>
+            <h2 class="corporate_tit fade-in">
+                企業<span class="h2_color">連携</span>
+            </h2>
+            <div class="corporate_content_box_top">
+
+                <div class="corporate_content_01 corporate_card scale-up">
+                    <div class="corporate_num">01</div>
+                    <div class="corporate_box">
+                        <p class="corporate_name">インターン</p>
+                        <div class="corporate_logo"><img src="./img/corporate_logo.png" alt="教授マーク"></div>
+                    </div>
+                    <div class="corporate_img">
+                        <img src="./img/corporate_img_01.jpg" alt="インターンの写真">
+                    </div>
+                    <div class="corporate_detail">
+                        <p class="corporate_detail_txt">
+                            実際の現場で制作フローやデザイン業務を在業中から体験し、プロに必要なスピード感と実践力を身につけます。
+                            現場での実務経験はスキルアップに直結するだけでなく、そのまま早期内定へつながる貴重な機会となっています。
+                        </p>
+                    </div>
+                    <button type="button" class="corporate_plus_btn" aria-label="詳細を開く"></button>
+                </div>
+
+                <div class="corporate_content_02 corporate_card scale-up">
+                    <div class="corporate_num">02</div>
+                    <div class="corporate_box">
+                        <p class="corporate_name">他校と交流</p>
+                        <div class="corporate_logo_02"><img src="./img/corporate_02_logo.png" alt="教授マーク" width="30">
+                        </div>
+                    </div>
+                    <div class="corporate_img">
+                        <img src="./img/corporate_img_02.jpg" alt="インターンの写真">
+                    </div>
+                    <div class="corporate_detail">
+                        <p class="corporate_detail_txt">
+                            他校のクリエイティブ系学科や他大学の学生と行う合同プロジェクト・ワークショップです。異なる視点や表現手法を持つ同世代と切磋琢磨することで、一人では気づけない発想力を養い、チーム制作に必要なコミュニケーション能力を磨きます。
+                        </p>
+                    </div>
+                    <button type="button" class="corporate_plus_btn" aria-label="詳細を開く"></button>
+                </div>
+            </div>
+            <div class="corporate_content_box_bottom">
+
+                <div class="corporate_content_03 corporate_card scale-up">
+                    <div class="corporate_num">03</div>
+                    <div class="corporate_box">
+                        <p class="corporate_name">うぇぶなう</p>
+                        <div class="corporate_logo_03"><img src="./img/corporate_03_logo.png" alt="教授マーク" width="49">
+                        </div>
+                    </div>
+                    <div class="corporate_img">
+                        <img src="./img/corporate_img_03.jpg" alt="インターンの写真">
+                    </div>
+                    <div class="corporate_detail">
+                        <p class="corporate_detail_txt">
+                            Web業界を牽引する企業のプロと、全国の主要専門学校が集結する合同イベントです。第一線で活躍するクリエイターから直接ポートフォリオ（作品集）の講評を受けられるほか、最新の業界動向を学び、Web・デザイン業界との強力なネットワークを築きます。
+                        </p>
+                    </div>
+                    <button type="button" class="corporate_plus_btn" aria-label="詳細を開く"></button>
+                </div>
+
+                <div class="corporate_content_04 corporate_card scale-up">
+
+                    <div class="corporate_num">04</div>
+                    <div class="corporate_box">
+                        <p class="corporate_name">会社説明会</p>
+                        <div class="corporate_logo_04"><img src="./img/corporate_04_logo.png" alt="教授マーク" width="30">
+                        </div>
+                    </div>
+                    <div class="corporate_img">
+                        <img src="./img/corporate_img_04.jpg" alt="インターンの写真">
+                    </div>
+                    <div class="corporate_detail">
+                        <p class="corporate_detail_txt">
+                            本校の学生のためだけに多数の企業が来校（またはオンライン開催）する限定の説明会です。求人票だけでは分からない企業の雰囲気や現場の本音を人事担当者・クリエイターから直接聞き、学内にいながら就職選考へ有利に進めるアドバンテージを得られます。
+                        </p>
+                    </div>
+                    <button type="button" class="corporate_plus_btn" aria-label="詳細を開く"></button>
+                </div>
+            </div>
+        </section>
+        <!-- 学生のいちにち -->
+        <section class="student_day" id="student_day">
+            <div class="student_day_dc">
+                <div class="sd_dc_1_1"><img src="./img/sd_deco_f_1.png" alt="" width="438"></div>
+                <div class="sd_dc_1_2"><img src="./img/sd_deco_l_1.png" alt="" width="487"></div>
+                <div class="sd_dc_1_3"><img src="./img/sd_deco_s_1.png" alt="" width="400"></div>
+                <div class="sd_dc_2_1"><img src="./img/sd_deco_f_2.png" alt="" width="346"></div>
+                <div class="sd_dc_2_2"><img src="./img/sd_deco_l_2.png" alt="" width="328"></div>
+                <div class="sd_dc_2_3"><img src="./img/sd_deco_s_2.png" alt="" width="304"></div>
+                <div class="sd_dc_3_1"><img src="./img/sd_deco_f_3.png" alt="" width="225"></div>
+                <div class="sd_dc_3_2"><img src="./img/sd_deco_l_3.png" alt="" width="291"></div>
+                <div class="sd_dc_3_3"><img src="./img/sd_deco_s_3.png" alt="" width="214"></div>
+                <div class="sd_dc_4_1"><img src="./img/sd_deco_f_4.png" alt="" width="346"></div>
+                <div class="sd_dc_4_2"><img src="./img/sd_deco_l_2.png" alt="" width="328"></div>
+                <div class="sd_dc_4_3"><img src="./img/sd_deco_s_4.png" alt="" width="301"></div>
+                <div class="sd_dc_5_1"><img src="./img/sd_deco_f_5.png" alt="" width="313"></div>
+                <div class="sd_dc_5_2"><img src="./img/sd_deco_l_4.png" alt="" width="692"></div>
+                <div class="sd_dc_5_3"></div>
+            </div>
+            <div class="student_day_reading fade-in">A Student's Day</div>
+            <h2 class="student_day_tit fade-in">
+                学生の<span class="h2_color">1日</span>
+            </h2>
+            <div class="student_day_content">
+                <ul class="sd_time_list">
+                    <li class="sd_time_list_1">
+                        <div class="sd_list_img"><img src="./img/sd_img_1.png" alt="登校"></div>
+                        <div class="sd_time_list_1_read">
+                            <p class="sd_time_list_read_1">9:20</p>
+                            <p class="sd_time_list_read_2">
+                                <span class="bg-wrap"><span class="inn">登校</span></span>
+                            </p>
+                            <p class="sd_time_list_read_3">
+                                通いやすいキャンパスへ登校。<br>クラスメイトや先生と明るく挨拶を交わし、<br>クリエイティブな一日がここから始まります。</p>
+                        </div>
+                    </li>
+                    <li class="sd_time_list_2">
+                        <div class="sd_list_img"><img src="./img/sd_img_2.png" alt="1〜3限授業"></div>
+                        <div class="sd_time_list_2_read">
+                            <p class="sd_time_list_read_1">9:20~12:10</p>
+                            <p class="sd_time_list_read_2">
+                                <span class="bg-wrap"><span class="inn">1~3限授業</span></span>
+                            </p>
+                            <p class="sd_time_list_read_3">
+                                デザインの基礎理論や表現テクニック、専門ツールの使い方まで、集中してしっかりと知識を吸収します。実際に手を動かした作品作りを行います。</p>
+                        </div>
+                    </li>
+                    <li class="sd_time_list_3">
+                        <div class="sd_list_img"><img src="./img/sd_img_3.png" alt="お昼ご飯"></div>
+                        <div class="sd_time_list_3_read">
+                            <p class="sd_time_list_read_1">12:10~13:10</p>
+                            <p class="sd_time_list_read_2">
+                                <span class="bg-wrap"><span class="inn">お昼ご飯</span></span>
+                            </p>
+                            <p class="sd_time_list_read_3">
+                                クラスメイトと一緒に楽しくランチタイム！キャンパス周辺のおしゃれなカフェへ出かけたり、学内のラウンジでおしゃべりをしたり、各々自由な時間を過ごして午後へのパワーをチャージします。
+                            </p>
+                        </div>
+                    </li>
+                    <li class="sd_time_list_4">
+                        <div class="sd_list_img"><img src="./img/sd_img_4.png" alt="4~6限授業"></div>
+                        <div class="sd_time_list_4_read">
+                            <p class="sd_time_list_read_1">13:10~16:00</p>
+                            <p class="sd_time_list_read_2">
+                                <span class="bg-wrap"><span class="inn">4~6限授業</span></span>
+                            </p>
+                            <p class="sd_time_list_read_3">
+                                自分の作品をつくり上げる実習授業。頭の中にあるアイデアが目に見えるカタチになっていくワクワク感をたっぷり味わえます。<br>先生や周りの友達からいろいろなフィードバックをもらって、よりクオリティの高い作品を作ろう！
+                            </p>
+                        </div>
+                    </li>
+                    <li class="sd_time_list_5">
+                        <div class="sd_list_img"><img src="./img/sd_img_5.png" alt="下校・放課後"></div>
+                        <div class="sd_time_list_5_read">
+                            <p class="sd_time_list_read_1">16:00~</p>
+                            <p class="sd_time_list_read_2">
+                                <span class="bg-wrap"><span class="inn">下校・放課後</span></span>
+                            </p>
+                            <p class="sd_time_list_read_3">
+                                実習室で作品のクオリティを高めたり、友達と遊びに出かけたり。<br>自分のペースで自由な時間を過ごしながら、クリエイターとしての感性をさらに磨きます。</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- 学生インタビュー -->
+        <section class="interview" id="interview">
+            <div class="student-interview_reading fade-in">Student Interview</div>
+            <h2 class="student-interview_tit fade-in">
+                学生<span class="h2_color">インタビュー</span>
+            </h2>
+            <div class="student-interview_content">
+                <div class="student-interview_top">
+                    <h3 class="st_iv_read">実際の企業課題で挑んだ経験が、就職活動での<span class="h3_st_color">大きな武器</span>になりました</h3>
+                    <div class="st_iv_tp_img"><img src="./img/sv_iv_1.png" alt="人物１" width="326"></div>
+                    <div class="profile_info">
+                        <div class="profile_info_content">
+                            <h4 class="h4_st"><img src="./img/st_iv_info.png" alt="プロフィール" width="88"></h4>
+                            <ul class="profile_info_read">
+                                <li>2年生　WEB専攻</li>
+                                <li class="profile_info_read_name">N.Tさん</li>
+                                <li>坂出商業高等学校</li>
+                            </ul>
+                        </div>
+                        <div class="profile_info_img"><img src="./img/st_iv_4.png" alt="ntさん" width="256"></div>
+                    </div>
+                </div>
+                <div class="student-interview_bottom">
+                    <div class="st_iv_bottom_content">
+                        <div class="st_iv_bottom_img">
+                            <img src="./img/sv_iv_2.png" alt="画像２" width="320">
+                            <img src="./img/sv_iv_3.png" alt="画像３" width="320">
+                        </div>
+                        <div class="st_iv_bottom_read">
+                            <div class="st_iv_bottom_read_title">
+                                <img src="./img/st_iv_Q.png" alt="クエスチョン" width="60">
+                                <h4 class="h4-st">神戸電子に入学して良かったと思うことは何ですか？</h4>
+                            </div>
+                            <dl>
+                                <dt class="st_iv_dt">デザイン未経験でも、着実にスキルが身についたこと</dt>
+                                <dd class="st_iv_dd">
+                                    入学前はデザインソフトの触り方も分からず不安でしたが、基礎からステップアップできるカリキュラムのおかげでスムーズに習得できました。現役クリエイターである先生方が一人ひとりに寄り添って指導してくれるので、独学では気づけない「伝えるためのデザイン思考」がしっかり身につきました。
+                                </dd>
+                                <dt class="st_iv_dt">実社会の課題に挑む「企業連携」</dt>
+                                <dd class="st_iv_dd">
+                                    授業で実際の企業から依頼を受け、ターゲット層のリサーチからコンセプト立案、デザイン提案まで一連のプロセスを経験しました。プロのクリエイターである先生方から「クライアントの課題をデザインでどう解決するか」という現場目線のフィードバックをもらう中で、単なる自己満足ではなく「相手に伝わるデザイン」を作る面白さを実感できました。
+                                </dd>
+                                <dt class="st_iv_dt">就活に直結する実績と自信</dt>
+                                <dd class="st_iv_dd">
+                                    企業連携で制作したデザインは、そのまま就職活動で使うポートフォリオ（作品集）の目玉実績になります。「実際に企業へ提案して採用された作品」として面接でも自信を持ってアピールできたのは、この学校ならではの大きなアドバンテージだと感じています。
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 先生紹介 -->
+        <section class="teacher_introduction" id="teacher_introduction">
+            <div class="teacher_introduction_reading fade-in">Teacher Introduction</div>
+            <h2 class="teacher_introduction_tit fade-in">
+                先生<span class="h2_color">紹介</span>
+            </h2>
+            <div class="t_intro_content">
+                <div class="t_intro_list t_list_1 scale-up">
+                    <div class="t_intro_list_line">
+                        <div class="t_list_name">
+                            <p>ビジュアルデザイン担当</p>
+                            <h4 class="t_list_name_h4">祇園先生</h4>
+                        </div>
+                        <div class="t_list_img">
+                            <img class="t_list_img_normal" src="./img/t_intro_teacher_1.png" alt="祇園先生">
+                            <img class="t_list_img_hover" src="./img/t_intro_teacher_hover1.png" alt="祇園先生">
+                        </div>
+                        <div class="t_list_read">
+                            <h5 class="t_list_read_h5">デジタルの力で広がる<br>表現の幅</h5>
+                            <p>広告代理店での経験を活かし、グラフィックデザインを指導。<br>卒業生とのつながりを活かして就職もサポートしています。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="t_intro_list t_list_2 scale-up delay-1">
+                    <div class="t_intro_list_line">
+                        <div class="t_list_name">
+                            <p>情報デザイン担当</p>
+                            <h4 class="t_list_name_h4">菅原先生</h4>
+                        </div>
+                        <div class="t_list_img">
+                            <img class="t_list_img_normal" src="./img/t_intro_teacher_2.png" alt="菅原先生">
+                            <img class="t_list_img_hover" src="./img/t_intro_teacher_hover2.png" alt="菅原先生">
+                        </div>
+                        <div class="t_list_read">
+                            <h5 class="t_list_read_h5">多くのデザインに触れ<br>実力を伸ばそう</h5>
+                            <p>制作会社での幅広い経験を活かし、デザインやWeb制作、企画・プレゼンを指導。学生とワクワクするアイデアを考えることを大切にしています。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="t_intro_list t_list_3 scale-up delay-2">
+                    <div class="t_intro_list_line">
+                        <div class="t_list_name">
+                            <p>動画制作担当</p>
+                            <h4 class="t_list_name_h4">岡村先生</h4>
+                        </div>
+                        <div class="t_list_img">
+                            <img class="t_list_img_normal" src="./img/t_intro_teacher_3.png" alt="岡村先生">
+                            <img class="t_list_img_hover" src="./img/t_intro_teacher_hover3.png" alt="岡村先生">
+                        </div>
+                        <div class="t_list_read">
+                            <h5 class="t_list_read_h5">心が動く瞬間を、<br>映像で</h5>
+                            <p>番組制作のプロの現場で培った経験をもとに、学生の個性を活かした表現と、楽しみながら続ける力を身に付けられる指導を心がけています。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- よくある質問 -->
+        <section class="FAQ" id="FAQ">
+            <div class="faq_reading fade-in">FAQ</div>
+            <h2 class="faq_tit fade-in">
+                よくある<span class="h2_color">質問</span>
+            </h2>
+            <p class="faq_sub_reading">入学前に気になる質問をまとめました。</p>
+            <div class="faq_inner">
+                <div class="faq_content">
+                    <div class="faq_box is-open">
+                        <div class="faq_q" role="button" tabindex="0" aria-expanded="false">
+                            <p class="q_box">絵が下手でも本当に大丈夫？</p>
+                            <div class="toggle_icon"></div>
+                        </div>
+                        <div class="faq_a">
+                            <p class="a_box">大丈夫です。<br>
+                                <span
+                                    class="a_box_deco">絵を描くのは苦手だけど、デザインに興味があるという人も、基礎から少しずつスキルを身につけられます。<br>大切なのは、上手に描けることよりもデザインすることが好きという気持ちです。</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq_content">
+                    <div class="faq_box">
+                        <div class="faq_q" role="button" tabindex="0" aria-expanded="false">
+                            <p class="q_box">課題って大変？</p>
+                            <div class="toggle_icon"></div>
+                        </div>
+                        <div class="faq_a">
+                            <p class="a_box">大変なこともあります。でも、その分「できること」が増えていきます。<br>
+                                <span
+                                    class="a_box_deco">グラフィックデザイン学科では、グラフィックだけでなく、Webや動画など幅広い制作に取り組みます。<br>1年次から基礎を学び、2年次には企業課題や卒業制作など、より実践的な制作にも挑戦します。</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq_content">
+                    <div class="faq_box">
+                        <div class="faq_q" role="button" tabindex="0" aria-expanded="false">
+                            <p class="q_box">パソコン初心者でも大丈夫？</p>
+                            <div class="toggle_icon"></div>
+                        </div>
+                        <div class="faq_a">
+                            <p class="a_box">もちろん大丈夫です。<br>
+                                <span class="a_box_deco">授業では、入学時に購入するMacBookを使い、日常的にパソコンに触れながら操作に慣れていきます。</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq_content">
+                    <div class="faq_box">
+                        <div class="faq_q" role="button" tabindex="0" aria-expanded="false">
+                            <p class="q_box">自分にどのコースが合っているか分からない......</p>
+                            <div class="toggle_icon"></div>
+                        </div>
+                        <div class="faq_a">
+                            <p class="a_box">最初から「これ！」と決めなくても大丈夫です。<br>
+                                <span
+                                    class="a_box_deco">神戸電子のグラフィックデザイン学科では、グラフィック・Web・動画など、幅広い分野に触れながら自分の興味や得意分野を見つけていけます。</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="sns">
+                <h2 class="sns_tit">SNS</h2>
+                <div class="sns_btn">
+                    <a class="sns_insta" href="https://www.instagram.com/kobedenshi_graphicdesign/" target="_blank">
+                        <div class="sns_icon_top"><img src="./img/insta_icon.png" alt="インスタ" width="36"></div>
+                        <p>公式Instagramはこちら</p>
+                        <div class="sns_arrow"></div>
+                    </a>
+                    <a class="sns_x" href="https://x.com/graphicdesignkd" target="_blank">
+                        <div class="sns_icon_top"><img src="./img/x_icon.png" alt="エックス" width="35"></div>
+                        <p>公式X(旧Twitter)はこちら</p>
+                        <div class="sns_arrow"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-content">
+                <a class="footer_top_btn" href="#mv">
+                    <img src="./img/top_btn_font.png" alt="トップへ戻る" width="106">
+                    <div class="top_btn_arrow"></div>
+                </a>
+                <div class="footer_bottom">
+                    <div class="footer_bottom_left">
+                        <div class="footer_bottom_left_menu">
+                            <ul>
+                                <li><a href="#introduction">学科紹介</a></li>
+                                <li><a href="#course">コース紹介</a></li>
+                                <li><a href="#genzaichiten">現在地展の紹介</a></li>
+                                <li><a href="#student_day">学生の1日</a></li>
+                                <li><a href="#interview">学生インタビュー</a></li>
+                                <li><a href="#teacher_introduction">先生紹介</a></li>
+                                <li><a href="#FAQ">よくある質問</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer_bottom_left_sub_menu">
+                            <ul>
+                                <li><a href="web.html">WEBコース</a></li>
+                                <li><a href="graphic.html">グラフィックコース</a></li>
+                                <li><a href="move.html">動画コース</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer_bottom_right">
+                        <div class="footer_bottom_right_link">
+                            <ul>
+                                <li>
+                                    <a class="footer_bottom_right_link_1" href="https://kobedenshi-graphic.net/genzaichiten/" target="_blank">
+                                        <img src="./img/genzaititen_btn_logo.png" alt="現在地展サイトへ" width="70">
+                                        <p>サイトへ</p>
+                                        <div class="sns_arrow"></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="footer_bottom_right_link_2" href="https://www.kobedenshi.ac.jp/" target="_blank">
+                                        <img src="./img/f_kobedenshi_logo.png" alt="神戸電子専門学校公式サイトへ" width="141">
+                                        <p>サイトへ</p>
+                                        <div class="sns_arrow_2"></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer_bottom_right_address">
+                            <img src="./img/f_kobedenshi_logo.png" alt="神戸電子専門学校" width="213">
+                            <p>〒650-0002 兵庫県神戸市中央区北野町1-1-8</p>
+                            <div class="footer_address">
+                                <p>TEL：078-242-0014 </p>
+                                <p>FAX：078-242-0038</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_slider">
+                <div class="slider-wrapper">
+                    <ul class="slider">
+                        <li class="slide"><img src="./img/logo_white_footer_1.png" alt="" width="600"></li>
+                        <li class="slide"><img src="./img/logo_white_footer_2.png" alt=""></li>
+                        <li class="slide"><img src="./img/logo_white_footer_1.png" alt=""></li>
+                        <li class="slide"><img src="./img/logo_white_footer_2.png" alt=""></li>
+                        <li class="slide"><img src="./img/logo_white_footer_1.png" alt=""></li>
+                        <li class="slide"><img src="./img/logo_white_footer_2.png" alt=""></li>
+                    </ul>
+
+                    <ul class="slider">
+                        <li class="slide"><img src="./img/logo_white_footer_1.png" alt=""></li>
+                        <li class="slide"><img src="./img/logo_white_footer_2.png" alt=""></li>
+                        <li class="slide"><img src="./img/logo_white_footer_1.png" alt=""></li>
+                        <li class="slide"><img src="./img/logo_white_footer_2.png" alt=""></li>
+                        <li class="slide"><img src="./img/logo_white_footer_1.png" alt=""></li>
+                        <li class="slide"><img src="./img/logo_white_footer_2.png" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        
+    </div>
 </body>
+
 </html>
