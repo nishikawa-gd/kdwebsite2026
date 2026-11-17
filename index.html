@@ -1,11 +1,644 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>神戸電子専門学校グラフィックデザイン学科サイト</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./img/icon.png">
 </head>
+
 <body>
-    <p>testtestaaa</p>
+
+    <div id="overlay" class="overlay"></div>
+    <!-- モーダルウィンドウ -->
+    <div class="modal-window" data-id="modal01">
+        <div class="modal-works">
+            <img src="./img/production_web1.png" alt="作品紹介水族館" class="production_web1">
+        </div>
+        <div class="js-close button-close">
+            <img src="./img/production_web_batu.svg" alt="バツボタン" class="production_web_batu">
+        </div>
+    </div>
+    <div class="modal-window" data-id="modal02">
+        <div class="modal-works">
+            <img src="./img/production_web2.png" alt="レザークラフトサイト" class="production_web2">
+        </div>
+        <div class="js-close button-close">
+            <img src="./img/production_web_batu.svg" alt="バツボタン" class="production_web_batu">
+        </div>
+    </div>
+    <div class="modal-window" data-id="modal03">
+        <div class="modal-works">
+            <img src="./img/production_web3.png" alt="カレーサイト" class="production_web3">
+        </div>
+        <div class="js-close button-close">
+            <img src="./img/production_web_batu.svg" alt="バツボタン" class="production_web_batu">
+        </div>
+    </div>
+    <div class="modal-window" data-id="modal04">
+        <div class="modal-works">
+            <img src="./img/production_gra1.png" alt="ZINE" class="production_gra1">
+        </div>
+        <div class="js-close button-close">
+            <img src="./img/production_gra_batu.svg" alt="バツボタン" class="production_gra_batu">
+        </div>
+    </div>
+    <div class="modal-window" data-id="modal05">
+        <div class="modal-works">
+            <img src="./img/production_gra2_in.png" alt="onsenposuta" class="production_gra2_in">
+        </div>
+        <div class="js-close button-close">
+            <img src="./img/production_gra_batu.svg" alt="バツボタン" class="production_gra_batu">
+        </div>
+    </div>
+    <div class="modal-window" data-id="modal06">
+        <div class="modal-works">
+            <img src="./img/production_gra3_in.png" alt="onsenposuta" class="production_gra3_in">
+        </div>
+        <div class="js-close button-close">
+            <img src="./img/production_gra_batu.svg" alt="バツボタン" class="production_gra_batu">
+        </div>
+    </div>
+    <div class="modal-window movie-modal" data-id="modal07">
+        <div class="modal-works">
+            <video src="./movie/movie_1.mp4" autoplay muted></video>
+        </div>
+        <div class="js-close button-close">
+            <img src="./img/production_move_batu.svg" alt="バツボタン" class="production_move_batu">
+        </div>
+    </div>
+    <div class="modal-window movie-modal" data-id="modal08">
+        <div class="modal-works">
+            <video src="./movie/movie_2.mp4" autoplay muted></video>
+        </div>
+        <div class="js-close button-close">
+            <img src="./img/production_move_batu.svg" alt="バツボタン" class="production_move_batu">
+        </div>
+    </div>
+    <div class="modal-window movie-modal" data-id="modal09">
+        <div class="modal-works">
+            <video src="./movie/movie_3.mp4" autoplay muted></video>
+        </div>
+        <div class="js-close button-close">
+            <img src="./img/production_move_batu.svg" alt="バツボタン" class="production_move_batu">
+        </div>
+    </div>
+
+
+
+    <section id="mv">
+        <div class="mv_decoration">
+            <img src="./img/deco1.PNG" alt="電球" class="mv_deco1">
+            <img src="./img/deco8.PNG" alt="稲妻" class="mv_deco8">
+        </div>
+        <div class="inner">
+            <div class="mv_top">
+                <div class="mv_rogo">
+                    <img src="./img/kobedebshi_rogo.svg" alt="神戸電子専門学校" class="mv_kd_rogo">
+                    <img src="./img/gra_rogo.svg" alt="グラフィックデザイン学科" class="mv_gra_rogo">
+                </div>
+                <div class="mv_menu">
+                    <a href="#about" class="mv_menu_about">学科について</a>
+                    <a href="#exhibition" class="mv_menu_exhibition">現在地展について</a>
+                    <a href="#course1" class="mv_menu_course">専攻紹介</a>
+                    <a href="#production" class="mv_menu_production">制作物紹介</a>
+                    <a href="#question" class="mv_menu_question">よくある質問</a>
+                </div>
+            </div>
+            <div class="mv_img">
+                <img src="./img/mv_g.svg" alt="G画像" class="mv_img_g">
+                <img src="./img/mv_d.svg" alt="D画像" class="mv_img_d">
+                <img src="./img/mv_text.svg" alt="アイデアをカタチに" class="mv_text">
+
+
+                <a href="https://kobedenshi-graphic.net/genzaichiten/index.html" class="mv_btn" target="_blank">
+                    <img src="./img/mv_btn.svg" alt="現在地展" class="mv_btn_img">
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="mv_bigtext">
+        <div class="bigtext_deco">
+            <img src="./img/deco12.PNG" alt="紫線" class="bigtext_deco12">
+            <img src="./img/deco13.PNG" alt="緑線" class="bigtext_deco13">
+        </div>
+        <div class="inner">
+            <p class="mv_toptext">
+                ポスター・パッケージから、Web・動画まで<br>
+                幅広い表現を学び、未来のデザイナーへ
+            </p>
+            <p class="mv_subtext">
+                印刷・Web・動画など、<br>
+                さまざまなデザインの基礎から実践まで幅広く学習。<br>
+                クライアントの想いをくみ取り、<br>
+                自分のアイデアをカタチにする力を身につけます。
+            </p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="inner">
+            <img src="./img/about_title.svg" alt="グラフィックデザイン学科の魅力" class="about_title">
+
+            <ul class="about_box">
+
+                <li class="about_1">
+                    <div class="about_1_txt">
+                        <p class="about_txt_m">
+                            基礎から実践へ
+                        </p>
+                        <p class="about_txt_s">
+                            デザインの基本となる色・レイアウト・ typographyなどの基
+                            礎からスタート。学んだ知識を実際の制作に活かしながら、自
+                            然とデザイン力を身につけていきます。
+                        </p>
+                    </div>
+                    <img src="./img/about_img1.png" alt="授業風景" class="about_img1">
+                    <img src="./img/about_deco1.svg" alt="デコレーション" class="about_deco1">
+                </li>
+
+                <li class="about_2">
+                    <div class="about_2_txt">
+                        <p class="about_txt_m">
+                            リアルな仕事を体験
+                        </p>
+                        <p class="about_txt_s">
+                            実際の企業や地域と連携した制作にも取り組み、クライアント<br>
+                            の要望をもとにデザインを考えます。授業だけでは得られな<br>
+                            い、実践的な経験を積むことができます。
+                        </p>
+                    </div>
+                    <img src="./img/about_img3.png" alt="企業との共同" class="about_img2">
+                    <img src="./img/about_deco2.svg" alt="デコレーション" class="about_deco2">
+                </li>
+
+                <li class="about_3">
+                    <div class="about_3_txt">
+                        <p class="about_txt_m">
+                            幅広いデザインを学ぶ
+                        </p>
+                        <p class="about_txt_s">
+                            ポスターや冊子などのグラフィックデザインだけでなく、Web<br>
+                            サイトや動画制作まで幅広く学習。さまざまな媒体に対応でき<br>
+                            る、柔軟なデザイン力を身につけます。
+                        </p>
+                    </div>
+                    <img src="./img/about_img4.png" alt="パソコン作業" class="about_img3">
+                    <img src="./img/about_deco3.svg" alt="デコレーション" class="about_deco3">
+                </li>
+
+                <li class="about_4">
+                    <div class="about_4_txt">
+                        <p class="about_txt_m">
+                            先生がしっかりサポート
+                        </p>
+                        <p class="about_txt_s">
+                            デザインの現場を知る経験豊富な先生が、基礎から応用まで一<br>
+                            人ひとりを丁寧にサポート。制作で分からないことも相談しな<br>
+                            がら、自分のペースでスキルを伸ばせます。
+                        </p>
+                    </div>
+                    <img src="./img/about_img2.png" alt="先生に教わっている" class="about_img4">
+                    <img src="./img/about_deco4.svg" alt="デコレーション" class="about_deco4">
+                </li>
+            </ul>
+    </section>
+
+    <section id="exhibition">
+        <div class="exhibition_deco">
+            <img src="./img/deco14.PNG" alt="線" class="exhibition_deco14">
+            <img src="./img/deco15.PNG" alt="線" class="exhibition_deco15">
+        </div>
+        <div class="inner">
+            <div class="exhibition_box">
+                <div class="exhibition_img">
+                    <img src="./img/exhibition_img.png" alt="現在地展の写真" class="exhibition_img">
+                </div>
+                <div class="exhibition_txt_box">
+                    <p class="exhibition_title">
+                        現在地展について
+                    </p>
+                    <img src="./img/exhibition_title.svg" alt="学生の今が、誰かの心を動かす" class="exhibition_title2">
+                    <p class="exhibition_txt1">
+                        企業課題に取り組む1年生と、<br>
+                        自らテーマを決めて制作する2年生。<br>
+                    </p>
+                    <p class="exhibition_txt2">
+                        それぞれの学びと想いを込めた作品を展示し、<br>
+                        学生と社会をつなぐ場となっています。
+                    </p>
+                    <div class="exhibition_btn_box">
+                        <a href="https://kobedenshi-graphic.net/genzaichiten/index.html" class="exhibition_btn"
+                            target="_blank">
+                            <p class="exhibition_btn_txt">詳しくみる</p>
+                            <img src="./img/arrow.svg" alt="ボタンの矢印" class="exhibition_btn_a">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="course1">
+        <div class="inner">
+            <img src="./img/course_title.svg" alt="グラフィックデザイン学科で学べる専攻・コース" class="course_title">
+
+            <div class="course_box">
+
+                <div class="course_web">
+                    <div class="course_web_box">
+                        <img src="./img/course_t_web.svg" alt="webコース" class="course_t_web">
+                        <p class="course_web_txt">
+                            Webサイトのデザインから<br>
+                            HTML・CSSを使ったコーディングまで、<br>
+                            Web制作に必要な知識と技術を学びます。<br>
+                            ユーザー目線で「伝わる」Webサイトを<br>
+                            つくる力を身につけます。
+                        </p>
+                        <div class="course_web_job">
+                            <img src="./img/course_web_sb.svg" alt="目指せる職業" class="course_web_sb">
+                            <div class="course_web_job_box">
+                                <p class="course_web_job1">Webサイト デザイナー</p>
+                                <p class="course_web_job2">Webサイト コーダー</p>
+                                <p class="course_web_job3">Webサイト UI・UXデザイナー</p>
+                                <p class="course_web_job4">Webサイト ディレクター</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course_img_web">
+                        <img src="./img/course_web_img.png" alt="webコース写真" class="course_web_img">
+                    </div>
+                </div>
+
+                <div class="course_gra">
+                    <div class="course_gra_box">
+                        <img src="./img/course_t_gra.svg" alt="グラフィックコース" class="course_t_gra">
+                        <p class="course_gra_txt">
+                            ポスターやパッケージ、冊子など、<br>
+                            幅広いグラフィックデザインを学びます。<br>
+                            色やレイアウトなどの基礎を身につけ、<br>
+                            想いをビジュアルで伝える力を磨きます。
+                        </p>
+                        <div class="course_gra_job">
+                            <img src="./img/course_gra_sb.svg" alt="目指せる職業" class="course_gra_sb">
+                            <div class="course_gra_job_box">
+                                <p class="course_gra_job1">グラフィックデザイナー</p>
+                                <p class="course_gra_job2">パッケージデザイナー</p>
+                                <p class="course_gra_job3">Webサイト UI・UXデザイナー</p>
+                                <p class="course_gra_job4">Webサイト ディレクター</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course_img_gra">
+                        <img src="./img/course_gra_img.png" alt="グラフィックの写真" class="course_gra_img">
+                    </div>
+                </div>
+
+                <div class="course_move">
+                    <div class="course_move_box">
+                        <img src="./img/course_t_move.svg" alt="動画コース" class="course_t_move">
+                        <p class="course_move_txt">
+                            動画撮影や編集、映像表現など、<br>
+                            動画制作に必要な技術を学びます。<br>
+                            企画から制作まで幅広く経験し、<br>
+                            映像で魅力を伝える力を身につけます。
+                        </p>
+                        <div class="course_move_job">
+                            <img src="./img/course_move_sb.svg" alt="目指せる職業" class="course_move_sb">
+                            <div class="course_move_job_box">
+                                <p class="course_move_job1">映像クリエイター</p>
+                                <p class="course_move_job2">SNS動画クリエイター</p>
+                                <p class="course_move_job3">映像ディレクター</p>
+                                <p class="course_move_job4">映像編集エンジニア</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course_img_move">
+                        <img src="./img/course_move_img.png" alt="動画コースの写真" class="course_move_img">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="production">
+        <div class="inner">
+            <img src="./img/production_title.svg" alt="学生制作物紹介" class="production_title">
+
+            <div class="production_accordion">
+                <details class="course_item web">
+
+                    <summary>
+                        <span>Webコース</span>
+                        <img src="./img/production_web_a.svg" alt="矢印">
+                    </summary>
+
+                    <div class="course_contents">
+
+                        <div class="course_wrap">
+                            <div class="js-open button-open" data-id="01">
+                                <article>
+                                    <img src="./img/production_web.svg" alt="水族館サイト">
+                                    <span>デザイン</span>
+                                    <h3>架空の水族館サイト</h3>
+                                    <p>
+                                        子ども連れの家族や友人同士で訪れる方をターゲットに、
+                                        Webデザインの学習の一環として制作した架空のWebサイトデザインです。
+                                    </p>
+                                </article>
+                            </div>
+                        </div>
+
+
+                        <div class="js-open button-open" data-id="02">
+                            <article>
+                                <img src="./img/production_web2.svg" alt="レザークラフト体験予約サイト">
+                                <span>デザイン</span>
+                                <span>コーディング</span>
+                                <h3>レザークラフト体験予約サイト</h3>
+                                <p>
+                                    親子で楽しめるレザークラフト体験の魅力を伝え、
+                                    体験への参加を促す予約サイトを制作しました。
+                                </p>
+                            </article>
+                        </div>
+
+                        <div class="js-open button-open" data-id="03">
+                            <article>
+                                <img src="./img/production_web3.svg" alt="カレー×防災サイト">
+                                <span>デザイン</span>
+                                <span>コーディング</span>
+                                <h3>カレー×防災サイト</h3>
+                                <p>
+                                    防災とカレーを掛け合わせ、楽しみながら備える
+                                    きっかけをつくる体験型LPサイトを制作しました。
+                                </p>
+                            </article>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="course_item graphic">
+
+                    <summary>
+                        <span>グラフィックコース</span>
+                        <img src="./img/production_gra_a.svg" alt="矢印">
+                    </summary>
+
+                    <div class="course_contents">
+                        <div class="js-open button-open" data-id="04">
+                            <article>
+                                <img src="./img/production_gra1.svg" alt="ZINE">
+                                <span>デザイン</span>
+                                <span>冊子</span>
+                                <h3>ZINE 「褒めことば」</h3>
+                                <p>
+                                    「褒め言葉」をテーマに、心が温まるZINEを制
+                                    作。余白と読みやすさを大切に、日々の小さな出
+                                    来事を前向きな気持ちにつなげました。
+                                </p>
+                            </article>
+                        </div>
+                        <div class="js-open button-open" data-id="05">
+                            <article>
+                                <img src="./img/production_gra2.png" alt="温泉ポスター">
+                                <span>デザイン</span>
+                                <span>ポスター</span>
+                                <h3>温泉イベントポスター</h3>
+                                <p>
+                                    群馬の温泉をめぐる新スポット「湯めぐりヴィ
+                                    レッジ」の魅力と、温泉情報やアクセス、キャン
+                                    ペーンを紹介する告知ポスターを制作しました。
+                                </p>
+                            </article>
+                        </div>
+                        <div class="js-open button-open" data-id="06">
+                            <article>
+                                <img src="./img/production_gra3.svg" alt="ミニ四駆">
+                                <span>デザイン</span>
+                                <span>ポスター</span>
+                                <h3>ミニ四駆ポスター</h3>
+                                <p>
+                                    親子で楽しむミニ四駆体験教室のポスターを制
+                                    作。親子のつながりと、イベントの楽しさが伝わ
+                                    るデザインを意識しました。
+                                </p>
+                            </article>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="course_item movie">
+
+                    <summary>
+                        <span>動画コース</span>
+                        <img src="./img/production_move_a.svg" alt="矢印">
+                    </summary>
+
+                    <div class="course_contents">
+                        <div class="js-open button-open" data-id="07">
+                            <article>
+                                <img src="./img/production_move1.png" alt="コース紹介">
+                                <span>撮影</span>
+                                <span>編集</span>
+                                <h3>動画プロモーションコース紹介</h3>
+                                <p>
+                                    神戸電子専門学校の動画プロモーションコースを紹介するPR動画です
+                                    。企画から撮影、編集まで一貫して学べる魅力や特徴を伝えています。
+                                </p>
+                            </article>
+                        </div>
+                        <div class="js-open button-open" data-id="08">
+                            <article>
+                                <img src="./img/production_move2.png" alt="神戸ファストジャイロPV">
+                                <span>撮影</span>
+                                <span>編集</span>
+                                <h3>神戸ファストジャイロPV</h3>
+                                <p>
+                                    女子ラグビーチーム「神戸ファストジャイロ」
+                                    の試合やプレイ映像を躍動感ある編集でつないだ、
+                                    プロモーション動画です。
+                                </p>
+                            </article>
+                        </div>
+                        <div class="js-open button-open" data-id="09">
+                            <article>
+                                <img src="./img/production_move3.png" alt="インタビュー動画">
+                                <span>撮影</span>
+                                <span>編集</span>
+                                <h3>インタビュー動画</h3>
+                                <p>
+                                    声優タレント学科教員の「大橋正幸先生」への
+                                    インタビュー動画です。仕事での挫折経験や人生最大の
+                                    お買い物などを語っています。
+                                </p>
+                            </article>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section id="question">
+        <div class="inner">
+            <div class="question_box">
+                <img src="./img/question_title.svg" alt="Q&A" class="question_title">
+
+                <details class="question_item">
+                    <summary>
+                        <span class="qa_q">Q</span>
+                        <span class="qa_question">
+                            入学するまでにしておくべきことはありますか？
+                        </span>
+                        <img src="./img/question_a.svg" alt="矢印" class="question_a">
+                    </summary>
+                    <div class="question_answer">
+                        <p>
+                            技術的なことは入学してから十分勉強できます。初心者であっても大丈夫です。
+                            入学前には、日頃、目にしているポスターやチラシ、パッケージデザインなど
+                            良いデザインを気にかけてたくさん見ておくと、入学して制作をするときに
+                            いろんなアイデアが浮かびやすいですよ。
+                        </p>
+                    </div>
+                </details>
+
+                <details class="question_item">
+                    <summary>
+                        <span class="qa_q">Q</span>
+                        <span class="qa_question">
+                            ノートPCは必ず買わないとダメですか？
+                        </span>
+                        <img src="./img/question_a.svg" alt="矢印" class="question_a">
+                    </summary>
+                    <div class="question_answer">
+                        <p>
+                            すべての学科でノートパソコンが必要ですが、学科によって必要な端末やスペックが異なります。
+                            購入前に募集要項やオープンキャンパスで確認してください。学校の一括購入なら、
+                            安価で手厚いサポートも受けられます。自分で購入する場合も、事前に学校へ確認しましょう。
+                        </p>
+                    </div>
+                </details>
+
+                <details class="question_item">
+                    <summary>
+                        <span class="qa_q">Q</span>
+                        <span class="qa_question">
+                            パソコンが苦手なのですが、授業についていけますか？
+                        </span>
+                        <img src="./img/question_a.svg" alt="矢印" class="question_a">
+                    </summary>
+                    <div class="question_answer">
+                        <p>
+                            授業では、入学時に購入したパソコン（Macbook）を使用しますので、
+                            毎日自由に使えます。操作にも早く慣れることができますよ。
+                            苦手な方も、一から丁寧に教えますので安心してください。
+                        </p>
+                    </div>
+                </details>
+
+                <details class="question_item">
+                    <summary>
+                        <span class="qa_q">Q</span>
+                        <span class="qa_question">
+                            どんなソフトで学びますか？ (Web・グラフィックデザインコース)
+                        </span>
+                        <img src="./img/question_a.svg" alt="矢印" class="question_a">
+                    </summary>
+                    <div class="question_answer">
+                        <p>
+                            デザイン業界で一般的に使われる「Illustrator」や「Photoshop」を中心に使用します。
+                            ※映像編集ソフト「Premiere Pro」「After Effects」も基本操作は習得します。
+                        </p>
+                    </div>
+                </details>
+
+                <details class="question_item">
+                    <summary>
+                        <span class="qa_q">Q</span>
+                        <span class="qa_question">
+                            どんなソフトで学びますか？ (動画コース)
+                        </span>
+                        <img src="./img/question_a.svg" alt="矢印" class="question_a">
+                    </summary>
+                    <div class="question_answer">
+                        <p>
+                            映像の編集や作成ができる「Premiere Pro」「After Effects」などを使用します。
+                            ※画像編集ソフト「Photoshop」、イラスト・デザインソフト「Illustrator」も基本操作は習得します。
+                        </p>
+                    </div>
+                </details>
+
+                <div class="question_btn_box">
+                    <a href="https://www.kobedenshi.ac.jp/faq/department/graphic/" class="question_btn" target="_blank">
+                        <p class="exhibition_btn_txt">よくある質問一覧を見る</p>
+                        <img src="./img/arrow.svg" alt="ボタンの矢印" class="exhibition_btn_a">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer">
+        <img src="./img/footer_img.svg" alt="フッター画像" class="footer_img">
+        <div class="footer_box">
+            <div class="inner">
+                <div class="footer_box">
+                    <div class="footer_top">
+                        <div class="footer_kobedenshi">
+                            <a href="https://www.kobedenshi.ac.jp/" target="_blank">
+                                <img src="./img/footer_rogo.svg" alt="神戸電子専門学校" class="footer_rogo">
+                            </a>
+                            <p class="footer_nanber">
+                                078-242-0014
+                            </p>
+                            <p class="footer_address">
+                                〒650-0002 兵庫県神戸市中央区北野町１丁目１−８
+                            </p>
+                        </div>
+                        <div class="footer_menu">
+                            <a href="#mv" class="footer_menu_top">トップ</a>
+                            <a href="#about" class="footer_menu_about">学科について</a>
+                            <a href="#exhibition" class="footer_menu_exhibition">現在地展について</a>
+                            <a href="#course1" class="footer_menu_course">専攻紹介</a>
+                            <a href="#production" class="footer_menu_production">制作物紹介</a>
+                            <a href="#question" class="footer_menu_question">よくある質問</a>
+                        </div>
+                    </div>
+                    <div class="footer_btn_box">
+                        <div class="footer_genzai">
+                            <a href="https://kobedenshi-graphic.net/genzaichiten/index.html" class="footer_genzai_btn" target="_blank">
+                                <img src="./img/footer_genzai.svg" alt="現在地展" class="footer_genzai_img">
+                            </a>
+                        </div>
+                        <div class="footer_sns">
+                            <a href="https://x.com/graphicdesignkd">
+                                <img src="./img/footer_icon_x.svg" alt="X" class="footer_icon_x" target="_blank">
+                            </a>
+                            <a href="https://www.instagram.com/kobedenshi_graphicdesign/">
+                                <img src="./img/footer_icon_inst.svg" alt="Instagram" class="footer_icon_inst"
+                                    target="_blank">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <small>© Kobe Institute of Computing - College of Computing</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
 </body>
+
 </html>
